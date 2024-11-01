@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayaClinic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+        <a class="navbar-brand" href="#" style="color: rgba(32, 197, 175, 1); font-weight: bold;">DayaClinic</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">View Result</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Custom CSS -->
+<style>
+    /* Set brand color */
+    .navbar-brand {
+        color: rgba(32, 197, 175, 1) !important;
+    }
+
+    /* Set menu item hover and active color */
+    .navbar-nav .nav-link {
+        color: black;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: rgba(32, 197, 175, 1) !important;
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="text-center py-5" style="background-color: #e9f8f5;" id="hero">
+    <div class="container py-5 px-4" style="background-color: #d0f0eb; border-radius: 15px;">
+        <div class="row align-items-center">
+            <!-- Left Column: Text and Button -->
+            <div class="col-md-6 text-start">
+                <h1 style="font-weight: 700;">Your Health is Our Priority</h1>
+                <p style="color: #6c757d;">
+                    We provide you with thorough health check-ups and help you in the process of maintaining overall health.
+                </p>
+                <button class="btn" style="background-color: #00c58d; color: white; padding: 10px 20px; border-radius: 5px;">
+                    Book Appointments
+                </button>
+            </div>
+
+            <!-- Right Column: Image and Overlays -->
+            <div class="col-md-6 position-relative">
+                <img src="./assets/images/daya-doctor.png" class="img-fluid rounded" alt="Doctor" style="max-width: 90%; border-radius: 10px;">
+                
+                <!-- Overlay: Top Right -->
+                <div class="position-absolute" style="top: 10%; right: 10%;">
+                    <div class="bg-white p-2 rounded shadow-sm" style="text-align: center; width: 100px;">
+                        <img src="./assets/images/lenses.png" alt="Top Icon" width="30">
+                        <p style="font-size: 0.8rem; margin: 5px 0 0; color: #6c757d;">Lorem ipsum</p>
+                    </div>
+                </div>
+
+                <!-- Overlay: Bottom Left -->
+                <div class="position-absolute" style="bottom: 10%; left: 10%;">
+                    <div class="bg-white p-2 rounded shadow-sm" style="text-align: center; width: 120px;">
+                        <span class="badge bg-warning text-dark">No. 1</span><br>
+                        <span style="font-weight: 500; font-size: 0.8rem;">Top Best Clinic</span>
+                    </div>
+                </div>
+
+                <!-- Overlay: Center Left -->
+                <div class="position-absolute" style="top: 50%; left: 5%; transform: translateY(-50%);">
+                    <img src="./assets/images/kidny.png" alt="Left Icon" class="rounded-circle" width="50">
+                </div>
+
+                <!-- Overlay: Center Right -->
+                <div class="position-absolute" style="top: 50%; right: 5%; transform: translateY(-50%);">
+                    <img src="./assets/images/lenses.png" alt="Right Icon" class="rounded-circle" width="50">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- About Section -->
+<section class="py-5 bg-light" id="about">
+    <div class="container">
+        <h2 class="text-center mb-4">About Daya Clinic</h2>
+        <p class="lead text-center mb-5">
+            At Daya, we provide you the best healthcare services. Whether it be a Doctor Consultation or any Lab Services, we ensure you with the best quality. Our top priority is to provide exceptional care, safety, and integrity. We ensure that every diagnosis we do is based on honesty and with ethical standards. We assure you that complete care will be accessible at any time and affordable. We focus on the well-being of the patients both physically and emotionally.
+        </p>
+
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6">
+                <div class="oval-image large">
+                    <img src="image1.jpg" class="img-fluid" alt="Clinic Interior">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="oval-image small">
+                            <img src="image2.jpg" class="img-fluid" alt="Doctor Consultation">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="oval-image small">
+                            <img src="image3.jpg" class="img-fluid" alt="Surgical Operation">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS -->
+<style>
+    .oval-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 50% / 25%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Large Image styling */
+    .oval-image.large {
+        width: 100%;
+        padding-top: 75%; /* Adjust height for aspect ratio */
+    }
+
+    /* Small Image styling */
+    .oval-image.small {
+        width: 100%;
+        padding-top: 56.25%; /* Adjust height for aspect ratio */
+    }
+
+    .oval-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+
+
+
+<!-- Services Section -->
+<section class="bg-light py-5" id="services">
+    <div class="container text-center">
+        <h2>The Best Quality Service For Your Family</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Doctor Consultation</h4>
+                <p>Personalized medical consultation for a range of health needs.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Observation</h4>
+                <p>Regular monitoring and assessment of patient health.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Lab Services</h4>
+                <p>Advanced laboratory testing services.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Appointment Section -->
+<section class="py-5" id="appointment">
+    <div class="container text-center">
+        <h2>Easy same or Next-day Appointments</h2>
+        <p>Book an appointment with our best doctors at your convenience.</p>
+        <button class="btn btn-outline-primary">See More</button>
+        <button class="btn btn-primary">Make an Appointment</button>
+    </div>
+</section>
+
+<!-- Doctor Profile Carousel Section -->
+<section class="doctor-profile py-5">
+    <div class="container">
+        <div class="text-center">
+            <h6 class="text-info">Team Doctor</h6>
+            <h2>Meet Our <span class="text-success">Specialists</span></h2>
+        </div>
+        <div id="doctorCarousel" class="carousel slide mt-4" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Doctor Profile -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <!-- Doctor Image -->
+                        <div class="col-md-4 text-center">
+                            <div class="profile-image">
+                                <img src="./assets/images/daya-doctor.png" alt="Doctor Image" class="img-fluid rounded shadow">
+                                <p class="mt-3">Doctor Profile</p>
+                            </div>
+                        </div>
+                        <!-- Doctor Details -->
+                        <div class="col-md-8">
+                            <h4 class="text-primary">Daya Clinic</h4>
+                            <h3 class="text-dark">DoctorName</h3>
+                            <p><strong>MBBS, FCPS (Pathologist), MD (Pathology)</strong></p>
+                            <p><a href="#" class="text-success">Pathology Specialist (3891 Ranchview Dr. Richard, Delhi 134234)</a></p>
+                            <h5 class="text-muted">Department of Pathology</h5>
+                            <p class="text-secondary">
+                                Lorem ipsum dolor sit amet consectetur. Id diam adipiscing faucibus pellentesque blandit molestie velit posuere. 
+                                Libero felis nisl amet habitant enim a nunc duis. Eilt purus aliquet risus urna mi ac consequat etiam lectus. 
+                                Ut netus erat aenean ut amet.
+                            </p>
+                            <a href="#" class="btn btn-success">Make an Appointment</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Doctor Profile -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <!-- Doctor Image -->
+                        <div class="col-md-4 text-center">
+                            <div class="profile-image">
+                                <img src="./assets/images/another-doctor.png" alt="Another Doctor" class="img-fluid rounded shadow">
+                                <p class="mt-3">Doctor Profile</p>
+                            </div>
+                        </div>
+                        <!-- Doctor Details -->
+                        <div class="col-md-8">
+                            <h4 class="text-primary">Daya Clinic</h4>
+                            <h3 class="text-dark">Another Doctor</h3>
+                            <p><strong>MBBS, FCPS (Cardiologist)</strong></p>
+                            <p><a href="#" class="text-success">Cardiology Specialist (1234 Health St, Delhi 134234)</a></p>
+                            <h5 class="text-muted">Department of Cardiology</h5>
+                            <p class="text-secondary">
+                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <a href="#" class="btn btn-success">Make an Appointment</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more doctor profiles as needed -->
+            </div>
+
+            <!-- Carousel indicators (dots) -->
+            <ol class="carousel-indicators">
+                <li data-target="#doctorCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#doctorCarousel" data-slide-to="1"></li>
+                <!-- Add more indicators for additional doctors -->
+            </ol>
+
+            <!-- Carousel controls -->
+            <div class="carousel-controls">
+                <a class="carousel-control-prev" href="#doctorCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#doctorCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS -->
+<style>
+    .doctor-profile {
+        background-color: #f9f9f9;
+    }
+
+    .doctor-profile h6 {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #20c997;
+        margin-bottom: 10px;
+    }
+
+    .doctor-profile h2 {
+        font-weight: bold;
+    }
+
+    .profile-image img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .profile-image p {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .doctor-profile h4 {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .doctor-profile h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .doctor-profile a.btn-success {
+        background-color: #20c997;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .doctor-profile a.btn-success:hover {
+        background-color: #17a589;
+        color: #fff;
+    }
+
+    .carousel-indicators {
+        bottom: -40px; /* Adjust position of dots */
+    }
+
+    .carousel-controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%; /* Adjust width of control buttons */
+    }
+</style>
+
+
+
+
+<!-- Test Listings Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center">Lab Services</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Complete Blood Count (CBC)</h4>
+                <ul>
+                    <li>Hemoglobin</li>
+                    <li>WBC Count</li>
+                    <li>Platelet Count</li>
+                    <!-- More items -->
+                </ul>
+            </div>
+            <!-- Repeat for other tests as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="bg-light py-5" id="testimonials">
+    <div class="container">
+        <h2 class="text-center mb-5">Testimonials</h2>
+        
+        <!-- Carousel -->
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <!-- Image on the left side -->
+                        <div class="col-md-4 text-center">
+                            <img src="./assets/images/daya-doctor.png" class="rounded-circle img-fluid" alt="Doctor 1">
+                        </div>
+                        <!-- Testimonial text on the right side -->
+                        <div class="col-md-8">
+                            <blockquote class="blockquote">
+                                <p>"Dr. Smith is fantastic! She provided excellent care and made me feel comfortable and informed throughout my treatment."</p>
+                                <footer class="blockquote-footer">Dr. Jane Smith</footer>
+                                <p class="mt-2 text-muted">Cardiologist with 15+ years of experience in patient care and heart disease prevention.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <!-- Image on the left side -->
+                        <div class="col-md-4 text-center">
+                            <img src="./assets/images/daya-doctor.png" class="rounded-circle img-fluid" alt="Doctor 2">
+                        </div>
+                        <!-- Testimonial text on the right side -->
+                        <div class="col-md-8">
+                            <blockquote class="blockquote">
+                                <p>"Dr. Johnson took the time to explain everything in detail, and I felt very comfortable under his care."</p>
+                                <footer class="blockquote-footer">Dr. Mark Johnson</footer>
+                                <p class="mt-2 text-muted">Dermatologist specializing in skin care and advanced treatment options for over 10 years.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <!-- Image on the left side -->
+                        <div class="col-md-4 text-center">
+                            <img src="./assets/images/daya-doctor.png" class="rounded-circle img-fluid" alt="Doctor 3">
+                        </div>
+                        <!-- Testimonial text on the right side -->
+                        <div class="col-md-8">
+                            <blockquote class="blockquote">
+                                <p>"Dr. Lee's expertise in orthopedics gave me confidence, and the results of my surgery exceeded my expectations."</p>
+                                <footer class="blockquote-footer">Dr. Sarah Lee</footer>
+                                <p class="mt-2 text-muted">Orthopedic surgeon known for minimally invasive techniques and personalized patient care.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- CSS -->
+<style>
+    #testimonials .carousel-item {
+        padding: 30px;
+    }
+
+    #testimonials .img-fluid {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    #testimonials .blockquote {
+        font-size: 1.1rem;
+        font-style: italic;
+    }
+
+    #testimonials .blockquote-footer {
+        font-weight: bold;
+        color: #20c997;
+    }
+</style>
+
+<!-- Call-to-Action Section -->
+<section class="cta-section text-center py-5" id="contact">
+    <div class="container">
+        <div class="cta-content">
+            <h3>Want to make an appointment easily?</h3>
+            <a href="#" class="btn btn-light cta-button">Contact Here</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-light py-5">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Branding and Description -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h4 class="footer-brand">Daya<span class="highlight">Clinic</span></h4>
+                <p>We will always give our patients the best in order to get the best experience.</p>
+                <p>Follow us on social:</p>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Services Links -->
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h5>Services</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Doctor Consultation</a></li>
+                    <li><a href="#">Observation</a></li>
+                    <li><a href="#">Lab Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Links -->
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h5>Company</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Policies Links -->
+            <div class="col-md-2">
+                <h5>Policies</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Licenses</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- CSS -->
+<style>
+    /* Call-to-Action Section */
+    .cta-section {
+        background-color: #20c997;
+        color: #fff;
+        padding: 40px 20px;
+        border-radius: 15px;
+        max-width: 600px;
+        margin: -30px auto 0 auto; /* Adjusts overlap onto footer */
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-content h3 {
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        background-color: #fff;
+        color: #20c997;
+        padding: 10px 30px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* Footer Styles */
+    .footer {
+        background: linear-gradient(to bottom, #e0f7fa, #cfd8dc);
+        color: #333;
+        padding: 100px 0; /* Increases footer height */
+    }
+
+    .footer .footer-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .footer .highlight {
+        color: #20c997;
+    }
+
+    .footer p {
+        margin: 10px 0;
+    }
+
+    .footer h5 {
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .footer ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer ul li a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer ul li a:hover {
+        color: #20c997;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+        color: #333;
+        margin-right: 15px;
+        text-decoration: none;
+    }
+
+    .social-icons a:hover {
+        color: #20c997;
+    }
+</style>
+
+<!-- Font Awesome for Social Icons -->
+<script src="https://kit.fontawesome.com/a6d3690513.js" crossorigin="anonymous"></script>
+<!-- Bootstrap JS (necessary for carousel) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

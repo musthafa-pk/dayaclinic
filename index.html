@@ -14,9 +14,9 @@
 <body>
 
 <!-- Header -->
-<header class="bg-light sticky-top">
+<header class="sticky-top" id="mainHeader">
     <nav class="navbar navbar-expand-lg navbar-light container">
-        <a class="navbar-brand" href="#" style="color: rgba(32, 197, 175, 1); font-weight: bold;">DayaClinic</a>
+        <a class="navbar-brand" href="#">DayaClinic</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,10 +35,24 @@
 
 <!-- Custom CSS -->
 <style>
+    /* Initial transparent background */
+    #mainHeader {
+        transition: background-color 0.3s ease;
+        background-color: transparent;
+    }
+
+    /* Solid background on scroll */
+    #mainHeader.scrolled {
+        background-color: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    }
+
     /* Set brand color */
     .navbar-brand {
+        font-weight: bold;
         color: rgba(32, 197, 175, 1) !important;
     }
+
 
     /* Set menu item hover and active color */
     .navbar-nav .nav-link {
@@ -50,6 +64,19 @@
     }
 </style>
 
+<!-- JavaScript for scroll effect -->
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.getElementById("mainHeader");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+</script>
+
+
 <!-- Hero Section -->
 <section class="text-center py-5" style="background-color: #e9f8f5;" id="hero">
     <div class="container py-5 px-4" style="background-color: #d0f0eb; border-radius: 15px;">
@@ -60,7 +87,7 @@
                 <p style="color: #6c757d;">
                     We provide you with thorough health check-ups and help you in the process of maintaining overall health.
                 </p>
-                <button class="btn" style="background-color: #00c58d; color: white; padding: 10px 20px; border-radius: 5px;">
+                <button class="btn">
                     Book Appointments
                 </button>
             </div>
@@ -103,31 +130,85 @@
 
 <!-- About Section -->
 <section class="py-5 bg-light" id="about">
-    <div class="container">
-        <h2 class="text-center mb-4">About Daya Clinic</h2>
-        <p class="lead text-center mb-5">
-            At Daya, we provide you the best healthcare services. Whether it be a Doctor Consultation or any Lab Services, we ensure you with the best quality. Our top priority is to provide exceptional care, safety, and integrity. We ensure that every diagnosis we do is based on honesty and with ethical standards. We assure you that complete care will be accessible at any time and affordable. We focus on the well-being of the patients both physically and emotionally.
+    <div class="mt-4 p-2"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="./assets/images/Rectangle 569.png" class="img-fluid" alt="Clinic Interior">
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <h1>About Daya Clinic</h1>
+                    <p>At Daya, we provide you the best healthcare services. Whether it be a Doctor Consultation or any Lab Services, we ensure you with the best quality. Our top priority is to provide exceptional care, safety and integrity. We ensure that every diagnosis we do is based on honesty and with ethical standards. We assure you that complete care will be accessible at any time and affordable. We focus on the well-being of the patients both physically and emotionally.</p>
+                </div>
+                <div class="row">
+                    <h1>image of lenght</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        image 1
+                    </div>
+                    <div class="col-md-9">
+                        image 2
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  id="services"></div>
+</section>
+
+
+
+<!-- Services Section -->
+<section class="bg-light py-5 mt-4">
+    <div class="container text-center">
+        <!-- Section Title -->
+        <h2 class="mb-3">
+            The <span style="color: rgba(32, 197, 175, 1);">Best Quality</span> Service <br> For Your Family
+        </h2>
+        <p class="mb-5 custom-paragraph">
+            Our best team doctor with complete and modern facilities will keep you healthy or return you to health from sick.
         </p>
 
-        <div class="row g-4 align-items-center">
-            <div class="col-md-6">
-                <div class="oval-image large">
-                    <img src="image1.jpg" class="img-fluid" alt="Clinic Interior">
+        <!-- Service Boxes -->
+        <div class="row">
+            <!-- Doctor Consultation -->
+            <div class="col-md-4 mb-4">
+                <div class="p-4 box-wrap-1 h-100">
+                    <div class="image mb-3">
+                        <img src="./assets/images/Ellipse 350.png" alt="Doctor Consultation" class="rounded-circle" width="80">
+                    </div>
+                    <h4>Doctor Consultation</h4>
+                    <p class="text-muted text-start">
+                        Regular check-ups and consultations to maintain and improve your overall health and well-being. Book your consultation today for a better treatment plan. Our doctors will provide you with an accurate diagnosis by evaluating your symptoms alongside your health history.
+                    </p>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="oval-image small">
-                            <img src="image2.jpg" class="img-fluid" alt="Doctor Consultation">
-                        </div>
+            <!-- Observation -->
+            <div class="col-md-4 mb-4">
+                <div class="p-4 box-wrap-2 h-100">
+                    <div class="image mb-3">
+                        <img src="./assets/images/Ellipse 351.png" alt="Observation" class="rounded-circle" width="80">
                     </div>
-                    <div class="col-12">
-                        <div class="oval-image small">
-                            <img src="image3.jpg" class="img-fluid" alt="Surgical Operation">
-                        </div>
+                    <h4>Observation</h4>
+                    <p class="text-muted text-start">
+                        Regular check-ups and consultations to maintain and improve your overall health and well-being. Book your consultation today for a better treatment plan. Our doctors will provide you with an accurate diagnosis by evaluating your symptoms alongside your health history.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Lab Services -->
+            <div class="col-md-4 mb-4">
+                <div class="p-4 box-wrap-2 h-100">
+                    <div class="image mb-3">
+                        <img src="./assets/images/Ellipse 352.png" alt="Lab Services" class="rounded-circle" width="80">
                     </div>
+                    <h4>Lab Services</h4>
+                    <p class="text-muted text-start">
+                        Regular check-ups and consultations to maintain and improve your overall health and well-being. Book your consultation today for a better treatment plan. Our doctors will provide you with an accurate diagnosis by evaluating your symptoms alongside your health history.
+                    </p>
                 </div>
             </div>
         </div>
@@ -136,66 +217,72 @@
 
 <!-- CSS -->
 <style>
-    .oval-image {
-        position: relative;
-        overflow: hidden;
-        border-radius: 50% / 25%;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Large Image styling */
-    .oval-image.large {
-        width: 100%;
-        padding-top: 75%; /* Adjust height for aspect ratio */
+    /* Style for each service box */
+    .box-wrap-1 {
+        background-color: rgba(216, 250, 245, 1);
+        border-radius: 10px;
     }
 
-    /* Small Image styling */
-    .oval-image.small {
-        width: 100%;
-        padding-top: 56.25%; /* Adjust height for aspect ratio */
+    .box-wrap-2 {
+        background-color: rgba(239, 239, 239, 1);
+        border-radius: 10px;
     }
 
-    .oval-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      /* Hover effect */
+      .box-wrap-1:hover {
+        background-color: rgba(176, 240, 220, 1); /* Lighter color on hover */
+    }
+
+    .box-wrap-2:hover {
+        background-color: rgba(220, 220, 220, 1); /* Lighter color on hover */
+    }
+
+
+    /* Image styling */
+    .image img {
+        display: inline-block;
+    }
+
+    /* Text styling */
+    h4 {
+        font-weight: bold;
+    }
+    .custom-paragraph {
+        max-width: 600px; /* Adjust width to control line breaks */
+        margin: 0 auto; /* Center the paragraph */
+        color: rgba(164, 164, 164, 1);
+        font-weight: 400;
+        size: 16px;
+        line-height: 26px;
+
     }
 </style>
 
-
-
-
-<!-- Services Section -->
-<section class="bg-light py-5" id="services">
-    <div class="container text-center">
-        <h2>The Best Quality Service For Your Family</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <h4>Doctor Consultation</h4>
-                <p>Personalized medical consultation for a range of health needs.</p>
-            </div>
-            <div class="col-md-4">
-                <h4>Observation</h4>
-                <p>Regular monitoring and assessment of patient health.</p>
-            </div>
-            <div class="col-md-4">
-                <h4>Lab Services</h4>
-                <p>Advanced laboratory testing services.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Appointment Section -->
 <section class="py-5" id="appointment">
-    <div class="container text-center">
-        <h2>Easy same or Next-day Appointments</h2>
-        <p>Book an appointment with our best doctors at your convenience.</p>
-        <button class="btn btn-outline-primary">See More</button>
-        <button class="btn btn-primary">Make an Appointment</button>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="./assets/images/ladydoc.png" class="img-fluid" alt="Clinic Interior">
+            </div>
+            <div class="col-md-6">
+                <h2>Easy  <span style="color: rgba(32, 197, 175, 1);">same</span> or Next-Day Appointments</h2>
+                <p class="custom-paragraph">Easily make appointments with our best doctors for your family, same day or next day.</p>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <a href="#" class="btn btn-primary">Easy Online Booking</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#" class="btn btn-secondary">View Test Results</a>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="#" class="btn btn-outline-primary">See More</a>
+                    <a href="#" class="btn btn-primary">Make an Appointment</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -359,117 +446,380 @@
 
 <!-- Test Listings Section -->
 <section class="py-5">
-    <div class="container">
-        <h2 class="text-center">Lab Services</h2>
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
+            <div class="col-12">
+                <h2 class="text-center" style="color: rgba(32, 197, 175, 1);">Lab Services</h2>
+                <p class="text-center">Our lab services</p>
             </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
+        </div>
+    
+        <div class="row mt-5">
+            <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between"> <!-- Flex container for even spacing -->
+
+                <!-- Urine Routine Examination -->
+                <div class="test-box-wrap flex-fill">
+                    <h4>Urine Routine Examination</h4>
+                    <ul class="bullet-custom">
+                        <li>Physical Examination</li>
+                        <li>Clinical Examination
+                            <ul>
+                                <li>Albumin</li>
+                                <li>Sugar</li>
+                            </ul>
+                        </li>
+                        <li>Microscopic Examination
+                            <ul>
+                                <li>Pus Cells</li>
+                                <li>RBC</li>
+                                <li>Epi Cells</li>
+                                <li>Calcium Oxalate</li>
+                                <li>Bacteria</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            
+
+                <!-- Lipid Profile -->
+                <div class="test-box-wrap flex-fill">
+                    <h4>Lipid Profile</h4>
+                    <ul class="bullet-custom">
+                        <li>Total Cholesterol</li>
+                        <li>Triglycerides</li>
+                        <li>HDL</li>
+                        <li>LDL</li>
+                        <li>VLDL</li>
+                    </ul>
+                </div>
+
+                <!-- Renal Function Test -->
+                <div class="test-box-wrap flex-fill">
+                    <h4>Renal Function Test</h4>
+                    <ul class="bullet-custom">
+                        <li>Urea</li>
+                        <li>Creatinine</li>
+                        <li>Uric Acid</li>
+                    </ul>
+                </div>
+
+                <!-- Thyroid Function Test -->
+                <div class="test-box-wrap flex-fill">
+                    <h4>Thyroid Function Test</h4>
+                    <ul class="bullet-custom">
+                        <li>T3</li>
+                        <li>T4</li>
+                        <li>TSH</li>
+                    </ul>
+                </div>
+
+                <!-- Blood Group RH -->
+                <div class="test-box-wrap flex-fill">
+                    <h4>Blood Group RH</h4>
+                    <ul class="bullet-custom">
+                        <li>ECG</li>
+                        <li>Blood Pressure</li>
+                        <li>Doctor Consultation</li>
+                    </ul>
+                </div>
+
             </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h4>Complete Blood Count (CBC)</h4>
-                <ul>
-                    <li>Hemoglobin</li>
-                    <li>WBC Count</li>
-                    <li>Platelet Count</li>
-                    <!-- More items -->
-                </ul>
-            </div>
-            <!-- Repeat for other tests as needed -->
         </div>
     </div>
+
+    <!-- Original Test Listings -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between">
+                
+                <div class="test-box-wrap flex-fill"> <!-- Complete Blood Count (CBC) box -->
+                    <h4>Complete Blood Count (CBC)</h4>
+                    <ul class="bullet-custom">
+                        <li>Haemoglobin</li>
+                        <li>Total WBC</li>
+                        <li>Differential Count</li>
+                        <li>Platelet</li>
+                        <li>RBC</li>
+                        <li>PVC</li>
+                        <li>MCV</li>
+                        <li>MCHC</li>
+                        <li>ESR</li>
+                    </ul>
+                </div>
+        
+                <div class="test-box-wrap flex-fill"> <!-- Liver Function Test (LFT) box -->
+                    <h4>Liver Function Test (LFT)</h4>
+                    <ul class="bullet-custom">
+                        <li>S. Bilirubin(T)</li>
+                        <li>Bilirubin(D)</li>
+                        <li>SGPT</li>
+                        <li>SGOT</li>
+                        <li>Alkaline Phosphatase</li>
+                        <li>Total Protein</li>
+                        <li>Globulin</li>
+                        <li>A/G Ratio</li>
+                    </ul>
+                </div>
+
+                <div class="d-flex flex-column gap-3 flex-fill"> <!-- Column containing Serum Electrolytes and Blood Sugar -->
+                    <div class="test-box-wrap"> <!-- Serum Electrolytes -->
+                        <h4>Serum Electrolytes</h4>
+                        <ul class="bullet-custom">
+                            <li>Sodium(Na+)</li>
+                            <li>Potassium(K+)</li>
+                        </ul>
+                    </div>
+                
+                    <div class="test-box-wrap"> <!-- Blood Sugar -->
+                        <h4>Blood Sugar</h4>
+                        <ul class="bullet-custom">
+                            <li>Glucose(Fasting)</li>
+                            <li>Glucose(PP)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+   <!-- Mini Package Section -->
+<section class="py-5">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="mini-package-wrap d-flex flex-wrap align-items-start gap-3">
+                    
+                    <!-- Left Side - Image Placeholder -->
+                    <div class="image-section">
+                        <img src="./assets/images/docgp.png" alt="Package Image" class="package-image">
+                    </div>
+
+                    <!-- Right Side - Content -->
+                    <div class="content-section">
+                        <!-- Clinic and Package Title -->
+                        <div>
+                            <span class="clinic-name">Daya <span style="color: #00c58d;">Clinic</span></span>
+                            <h2 class="package-title">Mini Package</h2>
+                        </div>
+
+                        <!-- Price Badge -->
+                        <div class="price-badge">
+                            <span>1050/</span>
+                            <span>549</span>
+                        </div>
+
+                        <!-- Test List Columns -->
+                        <div class="test-list-columns d-flex flex-wrap">
+                            <div class="test-box">
+                                <h4>URINE ROUTINE EXAMINATION</h4>
+                                <ul class="bullet-custom">
+                                    <li>Physical examination</li>
+                                    <li>Clinical Examination
+                                        <ul>
+                                            <li>Albumin</li>
+                                            <li>Sugar</li>
+                                        </ul>
+                                    </li>
+                                    <li>Microscopic Examination
+                                        <ul>
+                                            <li>Pus cells</li>
+                                            <li>RBC</li>
+                                            <li>Epi cells</li>
+                                            <li>Calcium Oxalate</li>
+                                            <li>Bacteria</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-box">
+                                <h4>LIPID PROFILE</h4>
+                                <ul class="bullet-custom">
+                                    <li>Total Cholesterol</li>
+                                    <li>Triglycerides</li>
+                                    <li>HDL</li>
+                                    <li>LDL</li>
+                                    <li>VLDL</li>
+                                </ul>
+                            </div>
+                            <div class="test-box">
+                                <h4>RENAL FUNCTION TEST</h4>
+                                <ul class="bullet-custom">
+                                    <li>Creatinine</li>
+                                    <li>Uric Acid</li>
+                                </ul>
+                            </div>
+                            <div class="test-box">
+                                <h4>BLOOD SUGAR</h4>
+                                <ul class="bullet-custom">
+                                    <li>Glucose(Fasting)</li>
+                                    <li>Glucose(PP)</li>
+                                </ul>
+                            </div>
+                            <div class="test-box">
+                                <h4>BLOOD GROUP RH</h4>
+                                <ul class="bullet-custom">
+                                    <li>ECG</li>
+                                    <li>Blood Pressure</li>
+                                    <li>Doctor Consultation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="testimonials"></div>
 </section>
 
+<style>
+    .mini-package-wrap {
+        width: 100%;
+        padding: 25px;
+        background: rgba(216, 250, 245, 1);
+        border-radius: 15px;
+    }
+
+    .image-section {
+        flex-basis: 35%;
+        max-width: 35%;
+    }
+
+    .package-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .content-section {
+        flex-basis: 60%;
+        max-width: 60%;
+        position: relative;
+    }
+
+    .clinic-name {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .package-title {
+        font-size: 24px;
+        color: #00c58d;
+    }
+
+    .price-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: red;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .test-list-columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .test-box {
+        width: calc(50% - 20px); /* Adjust the width for a balanced layout */
+        margin-bottom: 20px;
+    }
+
+    .test-box h4 {
+        color: #00c58d;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .bullet-custom {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .bullet-custom li {
+        position: relative;
+        color: black;
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    .bullet-custom li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: rgba(32, 197, 175, 1);
+        border-radius: 50%;
+    }
+</style>
+
+
+<style>
+    .test-box-wrap {
+        padding: 25px;
+        background: rgba(216, 250, 245, 1);
+        border-radius: 10px;
+        margin-bottom: 20px; /* Add margin at the bottom of each box */
+        flex: 1;
+    }
+    
+    .test-box-wrap h4 {
+        color: #00c58d;
+    }
+
+    .bullet-custom {
+        list-style: none; /* Remove default bullets */
+        padding-left: 0; /* Remove padding */
+    }
+
+    .bullet-custom li {
+        position: relative; /* Position for the pseudo-element */
+        color: black; /* Set text color to black */
+        padding-left: 20px; /* Space for custom bullet */
+    }
+
+    .bullet-custom li::before {
+        content: ''; /* Create a custom bullet */
+        position: absolute; /* Position it absolutely */
+        left: 0; /* Align it to the left */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust vertical alignment */
+        width: 10px; /* Width of the custom bullet */
+        height: 10px; /* Height of the custom bullet */
+        background-color: rgba(32, 197, 175, 1); /* Background color for bullet */
+        border-radius: 50%; /* Make it circular */
+    }
+    
+    /* Additional responsive styling */
+    .d-flex {
+        gap: 10px; /* Add space between flex items */
+    }
+</style>
+
+
+
 <!-- Testimonials Section -->
-<section class="bg-light py-5" id="testimonials">
-    <div class="container">
-        <h2 class="text-center mb-5">Testimonials</h2>
+<section class="bg-light py-5 mb-5" >
+    <div class="container mt-4 mb-5">
+        <h2 class="text-center" style="color: rgba(32, 197, 175, 1);">Testimonials</h2>
         
         <!-- Carousel -->
         <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -565,20 +915,16 @@
     }
 </style>
 
-<!-- Call-to-Action Section -->
-<section class="cta-section text-center py-5" id="contact">
+<!-- Footer with Floating CTA at the Top -->
+<footer class="footer bg-light py-5 mt-5">
     <div class="container">
-        <div class="cta-content">
+        <!-- CTA Content Positioned Outside the Footer -->
+        <div class="cta-content text-center" id="contact">
             <h3>Want to make an appointment easily?</h3>
             <a href="#" class="btn btn-light cta-button">Contact Here</a>
         </div>
-    </div>
-</section>
 
-<!-- Footer -->
-<footer class="footer bg-light py-5">
-    <div class="container">
-        <div class="row text-center text-md-start">
+        <div class="row text-center text-md-start mt-5">
             <!-- Branding and Description -->
             <div class="col-md-4 mb-4 mb-md-0">
                 <h4 class="footer-brand">Daya<span class="highlight">Clinic</span></h4>
@@ -627,17 +973,31 @@
 
 <!-- CSS -->
 <style>
-    /* Call-to-Action Section */
-    .cta-section {
-        background-color: #20c997;
+    @keyframes shake {
+        0% { transform: translate(1px, 0); }
+        25% { transform: translate(-1px, 0); }
+        50% { transform: translate(1px, 0); }
+        75% { transform: translate(-1px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+
+    /* Floating CTA Content */
+    .cta-content {
+        background-color: rgba(32, 197, 175, 1);
         color: #fff;
         padding: 40px 20px;
         border-radius: 15px;
-        max-width: 600px;
-        margin: -30px auto 0 auto; /* Adjusts overlap onto footer */
+        max-width: 500px;
+        margin: -150px auto 30px auto; /* Positions CTA above footer */
         position: relative;
-        z-index: 1;
+        z-index: 3;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        animation: shake 0.5s ease forwards; /* Initial shake animation */
+    }
+
+    /* Shake effect on hover */
+    .cta-content:hover {
+        animation: shake 0.5s ease forwards; /* Apply shake animation on hover */
     }
 
     .cta-content h3 {
@@ -659,7 +1019,8 @@
     .footer {
         background: linear-gradient(to bottom, #e0f7fa, #cfd8dc);
         color: #333;
-        padding: 100px 0; /* Increases footer height */
+        padding: 150px 0; /* Adjusts footer height */
+        position: relative;
     }
 
     .footer .footer-brand {
@@ -711,8 +1072,12 @@
     }
 </style>
 
+
 <!-- Font Awesome for Social Icons -->
 <script src="https://kit.fontawesome.com/a6d3690513.js" crossorigin="anonymous"></script>
+
+
+
 <!-- Bootstrap JS (necessary for carousel) -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>

@@ -141,45 +141,105 @@
             </div>
         </div>
     </div>
+    <div id="about"></div>
 </section>
 
 
-
 <!-- About Section -->
-<section class="py-5 bg-light" id="about">
-    <div class="mt-4 p-2"></div>
+<section class="py-3 bg-light mt-5">
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-6">
-                <img src="./assets/images/Rectangle 569.png" class="img-fluid" alt="Clinic Interior">
+            <!-- Left side: Large image with full height -->
+            <div class="col-md-3 position-relative full-height-container">
+                <img src="./assets/images/a1.jpeg" class="img-fluid main-image" alt="Clinic Interior">
+         
             </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <h1>About Daya Clinic</h1>
-                    <p>At Daya, we provide you the best healthcare services. Whether it be a Doctor Consultation or any Lab Services, we ensure you with the best quality. Our top priority is to provide exceptional care, safety and integrity. We ensure that every diagnosis we do is based on honesty and with ethical standards. We assure you that complete care will be accessible at any time and affordable. We focus on the well-being of the patients both physically and emotionally.</p>
+
+            <!-- Right side: Text and images -->
+            <div class="col-md-9">
+                <!-- Heading and Paragraph -->
+                <div class="mb-4">
+                    <h1>About Daya <span style="color: #00bfbf;">Clinic</span></h1>
+                    <p style="color:rgba(164, 164, 164, 1)">At Daya, we provide you the best healthcare services. Whether it be a Doctor Consultation or any Lab Services, we ensure you with the best quality. Our top priority is to provide exceptional care, safety, and integrity. We ensure that every diagnosis we do is based on honesty and with ethical standards. We assure you that complete care will be accessible at any time and affordable. We focus on the well-being of the patients both physically and emotionally.</p>
                 </div>
-                <div class="row">
-                    <h1>image of lenght</h1>
+
+                <!-- Single Image Row with overlay -->
+                <div class="mb-3 position-relative">
+                    <img src="./assets/images/a2.jpeg" class="img-fluid single-image" alt="Healthcare Service">
+                    
                 </div>
+
+                <!-- Two Images in a Row with overlays -->
                 <div class="row">
-                    <div class="col-md-3">
-                        image 1
+                    <div class="col-3 position-relative">
+                        <img src="./assets/images/a3.jpeg" class="img-fluid small-image" alt="Surgery Preparation">
+                
                     </div>
-                    <div class="col-md-9">
-                        image 2
+                    <div class="col-9 position-relative">
+                        <img src="./assets/images/a4.jpeg" class="img-fluid small-image" alt="Medical Procedure">
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div  id="services"></div>
+    <div id="services"></div>
 </section>
+
+<style>
+
+
+/* Ensure the container for the left-side image takes full height */
+.full-height-container {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Main image on the left side with full height */
+.main-image {
+    border-radius: 20px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%; /* Full width */
+    filter: brightness(0.5);
+}
+
+/* Single image in the second row */
+.single-image {
+    width: 100%;
+    border-radius: 15px;
+    height: 200px; /* Reduce height */
+    object-fit: cover;
+    filter: brightness(0.5); /* Darken the image */
+}
+
+/* Small images in the third row */
+.small-image {
+    width: 100%;
+    height: 200px; /* Reduce height */
+    border-radius: 15px;
+    object-fit: cover;
+    filter: brightness(0.5); /* Darken the image */
+}
+/* Reduce padding for the section */
+.py-5 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Optional: Adjust the container margin to reduce vertical space */
+.mt-5 {
+    margin-top: 2rem !important;
+}
+</style>
+
+
 
 
 
 <!-- Services Section -->
-<section class="bg-light py-5 mt-4">
-    <div class="container text-center">
+<section class="bg-light py-5 mt-5">
+    <div class="container text-center mt-5">
         <!-- Section Title -->
         <h2 class="mb-3">
             The <span style="color: rgba(32, 197, 175, 1);">Best Quality</span> Service <br> For Your Family
@@ -276,32 +336,60 @@
 </style>
 
 <!-- Appointment Section -->
-<section class="py-5" id="appointment">
+<section class="py-5" id="appointment" style="background-color: #f9f9f9; position: relative;">
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-6">
-                <img src="./assets/images/ladydoc.png" class="img-fluid" alt="Clinic Interior">
+            <div class="col-md-6 position-relative">
+                <img src="./assets/images/ladydoc.png" class="img-fluid" alt="Clinic Interior" style="position: absolute; top: -30px; left: 0; right: 0; margin: 0 auto; width: 70%; max-width: 300px; height: auto;">
             </div>
             <div class="col-md-6">
-                <h2>Easy  <span style="color: rgba(32, 197, 175, 1);">same</span> or Next-Day Appointments</h2>
+                <h2>Easy <span style="color: rgba(32, 197, 175, 1);">same</span> or Next-Day Appointments</h2>
                 <p class="custom-paragraph">Easily make appointments with our best doctors for your family, same day or next day.</p>
                 <div class="row mt-3">
                     <div class="col-md-6">
-                        <a href="#" class="btn btn-primary">Easy Online Booking</a>
+                        <a href="#" class="btn btn-primary btn-block">Easy Online Booking</a>
                     </div>
                     <div class="col-md-6">
-                        <a href="#" class="btn btn-secondary">View Test Results</a>
+                        <a href="#" class="btn btn-secondary btn-block">View Test Results</a>
                     </div>
                 </div>
                 <div class="text-center mt-3">
-                    <a href="#" class="btn btn-outline-primary">See More</a>
+                    <a href="#" class="btn btn-outline-primary me-2">See More</a>
                     <a href="#" class="btn btn-primary">Make an Appointment</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    #appointment {
+    background-color: #f9f9f9; /* Light background color */
+    position: relative; /* Allow absolute positioning of image */
+}
+
+#appointment .img-fluid {
+    position: absolute; /* Allows the image to be positioned relative to the column */
+    top: -30px; /* Move image upwards */
+    left: 0; /* Center the image */
+    right: 0;
+    margin: 0 auto; /* Center horizontally */
+    width: 70%; /* Adjust width percentage as needed */
+    max-width: 300px; /* Set a max width to control size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.btn-block {
+    width: 100%; /* Make buttons full-width */
+}
+
+.text-center .btn {
+    margin: 0 5px; /* Add some margin between buttons */
+}
+
+</style>
 
 <!-- Doctor Profile Carousel Section -->
 <section class="doctor-profile py-5">
@@ -310,30 +398,24 @@
             <h6 class="text-info">Team Doctor</h6>
             <h2>Meet Our <span class="text-success">Specialists</span></h2>
         </div>
-        <div id="doctorCarousel" class="carousel slide mt-4" data-ride="carousel">
+        <div id="doctorCarousel" class="carousel slide mt-4" data-ride="carousel" data-interval="3000" data-pause="hover">
             <div class="carousel-inner">
                 <!-- First Doctor Profile -->
                 <div class="carousel-item active">
                     <div class="row align-items-center">
-                        <!-- Doctor Image -->
                         <div class="col-md-4 text-center">
                             <div class="profile-image">
                                 <img src="./assets/images/daya-doctor.png" alt="Doctor Image" class="img-fluid rounded shadow">
                                 <p class="mt-3">Doctor Profile</p>
                             </div>
                         </div>
-                        <!-- Doctor Details -->
                         <div class="col-md-8">
                             <h4 class="text-primary">Daya Clinic</h4>
                             <h3 class="text-dark">DoctorName</h3>
                             <p><strong>MBBS, FCPS (Pathologist), MD (Pathology)</strong></p>
                             <p><a href="#" class="text-success">Pathology Specialist (3891 Ranchview Dr. Richard, Delhi 134234)</a></p>
                             <h5 class="text-muted">Department of Pathology</h5>
-                            <p class="text-secondary">
-                                Lorem ipsum dolor sit amet consectetur. Id diam adipiscing faucibus pellentesque blandit molestie velit posuere. 
-                                Libero felis nisl amet habitant enim a nunc duis. Eilt purus aliquet risus urna mi ac consequat etiam lectus. 
-                                Ut netus erat aenean ut amet.
-                            </p>
+                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur...</p>
                             <a href="#" class="btn btn-success">Make an Appointment</a>
                         </div>
                     </div>
@@ -341,123 +423,111 @@
                 <!-- Second Doctor Profile -->
                 <div class="carousel-item">
                     <div class="row align-items-center">
-                        <!-- Doctor Image -->
                         <div class="col-md-4 text-center">
                             <div class="profile-image">
                                 <img src="./assets/images/another-doctor.png" alt="Another Doctor" class="img-fluid rounded shadow">
                                 <p class="mt-3">Doctor Profile</p>
                             </div>
                         </div>
-                        <!-- Doctor Details -->
                         <div class="col-md-8">
                             <h4 class="text-primary">Daya Clinic</h4>
                             <h3 class="text-dark">Another Doctor</h3>
                             <p><strong>MBBS, FCPS (Cardiologist)</strong></p>
                             <p><a href="#" class="text-success">Cardiology Specialist (1234 Health St, Delhi 134234)</a></p>
                             <h5 class="text-muted">Department of Cardiology</h5>
-                            <p class="text-secondary">
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
+                            <p class="text-secondary">Sed do eiusmod tempor incididunt ut labore...</p>
                             <a href="#" class="btn btn-success">Make an Appointment</a>
                         </div>
                     </div>
                 </div>
-                <!-- Add more doctor profiles as needed -->
+                <!-- Third Doctor Profile -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center">
+                            <div class="profile-image">
+                                <img src="./assets/images/third-doctor.png" alt="Third Doctor" class="img-fluid rounded shadow">
+                                <p class="mt-3">Doctor Profile</p>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h4 class="text-primary">Daya Clinic</h4>
+                            <h3 class="text-dark">Third Doctor</h3>
+                            <p><strong>MBBS, FCPS (Neurologist)</strong></p>
+                            <p><a href="#" class="text-success">Neurology Specialist (5678 Health St, Delhi 134234)</a></p>
+                            <h5 class="text-muted">Department of Neurology</h5>
+                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur...</p>
+                            <a href="#" class="btn btn-success">Make an Appointment</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- Carousel indicators (dots) -->
-            <ol class="carousel-indicators">
-                <li data-target="#doctorCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#doctorCarousel" data-slide-to="1"></li>
-                <!-- Add more indicators for additional doctors -->
-            </ol>
 
             <!-- Carousel controls -->
-            <div class="carousel-controls">
-                <a class="carousel-control-prev" href="#doctorCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#doctorCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+            <a class="carousel-control-prev" href="#doctorCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#doctorCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 </section>
 
-<!-- CSS -->
+
 <style>
     .doctor-profile {
-        background-color: #f9f9f9;
-    }
+    background-color: #f9f9f9;
+}
 
-    .doctor-profile h6 {
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #20c997;
-        margin-bottom: 10px;
-    }
+.doctor-profile h6 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #20c997;
+    margin-bottom: 10px;
+}
 
-    .doctor-profile h2 {
-        font-weight: bold;
-    }
+.doctor-profile h2 {
+    font-weight: bold;
+}
 
-    .profile-image img {
-        max-width: 100%;
-        border-radius: 10px;
-    }
+.profile-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
 
-    .profile-image p {
-        font-weight: bold;
-        color: #555;
-    }
+.profile-image p {
+    font-weight: bold;
+    color: #555;
+}
 
-    .doctor-profile h4 {
-        font-size: 1.3rem;
-        font-weight: 600;
-    }
+.doctor-profile h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
 
-    .doctor-profile h3 {
-        font-size: 1.8rem;
-        font-weight: bold;
-    }
+.doctor-profile h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
 
-    .doctor-profile a.btn-success {
-        background-color: #20c997;
-        color: #fff;
-        border-radius: 5px;
-        padding: 10px 25px;
-        text-transform: uppercase;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
-    }
+.doctor-profile a.btn-success {
+    background-color: #20c997;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
 
-    .doctor-profile a.btn-success:hover {
-        background-color: #17a589;
-        color: #fff;
-    }
+.doctor-profile a.btn-success:hover {
+    background-color: #17a589;
+    color: #fff;
+}
 
-    .carousel-indicators {
-        bottom: -40px; /* Adjust position of dots */
-    }
-
-    .carousel-controls {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 5%; /* Adjust width of control buttons */
-    }
 </style>
-
 
 
 
@@ -834,7 +904,7 @@
 
 
 <!-- Testimonials Section -->
-<section class="bg-light py-5 mb-5" >
+<section class="bg-light py-5 mb-5 mt-5" >
     <div class="container mt-4 mb-5">
         <h2 class="text-center" style="color: rgba(32, 197, 175, 1);">Testimonials</h2>
         
@@ -941,96 +1011,107 @@
             <a href="#" class="btn btn-light cta-button">Contact Here</a>
         </div>
 
+        <!-- Other Footer Content Here -->
         <div class="row text-center text-md-start mt-5">
-            <!-- Branding and Description -->
-            <div class="col-md-4 mb-4 mb-md-0">
-                <h4 class="footer-brand">Daya<span class="highlight">Clinic</span></h4>
-                <p>We will always give our patients the best in order to get the best experience.</p>
-                <p>Follow us on social:</p>
-                <!-- Social Media Icons -->
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-
-            <!-- Services Links -->
-            <div class="col-md-2 mb-4 mb-md-0">
-                <h5>Services</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">Doctor Consultation</a></li>
-                    <li><a href="#">Observation</a></li>
-                    <li><a href="#">Lab Services</a></li>
-                </ul>
-            </div>
-
-            <!-- Company Links -->
-            <div class="col-md-2 mb-4 mb-md-0">
-                <h5>Company</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- Policies Links -->
-            <div class="col-md-2">
-                <h5>Policies</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Licenses</a></li>
-                </ul>
-            </div>
+            <!-- Footer Columns -->
         </div>
     </div>
 </footer>
 
+<script>
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Add event listener for scroll event
+    window.addEventListener('scroll', function() {
+        const ctaContent = document.querySelector('.cta-content');
+        
+        // Check if .cta-content is in the viewport
+        if (isInViewport(ctaContent)) {
+            // Add class to trigger popup effect
+            ctaContent.classList.add('popup');
+        }
+    });
+</script>
+
 <!-- CSS -->
 <style>
-    @keyframes shake {
-        0% { transform: translate(1px, 0); }
-        25% { transform: translate(-1px, 0); }
-        50% { transform: translate(1px, 0); }
-        75% { transform: translate(-1px, 0); }
-        100% { transform: translate(0, 0); }
-    }
+ @keyframes shake {
+    0% { transform: translate(2px, 0); }
+    25% { transform: translate(-2px, 0); }
+    50% { transform: translate(4px, 0); }
+    75% { transform: translate(-4px, 0); }
+    100% { transform: translate(0, 0); }
+}
 
-    /* Floating CTA Content */
-    .cta-content {
-        background-color: rgba(32, 197, 175, 1);
-        color: #fff;
-        padding: 40px 20px;
-        border-radius: 15px;
-        max-width: 500px;
-        margin: -150px auto 30px auto; /* Positions CTA above footer */
-        position: relative;
-        z-index: 3;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        animation: shake 0.5s ease forwards; /* Initial shake animation */
-    }
+@keyframes big-shake {
+    0% { transform: translate(5px, 0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(10px, 0); }
+    75% { transform: translate(-10px, 0); }
+    100% { transform: translate(0, 0); }
+}
 
-    /* Shake effect on hover */
-    .cta-content:hover {
-        animation: shake 0.5s ease forwards; /* Apply shake animation on hover */
+@keyframes popup {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
     }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
-    .cta-content h3 {
-        font-weight: 500;
-        margin-bottom: 20px;
-    }
+/* Floating CTA Content */
+.cta-content {
+    background-color: rgba(32, 197, 175, 1);
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: -150px auto 30px auto;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.8); /* Start with smaller scale */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
 
-    .cta-button {
-        background-color: #fff;
-        color: #20c997;
-        padding: 10px 30px;
-        border-radius: 5px;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-decoration: none;
-    }
+.cta-content.popup {
+    opacity: 1; /* Make visible */
+    animation: popup 0.5s ease-out forwards; /* Apply the popup effect */
+}
+
+/* Bigger shake effect on hover */
+.cta-content:hover {
+    animation: big-shake 0.7s ease forwards; /* Apply bigger shake animation on hover */
+}
+
+.cta-content h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #20c997;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 
     /* Footer Styles */
     .footer {

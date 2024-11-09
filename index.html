@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,702 +9,783 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/fav/favicon-16x16.png">
     <link rel="manifest" href="./assets/fav/site.webmanifest">
     <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </head>
+
 <body>
     <div class="loader" id="loader">Loading...</div>
 
-<div id="content" style="display: none;">
-    
-<!-- Header -->
-<header class="sticky-top" id="mainHeader">
-    <nav class="navbar navbar-expand-lg navbar-light container">
-        <a class="navbar-brand" href="#">DayaClinic</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="#">View Result</a></li> -->
+    <div id="content" style="display: none;">
 
-                <!-- Dropdown Menu for Services -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Services
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                    <li><a class="dropdown-item" href="#services">Our services</a></li>
-                    <li><a class="dropdown-item" href="#labservices">Lab services</a></li>
-                </ul>
-            </li>
-
-
-
-                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
-<!-- Custom CSS -->
-<style>
-    /* Initial transparent background */
-    #mainHeader {
-        transition: background-color 0.3s ease;
-        background-color: transparent;
-    }
-
-    /* Solid background on scroll */
-    #mainHeader.scrolled {
-        background-color: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    }
-
-    /* Set brand color */
-    .navbar-brand {
-        font-weight: bold;
-        color: rgba(32, 197, 175, 1) !important;
-    }
-
-
-    /* Set menu item hover and active color */
-    .navbar-nav .nav-link {
-        color: black;
-    }
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active {
-        color: rgba(32, 197, 175, 1) !important;
-    }
-</style>
-
-<!-- JavaScript for scroll effect -->
-<script>
-    window.addEventListener("scroll", function () {
-        const header = document.getElementById("mainHeader");
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    });
-
-    // Close the navbar when a link is clicked (on mobile)
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     const navLinks = document.querySelectorAll(".nav-link");
-    //     const navbarCollapse = document.getElementById("navbarNav");
-
-    //     navLinks.forEach(link => {
-    //         link.addEventListener("click", function () {
-    //             const navbarToggler = document.querySelector(".navbar-toggler");
-    //             if (window.getComputedStyle(navbarToggler).display !== "none") {
-    //                 // Close the navbar
-    //                 navbarToggler.click();
-    //             }
-    //         });
-    //     });
-    // });
-</script>
-
-
-
-<!-- Hero Section -->
-<section class="text-center py-5" style="background-color: #e9f8f5;" id="hero">
-    <div class="container py-5 px-4" style="background-color: #d0f0eb; border-radius: 15px;">
-        <div class="row align-items-center">
-            <!-- Left Column: Text and Button -->
-            <div class="col-md-6 text-start">
-                <h1 style="font-weight: 700;width: 600px;font-size: 50px;">Your Health is Our Priority</h1>
-                <p style="color: #6c757d;">
-                    We provide you with thorough health check-ups and help you in the process of maintaining overall health.
-                </p>
-                <button class="btn">
-                    Book Appointments
+        <!-- Header -->
+        <header class="sticky-top" id="mainHeader">
+            <nav class="navbar navbar-expand-lg navbar-light container">
+                <a class="navbar-brand" href="#">DayaClinic</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-            </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">View Result</a></li> -->
 
-            <!-- Right Column: Image and Overlays -->
-            <div class="col-md-6 position-relative">
-                <img src="./assets/images/daya-doctor.png" class="img-fluid rounded" alt="Doctor" style="max-width: 90%; border-radius: 10px;">
-                
-                <!-- Overlay: Top Right -->
-                <div class="position-absolute" style="top: 10%; right: 10%;">
-                    <div class="bg-white p-2 rounded shadow-sm" style="text-align: center; width: 100px;">
-                        <img src="./assets/images/lenses.png" alt="Top Icon" width="30">
-                        <p style="font-size: 0.8rem; margin: 5px 0 0; color: #6c757d;">Lorem ipsum</p>
+                        <!-- Dropdown Menu for Services -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="#services">Our services</a></li>
+                                <li><a class="dropdown-item" href="#labservices">Lab services</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Custom CSS -->
+        <style>
+            /* Initial transparent background */
+            #mainHeader {
+                transition: background-color 0.3s ease;
+                background-color: transparent;
+            }
+
+            /* Solid background on scroll */
+            #mainHeader.scrolled {
+                background-color: rgba(255, 255, 255, 0.9);
+                /* Light background with slight transparency */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                /* Optional shadow for depth */
+            }
+
+            /* Set brand color */
+            .navbar-brand {
+                font-weight: bold;
+                color: rgba(32, 197, 175, 1) !important;
+            }
+
+
+            /* Set menu item hover and active color */
+            .navbar-nav .nav-link {
+                color: black;
+            }
+
+            .navbar-nav .nav-link:hover,
+            .navbar-nav .nav-link.active {
+                color: rgba(32, 197, 175, 1) !important;
+            }
+        </style>
+
+        <!-- JavaScript for scroll effect -->
+        <script>
+            window.addEventListener("scroll", function () {
+                const header = document.getElementById("mainHeader");
+                if (window.scrollY > 50) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+
+            // Close the navbar when a link is clicked (on mobile)
+            // document.addEventListener("DOMContentLoaded", function () {
+            //     const navLinks = document.querySelectorAll(".nav-link");
+            //     const navbarCollapse = document.getElementById("navbarNav");
+
+            //     navLinks.forEach(link => {
+            //         link.addEventListener("click", function () {
+            //             const navbarToggler = document.querySelector(".navbar-toggler");
+            //             if (window.getComputedStyle(navbarToggler).display !== "none") {
+            //                 // Close the navbar
+            //                 navbarToggler.click();
+            //             }
+            //         });
+            //     });
+            // });
+        </script>
+
+
+
+        <!-- Hero Section -->
+        <section class="text-center py-5" style="background-color: #e9f8f5;" id="hero">
+            <div class="container py-5 px-4" style="background-color: #d0f0eb; border-radius: 15px;">
+                <div class="row align-items-center">
+                    <!-- Left Column: Text and Button -->
+                    <div class="col-md-6 text-start">
+                        <h1 style="font-weight: 700;font-size: 50px;">Your Health is Our Priority</h1>
+                        <p style="color: #6c757d;">
+                            We provide you with thorough health check-ups and help you in the process of maintaining
+                            overall health.
+                        </p>
+                        <button class="btn">
+                            Book Appointments
+                        </button>
+                    </div>
+
+                    <!-- Right Column: Image and Overlays -->
+                    <div class="col-md-6 position-relative">
+                        <img src="./assets/images/daya-doctor.png" class="img-fluid rounded" alt="Doctor"
+                            style="max-width: 90%; border-radius: 10px;">
+
+                        <!-- Overlay: Top Right -->
+                        <div class="position-absolute" style="top: 10%; right: 10%;">
+                            <div class="position-absolute" style="top: 50%; right: 5%; transform: translateY(-50%);">
+                                <!-- <img src="./assets/images/lenses.png" alt="Right Icon" class="rounded-circle" width="50"> -->
+                                <i class="fas fa-eye rounded-circle"
+                                    style="color: #00bfbf; font-size: 1.5rem; margin-left: 10px;background-color: white;padding: 10px;"></i>
+                            </div>
+                        </div>
+
+                        <!-- Overlay: Bottom Left -->
+                        <!-- Include Font Awesome in your HTML head if not already included -->
+
+
+                        <div class="position-absolute" style="bottom: 10%; left: -10%;">
+                            <div class="bg-white p-2 rounded shadow-sm" style="text-align: center; width: 150px;">
+                                <!-- Example Icons for Heart, Liver, Lungs -->
+                                <i class="fas fa-heart" style="color: #d9534f; font-size: 1.5rem;"></i>
+                                <!-- Heart icon -->
+                                <i class="fas fa-brain"
+                                    style="color: #5bc0de; font-size: 1.5rem; margin-left: 10px;"></i>
+                                <!-- Brain icon -->
+                                <i class="fas fa-stethoscope"
+                                    style="color: #5cb85c; font-size: 1.5rem; margin-left: 10px;"></i>
+                                <!-- Stethoscope icon -->
+                            </div>
+                        </div>
+
+
+                        <!-- Overlay: Center Left -->
+                        <div class="position-absolute" style="top: 50%; left: 5%; transform: translateY(-50%);">
+                            <img src="./assets/images/kidny.png" alt="Left Icon" class="rounded-circle" width="50">
+                        </div>
+
+                        <!-- Overlay: Center Right -->
+                        <div class="position-absolute" style="top: 50%; right: 5%; transform: translateY(-50%);">
+                            <img src="./assets/images/lenses.png" alt="Right Icon" class="rounded-circle" width="50">
+                        </div>
                     </div>
                 </div>
-
-                <!-- Overlay: Bottom Left -->
-                <div class="position-absolute" style="bottom: 10%; left: 10%;">
-                    <div class="bg-white p-2 rounded shadow-sm" style="text-align: center; width: 120px;">
-                        <span class="badge bg-warning text-dark">No. 1</span><br>
-                        <span style="font-weight: 500; font-size: 0.8rem;">Top Best Clinic</span>
-                    </div>
-                </div>
-
-                <!-- Overlay: Center Left -->
-                <div class="position-absolute" style="top: 50%; left: 5%; transform: translateY(-50%);">
-                    <img src="./assets/images/kidny.png" alt="Left Icon" class="rounded-circle" width="50">
-                </div>
-
-                <!-- Overlay: Center Right -->
-                <div class="position-absolute" style="top: 50%; right: 5%; transform: translateY(-50%);">
-                    <img src="./assets/images/lenses.png" alt="Right Icon" class="rounded-circle" width="50">
-                </div>
             </div>
-        </div>
-    </div>
-    <div id="about"></div>
-</section>
+            <div id="about"></div>
+        </section>
 
 
-<!-- About Section -->
-<section class="py-3 bg-light mt-5">
-    <div class="container mt-5">
-        <div class="row">
-            <!-- Left side: Large image with full height -->
-            <div class="col-md-3 position-relative full-height-container">
-                <img src="./assets/images/a1.jpeg" class="img-fluid main-image" alt="Clinic Interior">
-         
-            </div>
-
-            <!-- Right side: Text and images -->
-            <div class="col-md-9">
-                <!-- Heading and Paragraph -->
-                <div class="mb-4">
-                    <h1>About Daya <span style="color: #00bfbf;">Clinic</span></h1>
-                    <p style="color:rgba(164, 164, 164, 1)">At Daya, we provide you with the best healthcare services. Whether it be Doctor Consultations or Lab Services, we ensure the best quality. Our top priority is to provide exceptional care, safety, and integrity. We ensure that every diagnosis we make is based on honesty and ethical standards.We assure you that complete care will be accessible anytime and affordable. We focus on the well-being of the patients, both physically and emotionally.</p>
-                </div>
-
-                <!-- Single Image Row with overlay -->
-                <div class="mb-3 position-relative">
-                    <img src="./assets/images/a2.jpeg" class="img-fluid single-image" alt="Healthcare Service">
-                    
-                </div>
-
-                <!-- Two Images in a Row with overlays -->
+        <!-- About Section -->
+        <section class="py-3 bg-light">
+            <div class="container">
                 <div class="row">
-                    <div class="col-3 position-relative">
-                        <img src="./assets/images/a3.jpeg" class="img-fluid small-image" alt="Surgery Preparation">
-                
+                    <!-- Left side: Large image with full height -->
+                    <div class="col-md-3 position-relative full-height-container">
+                        <img src="./assets/images/a1.jpeg" class="img-fluid main-image" alt="Clinic Interior">
+
                     </div>
-                    <div class="col-9 position-relative">
-                        <img src="./assets/images/a4.jpeg" class="img-fluid small-image" alt="Medical Procedure">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="services"></div>
-</section>
 
-<style>
+                    <!-- Right side: Text and images -->
+                    <div class="col-md-9">
+                        <!-- Heading and Paragraph -->
+                        <div class="mb-4">
+                            <h1>About Daya <span style="color: #00bfbf;">Clinic</span></h1>
+                            <p style="color:rgba(164, 164, 164, 1)">At Daya, we provide you with the best healthcare
+                                services. Whether it be Doctor Consultations or Lab Services, we ensure the best
+                                quality. Our top priority is to provide exceptional care, safety, and integrity. We
+                                ensure that every diagnosis we make is based on honesty and ethical standards.We assure
+                                you that complete care will be accessible anytime and affordable. We focus on the
+                                well-being of the patients, both physically and emotionally.</p>
+                        </div>
 
+                        <!-- Single Image Row with overlay -->
+                        <div class="mb-3 position-relative">
+                            <img src="./assets/images/a2.jpeg" class="img-fluid single-image" alt="Healthcare Service">
 
-/* Ensure the container for the left-side image takes full height */
-.full-height-container {
-    display: flex;
-    align-items: stretch;
-}
+                        </div>
 
-/* Main image on the left side with full height */
-.main-image {
-    border-radius: 20px;
-    object-fit: cover;
-    height: 100%;
-    width: 100%; /* Full width */
-    filter: brightness(0.5);
-}
+                        <!-- Two Images in a Row with overlays -->
+                        <div class="row">
+                            <div class="col-3 position-relative">
+                                <img src="./assets/images/a3.jpeg" class="img-fluid small-image"
+                                    alt="Surgery Preparation">
 
-/* Single image in the second row */
-.single-image {
-    width: 100%;
-    border-radius: 15px;
-    height: 200px; /* Reduce height */
-    object-fit: cover;
-    filter: brightness(0.5); /* Darken the image */
-}
-
-/* Small images in the third row */
-.small-image {
-    width: 100%;
-    height: 200px; /* Reduce height */
-    border-radius: 15px;
-    object-fit: cover;
-    filter: brightness(0.5); /* Darken the image */
-}
-/* Reduce padding for the section */
-.py-5 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-}
-
-/* Optional: Adjust the container margin to reduce vertical space */
-.mt-5 {
-    margin-top: 2rem !important;
-}
-</style>
-
-
-
-
-
-<!-- Services Section -->
-<section class="bg-light py-5 mt-5">
-    <div class="container text-center mt-5">
-        <!-- Section Title -->
-        <h2 class="mb-3">
-            The <span style="color: rgba(32, 197, 175, 1);">Best Quality</span> Service <br> For Your Family
-        </h2>
-        <p class="mb-5 custom-paragraph">
-            Our best team doctor with complete and modern facilities will keep you healthy or return you to health from sick.
-        </p>
-
-        <!-- Service Boxes -->
-        <div class="row">
-            <!-- Doctor Consultation -->
-            <div class="col-md-4 mb-4">
-                <div class="p-4 box-wrap-1 h-100">
-                    <div class="image mb-3">
-                        <img src="./assets/images/Ellipse 350.png" alt="Doctor Consultation" class="rounded-circle" width="80">
-                    </div>
-                    <h4>Doctor Consultation</h4>
-                    <p class="text-muted text-start">
-                        Regular check-ups and consultations to maintain and improve your overall health and well-being. Book your consultation today for a better treatment plan. Our doctors will provide you with an accurate diagnosis by evaluating your symptoms alongside your health history.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Observation -->
-            <div class="col-md-4 mb-4">
-                <div class="p-4 box-wrap-2 h-100">
-                    <div class="image mb-3">
-                        <img src="./assets/images/Ellipse 351.png" alt="Observation" class="rounded-circle" width="80">
-                    </div>
-                    <h4>Observation</h4>
-                    <p class="text-muted text-start">
-                        Regular check-ups and consultations to maintain and improve your overall health and well-being. Book your consultation today for a better treatment plan. Our doctors will provide you with an accurate diagnosis by evaluating your symptoms alongside your health history.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Lab Services -->
-            <div class="col-md-4 mb-4">
-                <div class="p-4 box-wrap-2 h-100">
-                    <div class="image mb-3">
-                        <img src="./assets/images/Ellipse 352.png" alt="Lab Services" class="rounded-circle" width="80">
-                    </div>
-                    <h4>Lab Services</h4>
-                    <p class="text-muted text-start">
-                        Regular check-ups and consultations to maintain and improve your overall health and well-being. Book your consultation today for a better treatment plan. Our doctors will provide you with an accurate diagnosis by evaluating your symptoms alongside your health history.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CSS -->
-<style>
-    /* Style for each service box */
-    .box-wrap-1 {
-        background-color: rgba(216, 250, 245, 1);
-        border-radius: 10px;
-    }
-
-    .box-wrap-2 {
-        background-color: rgba(239, 239, 239, 1);
-        border-radius: 10px;
-    }
-
-      /* Hover effect */
-      .box-wrap-1:hover {
-        background-color: rgba(176, 240, 220, 1); /* Lighter color on hover */
-    }
-
-    .box-wrap-2:hover {
-        background-color: rgba(220, 220, 220, 1); /* Lighter color on hover */
-    }
-
-
-    /* Image styling */
-    .image img {
-        display: inline-block;
-    }
-
-    /* Text styling */
-    h4 {
-        font-weight: bold;
-    }
-    .custom-paragraph {
-        max-width: 600px; /* Adjust width to control line breaks */
-        margin: 0 auto; /* Center the paragraph */
-        color: rgba(164, 164, 164, 1);
-        font-weight: 400;
-        size: 16px;
-        line-height: 26px;
-
-    }
-</style>
-
-<!-- Appointment Section -->
-<section class="py-5" id="appointment" style="background-color: #f9f9f9; position: relative;">
-    <div class="section-wrap">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-6 position-relative">
-                    <img src="./assets/images/ladydoc.png" class="img-fluid" alt="Clinic Interior">
-                </div>
-                <div class="col-md-6">
-                    <h2 class="mt-5">Easy <span style="color: rgba(32, 197, 175, 1);">same</span> or Next-Day Appointments</h2>
-                    <p class="custom-paragraph">Easily make appointments with our best doctors for your family, same day or next day.</p>
-                    
-                    <!-- Button Grid Section -->
-                    <div class="button-grid mt-3">
-                        <a href="#" class="btn btn-primary">Easy Online Booking</a>
-                        <a href="#" class="btn btn-secondary">View Test Results</a>
-                        <!-- <a href="#" class="btn btn-outline-primary">See More</a> -->
-                        <a href="#" class="btn btn-primary">Make an Appointment</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    .section-wrap {
-        background-color: rgba(216, 250, 245, 1);
-        height: 60vh;
-    }
-
-    #appointment {
-        background-color: #f9f9f9; /* Light background color */
-        position: relative; /* Allow absolute positioning of image */
-    }
-
-    #appointment .img-fluid {
-        position: absolute; /* Allows the image to be positioned relative to the column */
-        top: -40px; /* Move image upwards */
-        left: 0; /* Center the image */
-        right: 0;
-        margin: 0 auto; /* Center horizontally */
-        width: 60%; /* Adjust width percentage as needed */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    /* Flexbox Grid Layout for Buttons */
-    .button-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px; /* Space between buttons */
-        justify-content: center; /* Center buttons */
-    }
-
-    .button-grid a {
-        flex: 1 1 45%; /* Two buttons per row (45% width) */
-        text-align: center;
-    }
-
-    @media (max-width: 768px) {
-        .button-grid a {
-            flex: 1 1 100%; /* Full width on smaller screens */
-        }
-    }
-</style>
-
-
-<section class="doctor-profile py-5">
-    <div class="container">
-        <div class="text-center">
-            <!-- <h6 class="text-info" style="color: #20c997 !important;">Team Doctor</h6> -->
-            <h2>Meet Our <span style="color: #00bfbf">Specialists</span></h2>
-        </div>
-        <div id="doctorCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="2500" data-pause="hover">
-            <div class="carousel-inner p-5">
-                <!-- First Doctor Profile -->
-                <div class="carousel-item active">
-                    <div class="row align-items-center">
-                        <div class="col-md-4 text-center">
-                            <div class="profile-image">
-                                <img src="./assets/images/docimage.png" alt="Doctor Image" class="img-fluid rounded shadow">
-                                <p class="mt-3">Dr. Benjamin Luis</p>
+                            </div>
+                            <div class="col-9 position-relative">
+                                <img src="./assets/images/a4.jpeg" class="img-fluid small-image"
+                                    alt="Medical Procedure">
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <h4 class="text-primary" style="color: #00bfbf !important;">Daya Clinic</h4>
-                            <h3 class="text-dark">Dr. Benjamin Luis</h3>
-                            <p><strong>MBBS, FCPS (Pathologist), MD (Pathology)</strong></p>
-                            <p><a href="" class="text-success">Pathology Specialist (3891 Ranchview Dr. Richard, Delhi 134234)</a></p>
-                            <h5 class="text-muted">Department of Pathology</h5>
-                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur...</p>
-                            <a href="#" class="btn btn-success">Make an Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div id="services"></div>
+        </section>
+
+        <style>
+            /* Ensure the container for the left-side image takes full height */
+            .full-height-container {
+                display: flex;
+                align-items: stretch;
+            }
+
+            /* Main image on the left side with full height */
+            .main-image {
+                border-radius: 20px;
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                /* Full width */
+                filter: brightness(0.5);
+            }
+
+            /* Single image in the second row */
+            .single-image {
+                width: 100%;
+                border-radius: 15px;
+                height: 200px;
+                /* Reduce height */
+                object-fit: cover;
+                filter: brightness(0.5);
+                /* Darken the image */
+            }
+
+            /* Small images in the third row */
+            .small-image {
+                width: 100%;
+                height: 200px;
+                /* Reduce height */
+                border-radius: 15px;
+                object-fit: cover;
+                filter: brightness(0.5);
+                /* Darken the image */
+            }
+
+            /* Reduce padding for the section */
+            .py-5 {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+
+            /* Optional: Adjust the container margin to reduce vertical space */
+            .mt-5 {
+                margin-top: 2rem !important;
+            }
+        </style>
+
+
+
+
+
+        <!-- Services Section -->
+        <section class="bg-light py-5">
+            <div class="container text-center mt-5">
+                <!-- Section Title -->
+                <h2 class="mb-3">
+                    The <span style="color: rgba(32, 197, 175, 1);">Best Quality</span> Service <br> For Your Family
+                </h2>
+                <p class="mb-5 custom-paragraph">
+                    Our best team doctor with complete and modern facilities will keep you healthy or return you to
+                    health from sick.
+                </p>
+
+                <!-- Service Boxes -->
+                <div class="row">
+                    <!-- Doctor Consultation -->
+                    <div class="col-md-4 mb-4">
+                        <div class="p-4 box-wrap-1 h-100">
+                            <div class="image mb-3">
+                                <img src="./assets/images/Ellipse 350.png" alt="Doctor Consultation"
+                                    class="rounded-circle" width="80">
+                            </div>
+                            <h4>Doctor Consultation</h4>
+                            <p class="text-muted text-start">
+                                Regular check-ups and consultations to maintain and improve your overall health and
+                                well-being. Book your consultation today for a better treatment plan. Our doctors will
+                                provide you with an accurate diagnosis by evaluating your symptoms alongside your health
+                                history.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Observation -->
+                    <div class="col-md-4 mb-4">
+                        <div class="p-4 box-wrap-2 h-100">
+                            <div class="image mb-3">
+                                <img src="./assets/images/Ellipse 351.png" alt="Observation" class="rounded-circle"
+                                    width="80">
+                            </div>
+                            <h4>Observation</h4>
+                            <p class="text-muted text-start">
+                                Regular check-ups and consultations to maintain and improve your overall health and
+                                well-being. Book your consultation today for a better treatment plan. Our doctors will
+                                provide you with an accurate diagnosis by evaluating your symptoms alongside your health
+                                history.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Lab Services -->
+                    <div class="col-md-4 mb-4">
+                        <div class="p-4 box-wrap-2 h-100">
+                            <div class="image mb-3">
+                                <img src="./assets/images/Ellipse 352.png" alt="Lab Services" class="rounded-circle"
+                                    width="80">
+                            </div>
+                            <h4>Lab Services</h4>
+                            <p class="text-muted text-start">
+                                Regular check-ups and consultations to maintain and improve your overall health and
+                                well-being. Book your consultation today for a better treatment plan. Our doctors will
+                                provide you with an accurate diagnosis by evaluating your symptoms alongside your health
+                                history.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Second Doctor Profile -->
-                <div class="carousel-item">
-                    <div class="row align-items-center">
-                        <div class="col-md-4 text-center">
-                            <div class="profile-image">
-                                <img src="./assets/images/male doctor.png" alt="Another Doctor" class="img-fluid rounded shadow">
-                                <p class="mt-3">Dr. Rohan Mehta</p>
+            </div>
+        </section>
+
+        <!-- CSS -->
+        <style>
+            /* Style for each service box */
+            .box-wrap-1 {
+                background-color: rgba(216, 250, 245, 1);
+                border-radius: 10px;
+            }
+
+            .box-wrap-2 {
+                background-color: rgba(239, 239, 239, 1);
+                border-radius: 10px;
+            }
+
+            /* Hover effect */
+            .box-wrap-1:hover {
+                background-color: rgba(176, 240, 220, 1);
+                /* Lighter color on hover */
+            }
+
+            .box-wrap-2:hover {
+                background-color: rgba(220, 220, 220, 1);
+                /* Lighter color on hover */
+            }
+
+
+            /* Image styling */
+            .image img {
+                display: inline-block;
+            }
+
+            /* Text styling */
+            h4 {
+                font-weight: bold;
+            }
+
+            .custom-paragraph {
+                max-width: 600px;
+                /* Adjust width to control line breaks */
+                margin: 0 auto;
+                /* Center the paragraph */
+                color: rgba(164, 164, 164, 1);
+                font-weight: 400;
+                size: 16px;
+                line-height: 26px;
+
+            }
+        </style>
+
+        <!-- Appointment Section -->
+        <section class="py-5" id="appointment" style="background-color: #f9f9f9; position: relative;">
+            <div class="section-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 position-relative">
+                            <img src="./assets/images/ladydoc.png" class="img-fluid" alt="Clinic Interior">
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="mt-5">Easy <span style="color: rgba(32, 197, 175, 1);">same</span> or Next-Day
+                                Appointments</h2>
+                            <p class="custom-paragraph">Easily make appointments with our best doctors for your family,
+                                same day or next day.</p>
+
+                            <!-- Button Grid Section -->
+                            <div class="button-grid mt-3">
+                                <a href="#" class="btn btn-primary">Easy Online Booking</a>
+                                <a href="#" class="btn btn-secondary">View Test Results</a>
+                                <!-- <a href="#" class="btn btn-outline-primary">See More</a> -->
+                                <a href="#" class="btn btn-primary">Make an Appointment</a>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <h4 class="text-primary"  style="color: #00bfbf !important;">Daya Clinic</h4>
-                            <h3 class="text-dark">Dr. Rohan Mehta </h3>
-                            <p><strong>MBBS, FCPS (Cardiologist)</strong></p>
-                            <p><a href="#" class="text-success">Cardiology Specialist (1234 Health St, Delhi 134234)</a></p>
-                            <h5 class="text-muted">Department of Cardiology</h5>
-                            <p class="text-secondary">Sed do eiusmod tempor incididunt ut labore...</p>
-                            <a href="#" class="btn btn-success">Make an Appointment</a>
-                        </div>
                     </div>
                 </div>
-                <!-- Third Doctor Profile -->
-                <div class="carousel-item">
-                    <div class="row align-items-center">
-                        <div class="col-md-4 text-center">
-                            <div class="profile-image">
-                                <img src="./assets/images/lady-doc.png" alt="Third Doctor" class="img-fluid rounded shadow">
-                                <p class="mt-3">Dr. Aisha Menon</p>
+            </div>
+        </section>
+
+        <style>
+            .section-wrap {
+                background-color: rgba(216, 250, 245, 1);
+                height: 60vh;
+            }
+
+            #appointment {
+                background-color: #f9f9f9;
+                /* Light background color */
+                position: relative;
+                /* Allow absolute positioning of image */
+            }
+
+            #appointment .img-fluid {
+                position: absolute;
+                /* Allows the image to be positioned relative to the column */
+                top: -40px;
+                /* Move image upwards */
+                left: 0;
+                /* Center the image */
+                right: 0;
+                margin: 0 auto;
+                /* Center horizontally */
+                width: 60%;
+                /* Adjust width percentage as needed */
+                height: auto;
+                /* Maintain aspect ratio */
+            }
+
+            /* Flexbox Grid Layout for Buttons */
+            .button-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                /* Space between buttons */
+                justify-content: center;
+                /* Center buttons */
+            }
+
+            .button-grid a {
+                flex: 1 1 45%;
+                /* Two buttons per row (45% width) */
+                text-align: center;
+            }
+
+            @media (max-width: 768px) {
+                .button-grid a {
+                    flex: 1 1 100%;
+                    /* Full width on smaller screens */
+                }
+            }
+        </style>
+
+
+        <section class="doctor-profile py-5">
+            <div class="container">
+                <div class="text-center">
+                    <!-- <h6 class="text-info" style="color: #20c997 !important;">Team Doctor</h6> -->
+                    <h2>Meet Our <span style="color: #00bfbf">Specialists</span></h2>
+                </div>
+                <div id="doctorCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="2500"
+                    data-pause="hover">
+                    <div class="carousel-inner p-5">
+                        <!-- First Doctor Profile -->
+                        <div class="carousel-item active">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/docimage.png" alt="Doctor Image"
+                                            class="img-fluid rounded shadow">
+                                        <p class="mt-3">Dr. Benjamin Luis</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4 class="text-primary" style="color: #00bfbf !important;">Daya Clinic</h4>
+                                    <h3 class="text-dark">Dr. Benjamin Luis</h3>
+                                    <p><strong>MBBS, FCPS (Pathologist), MD (Pathology)</strong></p>
+                                    <p><a href="" class="text-success">Pathology Specialist (3891 Ranchview Dr. Richard,
+                                            Delhi 134234)</a></p>
+                                    <h5 class="text-muted">Department of Pathology</h5>
+                                    <p class="text-secondary">Lorem ipsum dolor sit amet consectetur...</p>
+                                    <a href="#" class="btn btn-success">Make an Appointment</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <h4 class="text-primary"  style="color: #00bfbf !important;">Daya Clinic</h4>
-                            <h3 class="text-dark">Dr. Aisha Menon</h3>
-                            <p><strong>MBBS, FCPS (Neurologist)</strong></p>
-                            <p><a href="#" class="text-success">Neurology Specialist (5678 Health St, Delhi 134234)</a></p>
-                            <h5 class="text-muted">Department of Neurology</h5>
-                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur...</p>
-                            <a href="#" class="btn btn-success">Make an Appointment</a>
+                        <!-- Second Doctor Profile -->
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/male doctor.png" alt="Another Doctor"
+                                            class="img-fluid rounded shadow">
+                                        <p class="mt-3">Dr. Rohan Mehta</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4 class="text-primary" style="color: #00bfbf !important;">Daya Clinic</h4>
+                                    <h3 class="text-dark">Dr. Rohan Mehta </h3>
+                                    <p><strong>MBBS, FCPS (Cardiologist)</strong></p>
+                                    <p><a href="#" class="text-success">Cardiology Specialist (1234 Health St, Delhi
+                                            134234)</a></p>
+                                    <h5 class="text-muted">Department of Cardiology</h5>
+                                    <p class="text-secondary">Sed do eiusmod tempor incididunt ut labore...</p>
+                                    <a href="#" class="btn btn-success">Make an Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Doctor Profile -->
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/lady-doc.png" alt="Third Doctor"
+                                            class="img-fluid rounded shadow">
+                                        <p class="mt-3">Dr. Aisha Menon</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4 class="text-primary" style="color: #00bfbf !important;">Daya Clinic</h4>
+                                    <h3 class="text-dark">Dr. Aisha Menon</h3>
+                                    <p><strong>MBBS, FCPS (Neurologist)</strong></p>
+                                    <p><a href="#" class="text-success">Neurology Specialist (5678 Health St, Delhi
+                                            134234)</a></p>
+                                    <h5 class="text-muted">Department of Neurology</h5>
+                                    <p class="text-secondary">Lorem ipsum dolor sit amet consectetur...</p>
+                                    <a href="#" class="btn btn-success">Make an Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel controls with Font Awesome icons -->
+                    <a class="carousel-control-prev" href="#doctorCarousel" role="button" data-bs-slide="prev">
+                        <i class="fas fa-chevron-left carousel-control-prev-icon"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#doctorCarousel" role="button" data-bs-slide="next">
+                        <i class="fas fa-chevron-right carousel-control-next-icon"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div id="labservices"></div>
+        </section>
+
+
+        <style>
+            /* Adjust the previous button */
+            .carousel-control-prev {
+                left: -20px;
+                /* Adjust the previous button position */
+                width: 50px;
+                /* Button width */
+
+            }
+
+            .carousel-control-prev-icon {
+                font-size: 30px;
+                color: #000;
+                /* Arrow color */
+            }
+
+            /* Adjust the next button */
+            .carousel-control-next {
+                right: -20px;
+                /* Adjust the next button position */
+                width: 50px;
+                /* Button width */
+            }
+
+            .carousel-control-next-icon {
+                font-size: 30px;
+                color: #000
+            }
+
+            /* Optional: Set background for the control buttons */
+            .carousel-control-prev,
+            .carousel-control-next {
+                /* background-color: rgba(156, 246, 217, 0.5);  */
+                padding: 10px;
+                height: 50px;
+            }
+
+            /* Ensure controls are visible */
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 10px;
+                opacity: 1;
+                /* Ensure full visibility */
+            }
+        </style>
+
+
+
+
+        <!-- Test Listings Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center" style="color: rgba(32, 197, 175, 1);">Lab Services</h2>
+                        <!-- <p class="text-center">Our lab services</p> -->
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between">
+                        <!-- Flex container for even spacing -->
+
+                        <!-- Urine Routine Examination -->
+                        <div class="test-box-wrap flex-fill">
+                            <h4>Urine Routine Examination</h4>
+                            <ul class="bullet-custom">
+                                <li class="main-point">Physical Examination</li>
+                                <li class="main-point">Clinical Examination</li>
+                                <ul class="sub-bullet">
+                                    <li>Albumin</li>
+                                    <li>Sugar</li>
+                                </ul>
+                                </li>
+                                <li class="main-point">Microscopic Examination</li>
+                                <ul class="sub-bullet">
+                                    <li>Pus Cells</li>
+                                    <li>RBC</li>
+                                    <li>Epi Cells</li>
+                                    <li>Calcium Oxalate</li>
+                                    <li>Bacteria</li>
+                                </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+
+                        <!-- Lipid Profile -->
+                        <div class="test-box-wrap flex-fill">
+                            <h4>Lipid Profile</h4>
+                            <ul class="bullet-custom">
+                                <li>Total Cholesterol</li>
+                                <li>Triglycerides</li>
+                                <li>HDL</li>
+                                <li>LDL</li>
+                                <li>VLDL</li>
+                            </ul>
+                        </div>
+
+                        <!-- Renal Function Test -->
+                        <div class="test-box-wrap flex-fill">
+                            <h4>Renal Function Test</h4>
+                            <ul class="bullet-custom">
+                                <li>Urea</li>
+                                <li>Creatinine</li>
+                                <li>Uric Acid</li>
+                            </ul>
+                        </div>
+
+                        <!-- Thyroid Function Test -->
+                        <div class="test-box-wrap flex-fill">
+                            <h4>Thyroid Function Test</h4>
+                            <ul class="bullet-custom">
+                                <li>T3</li>
+                                <li>T4</li>
+                                <li>TSH</li>
+                            </ul>
+                        </div>
+
+                        <!-- Blood Group RH -->
+                        <div class="test-box-wrap flex-fill">
+                            <h4>Blood Group RH</h4>
+                            <ul class="bullet-custom">
+                                <li>ECG</li>
+                                <li>Blood Pressure</li>
+                                <li>Doctor Consultation</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Original Test Listings -->
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between">
+
+                        <div class="test-box-wrap flex-fill"> <!-- Complete Blood Count (CBC) box -->
+                            <h4>Complete Blood Count (CBC)</h4>
+                            <ul class="bullet-custom">
+                                <li>Haemoglobin</li>
+                                <li>Total WBC</li>
+                                <li>Differential Count</li>
+                                <li>Platelet</li>
+                                <li>RBC</li>
+                                <li>PVC</li>
+                                <li>MCV</li>
+                                <li>MCHC</li>
+                                <li>ESR</li>
+                            </ul>
+                        </div>
+
+                        <div class="test-box-wrap flex-fill"> <!-- Liver Function Test (LFT) box -->
+                            <h4>Liver Function Test (LFT)</h4>
+                            <ul class="bullet-custom">
+                                <li>S. Bilirubin(T)</li>
+                                <li>Bilirubin(D)</li>
+                                <li>SGPT</li>
+                                <li>SGOT</li>
+                                <li>Alkaline Phosphatase</li>
+                                <li>Total Protein</li>
+                                <li>Globulin</li>
+                                <li>A/G Ratio</li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex flex-column gap-3 flex-fill">
+                            <!-- Column containing Serum Electrolytes and Blood Sugar -->
+                            <div class="test-box-wrap"> <!-- Serum Electrolytes -->
+                                <h4>Serum Electrolytes</h4>
+                                <ul class="bullet-custom">
+                                    <li>Sodium(Na+)</li>
+                                    <li>Potassium(K+)</li>
+                                </ul>
+                            </div>
+
+                            <div class="test-box-wrap"> <!-- Blood Sugar -->
+                                <h4>Blood Sugar</h4>
+                                <ul class="bullet-custom">
+                                    <li>Glucose(Fasting)</li>
+                                    <li>Glucose(PP)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Carousel controls with Font Awesome icons -->
-            <a class="carousel-control-prev" href="#doctorCarousel" role="button" data-bs-slide="prev">
-                <i class="fas fa-chevron-left carousel-control-prev-icon"></i>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#doctorCarousel" role="button" data-bs-slide="next">
-                <i class="fas fa-chevron-right carousel-control-next-icon"></i>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-    <div id="labservices"></div>
-</section>
-
-
-<style>
-
- /* Adjust the previous button */
-.carousel-control-prev {
-    left: -20px; /* Adjust the previous button position */
-    width: 50px; /* Button width */
-
-}
-
-.carousel-control-prev-icon {
-    font-size: 30px;
-    color: #000; /* Arrow color */
-}
-
-/* Adjust the next button */
-.carousel-control-next {
-    right: -20px; /* Adjust the next button position */
-    width: 50px; /* Button width */
-}
-
-.carousel-control-next-icon {
-    font-size: 30px;
-    color: #000
-}
-
-/* Optional: Set background for the control buttons */
-.carousel-control-prev, .carousel-control-next {
-    /* background-color: rgba(156, 246, 217, 0.5);  */
-    padding: 10px;
-    height: 50px;
-}
-
-/* Ensure controls are visible */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 10px;
-    opacity: 1; /* Ensure full visibility */
-}
-
-</style>
-
-
-
-
-<!-- Test Listings Section -->
-<section class="py-5 mt-5">
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="text-center" style="color: rgba(32, 197, 175, 1);">Lab Services</h2>
-                <!-- <p class="text-center">Our lab services</p> -->
-            </div>
-        </div>
-    
-        <div class="row mt-5">
-            <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between"> <!-- Flex container for even spacing -->
-
-             <!-- Urine Routine Examination -->
-             <div class="test-box-wrap flex-fill">
-                <h4>Urine Routine Examination</h4>
-                <ul class="bullet-custom">
-                    <li class="main-point">Physical Examination</li>
-                    <li class="main-point">Clinical Examination</li>
-                        <ul class="sub-bullet">
-                            <li>Albumin</li>
-                            <li>Sugar</li>
-                        </ul>
-                    </li>
-                    <li class="main-point">Microscopic Examination</li>
-                        <ul class="sub-bullet">
-                            <li>Pus Cells</li>
-                            <li>RBC</li>
-                            <li>Epi Cells</li>
-                            <li>Calcium Oxalate</li>
-                            <li>Bacteria</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            
-
-            
-
-                <!-- Lipid Profile -->
-                <div class="test-box-wrap flex-fill">
-                    <h4>Lipid Profile</h4>
-                    <ul class="bullet-custom">
-                        <li>Total Cholesterol</li>
-                        <li>Triglycerides</li>
-                        <li>HDL</li>
-                        <li>LDL</li>
-                        <li>VLDL</li>
-                    </ul>
-                </div>
-
-                <!-- Renal Function Test -->
-                <div class="test-box-wrap flex-fill">
-                    <h4>Renal Function Test</h4>
-                    <ul class="bullet-custom">
-                        <li>Urea</li>
-                        <li>Creatinine</li>
-                        <li>Uric Acid</li>
-                    </ul>
-                </div>
-
-                <!-- Thyroid Function Test -->
-                <div class="test-box-wrap flex-fill">
-                    <h4>Thyroid Function Test</h4>
-                    <ul class="bullet-custom">
-                        <li>T3</li>
-                        <li>T4</li>
-                        <li>TSH</li>
-                    </ul>
-                </div>
-
-                <!-- Blood Group RH -->
-                <div class="test-box-wrap flex-fill">
-                    <h4>Blood Group RH</h4>
-                    <ul class="bullet-custom">
-                        <li>ECG</li>
-                        <li>Blood Pressure</li>
-                        <li>Doctor Consultation</li>
-                    </ul>
-                </div>
+                <!-- <div class="text-center mt-4" style="width: 100%;"> -->
+                <img src="./assets/images/MINIPACKAGE.png" alt="Mini Package" class="mini-package-img"
+                    style="width: 100%;">
+                <!-- </div> -->
 
             </div>
-        </div>
-    </div>
 
-    <!-- Original Test Listings -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between">
-                
-                <div class="test-box-wrap flex-fill"> <!-- Complete Blood Count (CBC) box -->
-                    <h4>Complete Blood Count (CBC)</h4>
-                    <ul class="bullet-custom">
-                        <li>Haemoglobin</li>
-                        <li>Total WBC</li>
-                        <li>Differential Count</li>
-                        <li>Platelet</li>
-                        <li>RBC</li>
-                        <li>PVC</li>
-                        <li>MCV</li>
-                        <li>MCHC</li>
-                        <li>ESR</li>
-                    </ul>
-                </div>
-        
-                <div class="test-box-wrap flex-fill"> <!-- Liver Function Test (LFT) box -->
-                    <h4>Liver Function Test (LFT)</h4>
-                    <ul class="bullet-custom">
-                        <li>S. Bilirubin(T)</li>
-                        <li>Bilirubin(D)</li>
-                        <li>SGPT</li>
-                        <li>SGOT</li>
-                        <li>Alkaline Phosphatase</li>
-                        <li>Total Protein</li>
-                        <li>Globulin</li>
-                        <li>A/G Ratio</li>
-                    </ul>
-                </div>
-
-                <div class="d-flex flex-column gap-3 flex-fill"> <!-- Column containing Serum Electrolytes and Blood Sugar -->
-                    <div class="test-box-wrap"> <!-- Serum Electrolytes -->
-                        <h4>Serum Electrolytes</h4>
-                        <ul class="bullet-custom">
-                            <li>Sodium(Na+)</li>
-                            <li>Potassium(K+)</li>
-                        </ul>
-                    </div>
-                
-                    <div class="test-box-wrap"> <!-- Blood Sugar -->
-                        <h4>Blood Sugar</h4>
-                        <ul class="bullet-custom">
-                            <li>Glucose(Fasting)</li>
-                            <li>Glucose(PP)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="text-center mt-4" style="width: 100%;"> -->
-            <img src="./assets/images/mini.png" alt="Mini Package" class="mini-package-img" style="width: 100%;">
-        <!-- </div> -->
-
-    </div>
-    
-<div id="testimonials"></div>
-</section>
+            <div id="testimonials"></div>
+        </section>
 
 
-<!-- <style>
+        <!-- <style>
    
     .mini-package-wrap {
         width: 100%;
@@ -801,517 +883,580 @@
 </style> -->
 
 
-<style>
-    .test-box-wrap {
-        padding: 25px;
-        background: rgba(216, 250, 245, 1);
-        border-radius: 10px;
-        margin-bottom: 20px; /* Add margin at the bottom of each box */
-        flex: 1;
-    }
-    
-    .test-box-wrap h4 {
-        color: #00c58d;
-    }
+        <style>
+            .test-box-wrap {
+                padding: 25px;
+                background: rgba(216, 250, 245, 1);
+                border-radius: 10px;
+                margin-bottom: 20px;
+                /* Add margin at the bottom of each box */
+                flex: 1;
+            }
 
-   /* Main points (Physical, Clinical, Microscopic) with red bullets */
-.bullet-custom .main-point {
-    color: black; /* Keep text black */
-    font-weight: bold;
-    list-style: none; /* Remove default bullets */
-    position: relative;
-    padding-left: 20px;
-}
+            .test-box-wrap h4 {
+                color: #00c58d;
+            }
 
-.bullet-custom .main-point::before {
-    content: ''; /* Red custom bullet */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: red; /* Red bullet color */
-    border-radius: 50%; /* Circular bullet */
-}
+            /* Main points (Physical, Clinical, Microscopic) with red bullets */
+            .bullet-custom .main-point {
+                color: black;
+                /* Keep text black */
+                font-weight: bold;
+                list-style: none;
+                /* Remove default bullets */
+                position: relative;
+                padding-left: 20px;
+            }
 
-/* Sub-bullets styling */
-.sub-bullet {
-    list-style: none; /* Remove default bullets */
-    padding-left: 20px; /* Indent sub-bullets */
-}
+            .bullet-custom .main-point::before {
+                content: '';
+                /* Red custom bullet */
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                /* background-color: red;  */
+                border-radius: 50%;
+                /* Circular bullet */
+            }
 
-/* Custom bullet for sub-bullets */
-.sub-bullet li {
-    position: relative;
-    color: black; /* Sub-bullet text color */
-    padding-left: 20px;
-}
+            /* Sub-bullets styling */
+            .sub-bullet {
+                list-style: none;
+                /* Remove default bullets */
+                padding-left: 20px;
+                /* Indent sub-bullets */
+            }
 
-.sub-bullet li::before {
-    content: ''; /* Green custom bullet */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    background-color: rgba(32, 197, 175, 1); /* Green bullet color */
-    border-radius: 50%; /* Circular bullet */
-}
-    
-    /* Additional responsive styling */
-    .d-flex {
-        gap: 10px; /* Add space between flex items */
-    }
-</style>
+            /* Custom bullet for sub-bullets */
+            .sub-bullet li {
+                position: relative;
+                color: black;
+                /* Sub-bullet text color */
+                padding-left: 20px;
+            }
+
+            .sub-bullet li::before {
+                content: '';
+                /* Green custom bullet */
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px;
+                background-color: black;
+                /* Green bullet color */
+                border-radius: 50%;
+                /* Circular bullet */
+            }
+
+            /* Additional responsive styling */
+            .d-flex {
+                gap: 10px;
+                /* Add space between flex items */
+            }
+        </style>
 
 
 
-<!-- Testimonials Section -->
-<section class="bg-light py-5 mb-5 mt-5" >
-    <div class="container mt-4 mb-5">
-        <h2 class="text-center" style="color: rgba(32, 197, 175, 1);">Testimonials</h2>
-        
-        <!-- Carousel -->
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
-            <div class="carousel-inner">
-                <!-- Testimonial 1 -->
-                <div class="carousel-item active">
-                    <div class="row align-items-center">
-                        <!-- Image on the left side -->
-                        <div class="col-md-4 text-center">
-                            <img src="./assets/images/daya-doctor.png" class="rounded-circle img-fluid" alt="Doctor 1">
+        <!-- Testimonials Section -->
+        <section class="bg-light py-5 mb-5 mt-5">
+            <div class="container mt-4 mb-5">
+                <h2 class="text-center" style="color: rgba(32, 197, 175, 1);">Testimonials</h2>
+
+                <!-- Carousel -->
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+                    <div class="carousel-inner">
+                        <!-- Testimonial 1 -->
+                        <div class="carousel-item active">
+                            <div class="row align-items-center">
+                                <!-- Image on the left side -->
+                                <div class="col-md-4 text-center">
+                                    <img src="./assets/images/daya-doctor.png" class="rounded-circle img-fluid"
+                                        alt="Doctor 1">
+                                </div>
+                                <!-- Testimonial text on the right side -->
+                                <div class="col-md-8">
+                                    <blockquote class="blockquote">
+                                        <p>"Dr. Smith is fantastic! She provided excellent care and made me feel
+                                            comfortable and informed throughout my treatment."</p>
+                                        <footer class="blockquote-footer">Dr. Jane Smith</footer>
+                                        <p class="mt-2 text-muted">Cardiologist with 15+ years of experience in patient
+                                            care and heart disease prevention.</p>
+                                    </blockquote>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Testimonial text on the right side -->
-                        <div class="col-md-8">
-                            <blockquote class="blockquote">
-                                <p>"Dr. Smith is fantastic! She provided excellent care and made me feel comfortable and informed throughout my treatment."</p>
-                                <footer class="blockquote-footer">Dr. Jane Smith</footer>
-                                <p class="mt-2 text-muted">Cardiologist with 15+ years of experience in patient care and heart disease prevention.</p>
-                            </blockquote>
+
+                        <!-- Testimonial 2 -->
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <!-- Image on the left side -->
+                                <div class="col-md-4 text-center">
+                                    <img src="./assets/images/daya-doctor.png" class="rounded-circle img-fluid"
+                                        alt="Doctor 2">
+                                </div>
+                                <!-- Testimonial text on the right side -->
+                                <div class="col-md-8">
+                                    <blockquote class="blockquote">
+                                        <p>"Dr. Johnson took the time to explain everything in detail, and I felt very
+                                            comfortable under his care."</p>
+                                        <footer class="blockquote-footer">Dr. Mark Johnson</footer>
+                                        <p class="mt-2 text-muted">Dermatologist specializing in skin care and advanced
+                                            treatment options for over 10 years.</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <!-- Image on the left side -->
+                                <div class="col-md-4 text-center">
+                                    <img src="./assets/images/daya-doctor.png" class="rounded-circle img-fluid"
+                                        alt="Doctor 3">
+                                </div>
+                                <!-- Testimonial text on the right side -->
+                                <div class="col-md-8">
+                                    <blockquote class="blockquote">
+                                        <p>"Dr. Lee's expertise in orthopedics gave me confidence, and the results of my
+                                            surgery exceeded my expectations."</p>
+                                        <footer class="blockquote-footer">Dr. Sarah Lee</footer>
+                                        <p class="mt-2 text-muted">Orthopedic surgeon known for minimally invasive
+                                            techniques and personalized patient care.</p>
+                                    </blockquote>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 2 -->
-                <div class="carousel-item">
-                    <div class="row align-items-center">
-                        <!-- Image on the left side -->
-                        <div class="col-md-4 text-center">
-                            <img src="./assets/images/daya-doctor.png" class="rounded-circle img-fluid" alt="Doctor 2">
-                        </div>
-                        <!-- Testimonial text on the right side -->
-                        <div class="col-md-8">
-                            <blockquote class="blockquote">
-                                <p>"Dr. Johnson took the time to explain everything in detail, and I felt very comfortable under his care."</p>
-                                <footer class="blockquote-footer">Dr. Mark Johnson</footer>
-                                <p class="mt-2 text-muted">Dermatologist specializing in skin care and advanced treatment options for over 10 years.</p>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="carousel-item">
-                    <div class="row align-items-center">
-                        <!-- Image on the left side -->
-                        <div class="col-md-4 text-center">
-                            <img src="./assets/images/daya-doctor.png" class="rounded-circle img-fluid" alt="Doctor 3">
-                        </div>
-                        <!-- Testimonial text on the right side -->
-                        <div class="col-md-8">
-                            <blockquote class="blockquote">
-                                <p>"Dr. Lee's expertise in orthopedics gave me confidence, and the results of my surgery exceeded my expectations."</p>
-                                <footer class="blockquote-footer">Dr. Sarah Lee</footer>
-                                <p class="mt-2 text-muted">Orthopedic surgeon known for minimally invasive techniques and personalized patient care.</p>
-                            </blockquote>
-                        </div>
-                    </div>
+                    <!-- Carousel controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
+        </section>
 
-            <!-- Carousel controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</section>
+        <!-- CSS -->
+        <style>
+            #testimonials .carousel-item {
+                padding: 30px;
+            }
 
-<!-- CSS -->
-<style>
-    #testimonials .carousel-item {
-        padding: 30px;
-    }
+            #testimonials .img-fluid {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
 
-    #testimonials .img-fluid {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-    }
+            #testimonials .blockquote {
+                font-size: 1.1rem;
+                font-style: italic;
+            }
 
-    #testimonials .blockquote {
-        font-size: 1.1rem;
-        font-style: italic;
-    }
-
-    #testimonials .blockquote-footer {
-        font-weight: bold;
-        color: #20c997;
-    }
-</style>
+            #testimonials .blockquote-footer {
+                font-weight: bold;
+                color: #20c997;
+            }
+        </style>
 
 
-<!-- Footer with Floating CTA at the Top -->
-<footer class="footer bg-light py-5 mt-5 position-relative">
-    <div class="container">
-        <!-- CTA Content Positioned Outside the Footer -->
-        <div class="cta-content text-center mb-5" id="contact">
-            <h3>Want to make an appointment easily?</h3>
-            <a href="#" class="btn btn-light cta-button" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Here</a>
-        </div>
-
-        <!-- Contact Modal -->
-<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body d-flex">
-                <!-- Contact Form (Left Side) -->
-                <div class="col-md-6 p-4">
-                    <h3 class="modal-title mb-4" id="contactModalLabel">Lets Talk</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur. Arcu eleifend faucibus sapien id elementum ultrices. Elit fames egestas pharetra tristique morbi ac facilisis. Urna massa blandit integer eget. Lobortis mus non faucibus sed est urna nec.</p>
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+        <!-- Footer with Floating CTA at the Top -->
+        <footer class="footer bg-light py-5 mt-5 position-relative">
+            <div class="container">
+                <!-- CTA Content Positioned Outside the Footer -->
+                <div class="cta-content text-center mb-5" id="contact">
+                    <h3>Want to make an appointment easily?</h3>
+                    <a href="#" class="btn btn-light cta-button" data-bs-toggle="modal"
+                        data-bs-target="#contactModal">Contact Here</a>
                 </div>
 
-                <!-- Image (Right Side) -->
-                <!-- <div class="col-md-6 d-none d-md-block">
+                <!-- Contact Modal -->
+                <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body d-flex">
+                                <!-- Contact Form (Left Side) -->
+                                <div class="col-md-6 p-4">
+                                    <h3 class="modal-title mb-4" id="contactModalLabel">Lets Talk</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur. Arcu eleifend faucibus sapien id
+                                        elementum ultrices. Elit fames egestas pharetra tristique morbi ac facilisis.
+                                        Urna massa blandit integer eget. Lobortis mus non faucibus sed est urna nec.</p>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message" class="form-label">Message</label>
+                                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Send Message</button>
+                                    </form>
+                                </div>
+
+                                <!-- Image (Right Side) -->
+                                <!-- <div class="col-md-6 d-none d-md-block">
                     <img src="./assets/images/cta.png" alt="Contact Image" class="img-fluid">
                 </div> -->
-                 <!-- Right Side: Image and Contact Info -->
-                 <div class="col-md-6 p-4 d-flex flex-column align-items-center justify-content-center">
-                    <img src="./assets/images/cta.png" alt="Contact Image" class="img-fluid mb-4" style="max-width: 80%;">
-                    
-                    <!-- Contact Info -->
-                    <div class="contact-info text-center">
-                        <p><i class="fa-solid fa-location-dot"></i> Calicut , Kerala , India</p>
-                        <p><i class="fa-solid fa-phone"></i> 0987654321</p>
-                        <p><i class="fa-solid fa-envelope"></i> loremipsum@gmail.com</p>
+                                <!-- Right Side: Image and Contact Info -->
+                                <div class="col-md-6 p-4 d-flex flex-column align-items-center justify-content-center">
+                                    <img src="./assets/images/cta.png" alt="Contact Image" class="img-fluid mb-4"
+                                        style="max-width: 80%;">
+
+                                    <!-- Contact Info -->
+                                    <div class="contact-info text-center">
+                                        <p><i class="fa-solid fa-location-dot"></i> Calicut , Kerala , India</p>
+                                        <p><i class="fa-solid fa-phone"></i> 0987654321</p>
+                                        <p><i class="fa-solid fa-envelope"></i> loremipsum@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<style>
-    .modal-body {
-    padding: 0;
-}
+                <style>
+                    .modal-body {
+                        padding: 0;
+                    }
 
-.modal-content {
-    overflow: hidden;
-}
-/* Contact Form */
-.modal-body h3 {
-    font-weight: bold;
-    color: #00bfa6; /* Adjust color to match your design */
-}
+                    .modal-content {
+                        overflow: hidden;
+                    }
 
-.modal-body p {
-    color: #666;
-    font-size: 14px;
-}
-.form-control {
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 8px;
-}
-.form-control:focus {
-    box-shadow: none;
-    border-color: #00bfa6;
-}
-/* Contact Info */
-.contact-info p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: start;
-}
+                    /* Contact Form */
+                    .modal-body h3 {
+                        font-weight: bold;
+                        color: #00bfa6;
+                        /* Adjust color to match your design */
+                    }
 
-.contact-info i {
-    color: #00bfa6;
-    margin-right: 8px;
-    margin-top: 4px;
-}
- /* Responsive Adjustments */
- @media (max-width: 768px) {
-        .modal-body {
-            flex-direction: column;
-        }
+                    .modal-body p {
+                        color: #666;
+                        font-size: 14px;
+                    }
 
-        .modal-body .col-md-6 {
-            width: 100%;
-            padding: 1rem;
-            text-align: center;
-        }
+                    .form-control {
+                        background-color: #f0f0f0;
+                        border: none;
+                        border-radius: 8px;
+                    }
 
-        .contact-info p {
-            justify-content: center;
-        }
+                    .form-control:focus {
+                        box-shadow: none;
+                        border-color: #00bfa6;
+                    }
 
-        .modal-content {
-            margin: 0 10px;
-        }
-    }
-</style>
+                    /* Contact Info */
+                    .contact-info p {
+                        font-size: 14px;
+                        color: #666;
+                        margin-bottom: 10px;
+                        display: flex;
+                        align-items: start;
+                    }
 
-        <!-- Main Footer Content -->
-        <div class="row text-center text-md-start mt-5">
-            <!-- About Section -->
-            <div class="col-md-3 mb-4">
-                <h5>Daya<span class="highlight">Clinic</span></h5>
-                <p>We will always provide our patients with the best care to ensure the best experience.</p><br>
-                <!-- <p class="mt-3">
+                    .contact-info i {
+                        color: #00bfa6;
+                        margin-right: 8px;
+                        margin-top: 4px;
+                    }
+
+                    /* Responsive Adjustments */
+                    @media (max-width: 768px) {
+                        .modal-body {
+                            flex-direction: column;
+                        }
+
+                        .modal-body .col-md-6 {
+                            width: 100%;
+                            padding: 1rem;
+                            text-align: center;
+                        }
+
+                        .contact-info p {
+                            justify-content: center;
+                        }
+
+                        .modal-content {
+                            margin: 0 10px;
+                        }
+                    }
+                </style>
+
+                <!-- Main Footer Content -->
+                <div class="row text-center text-md-start mt-5">
+                    <!-- About Section -->
+                    <div class="col-md-3 mb-4">
+                        <h5>Daya<span class="highlight">Clinic</span></h5>
+                        <p>We will always provide our patients with the best care to ensure the best experience.</p><br>
+                        <!-- <p class="mt-3">
                     Developed by <a href="https://chaaviesolutions.com" target="_blank" class="text-dark">Chaavie Solutions</a>.
                 </p> -->
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.fa-linkedin.com" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com" class="text-dark"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.twitter.com" class="text-dark"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.fa-linkedin.com" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Services Section -->
+                    <div class="col-md-3 mb-4">
+                        <h5>Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-dark">Doctor Consultation</a></li>
+                            <li><a href="#" class="text-dark">Observation</a></li>
+                            <li><a href="#" class="text-dark">Lab Services</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Section -->
+                    <div class="col-md-3 mb-4">
+                        <h5>Company</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#about" class="text-dark">About</a></li>
+                            <li><a href="#" class="text-dark">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Policies Section -->
+                    <div class="col-md-3 mb-4">
+                        <h5>Policies</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-dark">Terms</a></li>
+                            <li><a href="#" class="text-dark">Privacy</a></li>
+                            <li><a href="#" class="text-dark">Licenses</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Copyright Section -->
+                <div class="text-center mt-4">
+                    <p>&copy; 2024 <a href="https://chaaviesolutions.com" target="_blank" class="text-dark"
+                            style="text-decoration: none;">chaaviesolutions</a>. All rights reserved.</p>
                 </div>
             </div>
+        </footer>
 
-            <!-- Services Section -->
-            <div class="col-md-3 mb-4">
-                <h5>Services</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-dark">Doctor Consultation</a></li>
-                    <li><a href="#" class="text-dark">Observation</a></li>
-                    <li><a href="#" class="text-dark">Lab Services</a></li>
-                </ul>
-            </div>
+        <script>
+            // Function to check if an element is in the viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
 
-            <!-- Company Section -->
-            <div class="col-md-3 mb-4">
-                <h5>Company</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#about" class="text-dark">About</a></li>
-                    <li><a href="#" class="text-dark">Contact Us</a></li>
-                </ul>
-            </div>
+            // Add event listener for scroll event
+            window.addEventListener('scroll', function () {
+                const ctaContent = document.querySelector('.cta-content');
 
-            <!-- Policies Section -->
-            <div class="col-md-3 mb-4">
-                <h5>Policies</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-dark">Terms</a></li>
-                    <li><a href="#" class="text-dark">Privacy</a></li>
-                    <li><a href="#" class="text-dark">Licenses</a></li>
-                </ul>
-            </div>
-        </div>
+                // Check if .cta-content is in the viewport
+                if (isInViewport(ctaContent)) {
+                    // Add class to trigger popup effect
+                    ctaContent.classList.add('popup');
+                }
+            });
+        </script>
 
-        <!-- Copyright Section -->
-        <div class="text-center mt-4">
-            <p>&copy; 2024  <a href="https://chaaviesolutions.com" target="_blank" class="text-dark" style="text-decoration: none;">chaaviesolutions</a>. All rights reserved.</p>
-        </div>
+        <!-- CSS -->
+        <style>
+            @keyframes shake {
+                0% {
+                    transform: translate(2px, 0);
+                }
+
+                25% {
+                    transform: translate(-2px, 0);
+                }
+
+                50% {
+                    transform: translate(4px, 0);
+                }
+
+                75% {
+                    transform: translate(-4px, 0);
+                }
+
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            @keyframes big-shake {
+                0% {
+                    transform: translate(5px, 0);
+                }
+
+                25% {
+                    transform: translate(-5px, 0);
+                }
+
+                50% {
+                    transform: translate(10px, 0);
+                }
+
+                75% {
+                    transform: translate(-10px, 0);
+                }
+
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            @keyframes popup {
+                0% {
+                    transform: scale(0.8);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            /* Floating CTA Content */
+            .cta-content {
+                background-color: rgba(32, 197, 175, 1);
+                color: #fff;
+                padding: 40px 20px;
+                border-radius: 15px;
+                max-width: 500px;
+                margin: -100px auto 30px auto;
+                position: relative;
+                z-index: 3;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                opacity: 0;
+                /* Initially hidden */
+                transform: scale(0.8);
+                /* Start with smaller scale */
+                transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+            }
+
+            .cta-content.popup {
+                opacity: 1;
+                /* Make visible */
+                animation: popup 0.5s ease-out forwards;
+                /* Apply the popup effect */
+            }
+
+            /* Bigger shake effect on hover */
+            .cta-content:hover {
+                animation: big-shake 0.7s ease forwards;
+                /* Apply bigger shake animation on hover */
+            }
+
+            .cta-content h3 {
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            .cta-button {
+                background-color: #fff;
+                color: #20c997;
+                padding: 10px 30px;
+                border-radius: 5px;
+                text-transform: uppercase;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+
+            /* Footer Styles */
+            .footer {
+                background: linear-gradient(to bottom, #e0f7fa, #cfd8dc);
+                color: #333;
+                padding: 150px 0;
+                /* Adjusts footer height */
+                position: relative;
+            }
+
+            .footer .footer-brand {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            .footer .highlight {
+                color: #20c997;
+            }
+
+            .footer p {
+                margin: 10px 0;
+            }
+
+            .footer h5 {
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .footer ul {
+                padding: 0;
+                list-style: none;
+            }
+
+            .footer ul li {
+                margin-bottom: 10px;
+            }
+
+            .footer ul li a {
+                color: #333;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .footer ul li a:hover {
+                color: #20c997;
+            }
+
+            .social-icons a {
+                font-size: 1.2rem;
+                color: #333;
+                margin-right: 15px;
+                text-decoration: none;
+            }
+
+            .social-icons a:hover {
+                color: #20c997;
+            }
+        </style>
+
     </div>
-</footer>
 
-<script>
-    // Function to check if an element is in the viewport
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Add event listener for scroll event
-    window.addEventListener('scroll', function() {
-        const ctaContent = document.querySelector('.cta-content');
-        
-        // Check if .cta-content is in the viewport
-        if (isInViewport(ctaContent)) {
-            // Add class to trigger popup effect
-            ctaContent.classList.add('popup');
-        }
-    });
-</script>
-
-<!-- CSS -->
-<style>
- @keyframes shake {
-    0% { transform: translate(2px, 0); }
-    25% { transform: translate(-2px, 0); }
-    50% { transform: translate(4px, 0); }
-    75% { transform: translate(-4px, 0); }
-    100% { transform: translate(0, 0); }
-}
-
-@keyframes big-shake {
-    0% { transform: translate(5px, 0); }
-    25% { transform: translate(-5px, 0); }
-    50% { transform: translate(10px, 0); }
-    75% { transform: translate(-10px, 0); }
-    100% { transform: translate(0, 0); }
-}
-
-@keyframes popup {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Floating CTA Content */
-.cta-content {
-    background-color: rgba(32, 197, 175, 1);
-    color: #fff;
-    padding: 40px 20px;
-    border-radius: 15px;
-    max-width: 500px;
-    margin: -150px auto 30px auto;
-    position: relative;
-    z-index: 3;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    opacity: 0; /* Initially hidden */
-    transform: scale(0.8); /* Start with smaller scale */
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.cta-content.popup {
-    opacity: 1; /* Make visible */
-    animation: popup 0.5s ease-out forwards; /* Apply the popup effect */
-}
-
-/* Bigger shake effect on hover */
-.cta-content:hover {
-    animation: big-shake 0.7s ease forwards; /* Apply bigger shake animation on hover */
-}
-
-.cta-content h3 {
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #fff;
-    color: #20c997;
-    padding: 10px 30px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-
-    /* Footer Styles */
-    .footer {
-        background: linear-gradient(to bottom, #e0f7fa, #cfd8dc);
-        color: #333;
-        padding: 150px 0; /* Adjusts footer height */
-        position: relative;
-    }
-
-    .footer .footer-brand {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-    .footer .highlight {
-        color: #20c997;
-    }
-
-    .footer p {
-        margin: 10px 0;
-    }
-
-    .footer h5 {
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-    .footer ul {
-        padding: 0;
-        list-style: none;
-    }
-
-    .footer ul li {
-        margin-bottom: 10px;
-    }
-
-    .footer ul li a {
-        color: #333;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-
-    .footer ul li a:hover {
-        color: #20c997;
-    }
-
-    .social-icons a {
-        font-size: 1.2rem;
-        color: #333;
-        margin-right: 15px;
-        text-decoration: none;
-    }
-
-    .social-icons a:hover {
-        color: #20c997;
-    }
-</style>
-
-</div>
-
-<!-- Font Awesome for Social Icons -->
-<script src="https://kit.fontawesome.com/a6d3690513.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome for Social Icons -->
+    <script src="https://kit.fontawesome.com/a6d3690513.js" crossorigin="anonymous"></script>
 
 
 
-<!-- Bootstrap JS (necessary for carousel) -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> -->
+    <!-- Bootstrap JS (necessary for carousel) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-

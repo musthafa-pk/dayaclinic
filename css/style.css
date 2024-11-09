@@ -8,6 +8,7 @@
 html{
     scrollbar-width: thin;
     scrollbar-color:#00c3a5 #fff ;
+    scroll-padding-top: 70px; 
 }
 
 /* Body and General Styles */

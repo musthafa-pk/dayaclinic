@@ -99,7 +99,8 @@ nav ul li a:hover {
     align-items: center;
     background-color: #e3f3f3;
     padding: 50px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    height: 100vh;
 }
 .hero-content {
     max-width: 50%;

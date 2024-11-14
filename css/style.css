@@ -146,3 +146,11 @@ nav ul li a:hover {
         font-size: 1rem;
     }
 }
+
+/* minipackage */
+.brand-wrap{
+    background-color: white;
+    width: 200px;
+    padding: 5px;
+    border-radius: 50px 50px 50px 50px;
+}

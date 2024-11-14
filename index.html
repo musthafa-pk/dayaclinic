@@ -372,21 +372,21 @@
         </style>
 
 <!-- Appointment Section -->
-<section class="py-5" id="appointment">
+<section class="py-2" id="appointment">
     <div class="section-wrap">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Right Column (Text and Buttons) -->
-                <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
+                <div class="col-md-6 order-1 order-md-2" data-aos="fade-left" id="abc">
                     <h2 class="mt-4">Easy <span style="color: rgba(32, 197, 175, 1);">Same</span> or Next-Day Appointments</h2>
                     <p class="custom-paragraph mt-3">Book Your Health Journey – Scheduling an Appointment Has Never Been Easier!
                     </p>
                     
                     <!-- Button Grid Section -->
                     <div class="button-grid mt-4">
-                        <a href="#" class="btn btn-primary" onclick="showComingSoon()" data-aos="fade-left">Easy Online Booking</a>
-                        <a href="#" class="btn btn-secondary" onclick="showComingSoon()" data-aos="fade-left">View Test Results</a>
-                        <a href="#" class="btn btn-primary" onclick="showComingSoon()" data-aos="fade-left">Make an Appointment</a>
+                        <a href="#abc" class="btn btn-primary" onclick="showComingSoon()" data-aos="fade-left">Easy Online Booking</a>
+                        <a href="#abc" class="btn btn-secondary" onclick="showComingSoon()" data-aos="fade-left">View Test Results</a>
+                        <a href="#abc" class="btn btn-primary" onclick="showComingSoon()" data-aos="fade-left">Make an Appointment</a>
                     </div>
                 </div>
                 
@@ -519,7 +519,7 @@
                 </div>
                 <div id="doctorCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="2500"
                     data-pause="hover">
-                    <div class="carousel-inner p-5">
+                    <div class="carousel-inner p-3">
                         <!-- First Doctor Profile -->
                         <div class="carousel-item active">
                             <div class="row align-items-center">
@@ -656,7 +656,7 @@
 
 
         <!-- Test Listings Section -->
-        <section class="py-5" id="labservices">
+        <section class="py-1" id="labservices">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -665,7 +665,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-5">
+                <div class="row mt-3">
                     <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between">
                         <!-- Flex container for even spacing -->
 
@@ -740,7 +740,7 @@
             </div>
 
             <!-- Original Test Listings -->
-            <div class="container mt-5">
+            <div class="container mt-2">
                 <div class="row">
                     <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between">
 
@@ -798,8 +798,9 @@
             </div>
         </section>
 
-        <div class="container">
-            <div class="" style="background-color: #D8FAF5; border-radius: 20px;">
+        <div class="container position-relative">
+            <div class="offer-price-circle position-absolute">1050/549</div>
+            <div class="" style="background-color: #D8FAF5; border-radius: 50px;">
                 <div class="row p-4">
                     <div class="col-md-6">
                         <div class="brand-wrap text-center" data-aos="fade-right">
@@ -890,6 +891,24 @@
         </div>
 
         <style>
+
+.offer-price-circle {
+        background-color: #bf0000;  /* Circle background color */
+        color: #ffffff;             /* Text color */
+        font-weight: bold;
+        font-size: 18px;            /* Adjust font size */
+        padding: 10px 15px;         /* Padding inside the circle */
+        border-radius: 50%;         /* Circular shape */
+        position: absolute;
+        top: -10px;                 /* Adjust as needed */
+        right: -10px;               /* Adjust as needed */
+        height: 120px;
+        width: 120px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        z-index: 1;
+    }
             .test-box-wrap {
                 padding: 25px;
                 background: rgba(216, 250, 245, 1);
@@ -911,7 +930,7 @@
                 list-style: none;
                 /* Remove default bullets */
                 position: relative;
-                padding-left: 20px;
+                /* padding-left: 20px; */
             }
 
             .bullet-custom .main-point::before {
@@ -964,12 +983,22 @@
                 gap: 10px;
                 /* Add space between flex items */
             }
+            @media (max-width: 768px) {
+        .offer-price-circle {
+            font-size: 12px;       /* Adjust font size for mobile */
+            padding: 8px 12px;     /* Adjust padding for mobile */
+            top: -35px;
+            right: -5px;
+            height: 80px;
+            width: 80px;
+        }
+    }
         </style>
 
 
 
         <!-- Testimonials Section -->
-        <section class="bg-light py-5 mb-5 mt-5" id="testimonials">
+        <section class="bg-light py-3 mb-5" id="testimonials">
             <div class="container mt-4 mb-5">
                 <h2 class="text-center" style="color: rgba(32, 197, 175, 1);" data-aos="fade-right">Testimonials</h2>
 
@@ -1398,8 +1427,8 @@
 
                 <!-- Copyright Section -->
                 <div class="text-center mt-4">
-                    <p>&copy; 2024 <a href="https://chaaviesolutions.com" target="_blank" class="text-dark"
-                            style="text-decoration: none;">chaaviesolutions</a>. All rights reserved.</p>
+                    <p>&copy; 2024 <a href="https://chaaviesolutions.com" target="_blank" class="text-dark">
+                        chaaviesolutions</a>. All rights reserved.</p>
                 </div>
             </div>
         </footer>

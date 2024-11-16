@@ -44,9 +44,11 @@
                         <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 
+                        <li class="nav-item"><a class="nav-link" href="#specialist">Our Specialist</a></li>
+
                         <!-- Dropdown Menu for Services -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
@@ -376,7 +378,7 @@
                         </div>
                     </div>
                 </div>
-            </div>s
+            </div>
         </section>
 
         <!-- CSS -->
@@ -573,7 +575,7 @@
         </script>
 
 
-<section class="doctor-profile py-5">
+<section class="doctor-profile py-5" id="specialist">
     <div class="container">
         <div class="text-center">
             <h2 data-aos="fade-left">Meet Our <span class="text-highlight">Specialists</span></h2>
@@ -590,7 +592,7 @@
                                 <img src="./assets/images/fshadow1.jpg" alt="Dr Anna John" class="img-fluid profile-image p-3">
                                 <p class="mt-3">Dr Anna John</p>
                             </div>
-                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
                             <h3 class="doctor-name">Dr Anna John</h3>
                             <p><strong>MBBS (Medical Officer)</strong></p>
                             <p class="specialization">General Medicine</p>
@@ -603,7 +605,7 @@
                                 <img src="./assets/images/mshadow1.png" alt="Dr Jithesh M" class="img-fluid profile-image">
                                 <p class="mt-3">Dr Jithesh M</p>
                             </div>
-                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
                             <h3 class="doctor-name">Dr Jithesh M</h3>
                             <p><strong>MBBS, MS (General Surgery), M.CH (Urology)</strong></p>
                             <p class="specialization">Urology</p>
@@ -629,7 +631,7 @@
                                 <img src="./assets/images/fshadow2.jpg" alt="Dr Indhu" class="img-fluid profile-image p-3">
                                 <p class="mt-3">Dr Indhu</p>
                             </div>
-                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
                             <h3 class="doctor-name">Dr Indhu</h3>
                             <p><strong>MBBS, DPM</strong></p>
                             <p class="specialization">Psychology</p>
@@ -642,7 +644,7 @@
                                 <img src="./assets/images/mshadow2.png" alt="Dr Pranav N Saji" class="img-fluid profile-image">
                                 <p class="mt-3">Dr Pranav N Saji</p>
                             </div>
-                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
                             <h3 class="doctor-name">Dr Pranav N Saji</h3>
                             <p><strong>MBBS, MD Pediatrics, FIAP</strong></p>
                             <p class="specialization">Pediatrics</p>
@@ -661,7 +663,7 @@
                                 <img src="./assets/images/fshadow3.jpg" alt="Dr Athira Krishna" class="img-fluid profile-image p-3">
                                 <p class="mt-3">Dr Athira Krishna</p>
                             </div>
-                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
                             <h3 class="doctor-name">Dr Athira Krishna</h3>
                             <p><strong>MBBS, MD Respiratory Medicine</strong></p>
                             <p class="specialization">Respiratory Medicine</p>
@@ -674,7 +676,7 @@
                                 <img src="./assets/images/fshadow4.jpg" alt="Dr Shemeera Thufeeq P M" class="img-fluid profile-image p-3">
                                 <p class="mt-3">Dr Shemeera Thufeeq P M</p>
                             </div>
-                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
                             <h3 class="doctor-name">Dr Shemeera Thufeeq P M</h3>
                             <p><strong>MBBS, DNB, Physician</strong></p>
                             <p class="specialization">Physician, Diabetes Specialist</p>
@@ -693,7 +695,7 @@
                                 <img src="./assets/images/fshadow5.jpg" alt="Dr Sajmi" class="img-fluid profile-image p-3">
                                 <p class="mt-3">Dr Sajmi</p>
                             </div>
-                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
                             <h3 class="doctor-name">Dr Sajmi</h3>
                             <p><strong>MBBS, DNB, OBG</strong></p>
                             <p class="specialization">Obstetrics & Gynaecology</p>
@@ -706,7 +708,7 @@
                                 <img src="./assets/images/mshadow3.png" alt="Dr Jothish K" class="img-fluid profile-image">
                                 <p class="mt-3">Dr Jothish K</p>
                             </div>
-                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
                             <h3 class="doctor-name">Dr Jothish K</h3>
                             <p><strong>MBBS, MS, DNB, MRCS Edinburgh, UK</strong></p>
                             <p class="specialization">Orthopedics</p>
@@ -745,53 +747,26 @@
 .text-highlight {
     color: #00bfbf;
 }
-            /* Adjust the previous button */
-            .carousel-control-prev {
-                left: -20px;
-                /* Adjust the previous button position */
-                width: 50px;
-                /* Button width */
+.carousel-control-prev, .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
 
-            }
+    .carousel-control-prev {
+        left: 15px; /* Adjust the position */
+    }
 
-            .carousel-control-prev-icon {
-                font-size: 30px;
-                color: #000;
-                /* Arrow color */
-            }
+    .carousel-control-next {
+        right: 15px; /* Adjust the position */
+    }
 
-            /* Adjust the next button */
-            .carousel-control-next {
-                right: -20px;
-                /* Adjust the next button position */
-                width: 50px;
-                /* Button width */
-            }
-
-            .carousel-control-next-icon {
-                font-size: 30px;
-                color: #000
-            }
-
-            /* Optional: Set background for the control buttons */
-            .carousel-control-prev,
-            .carousel-control-next {
-                /* background-color: rgba(156, 246, 217, 0.5);  */
-                padding: 10px;
-                height: 50px;
-            }
-
-            /* Ensure controls are visible */
-            .carousel-control-prev-icon,
-            .carousel-control-next-icon {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 40px;
-                height: 10px;
-                opacity: 1;
-                /* Ensure full visibility */
-            }
+    /* Optionally, style the controls to make them more visible */
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: #00bfa6;
+        border-radius: 50%; /* Round icon */
+    }
         </style>
 
 
@@ -1410,7 +1385,7 @@
                                     <div class="contact-info text-center">
                                         <p><i class="fa-solid fa-location-dot"></i> Kambalakkad ,Wayanad , Kerala , India</p>
                                         <p><i class="fa-solid fa-phone"></i> 04936 293 706 | 9207 22 99 66</p>
-                                        <p><i class="fa-solid fa-envelope"></i> dayaclinic@gmail.com</p>
+                                        <p><i class="fa-solid fa-envelope"></i> info@dayapolyclinic.com</p>
                                     </div>
                                 </div>
                             </div>

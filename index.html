@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/fav/favicon-16x16.png">
@@ -30,21 +32,21 @@
 
         <!-- Header -->
         <header class="sticky-top" id="mainHeader">
-            <nav class="navbar navbar-expand-lg navbar-light container">
-                <a class="navbar-brand" href="#" >DayaClinic</a>
-                <button class="navbar-toggler" type="button" id="navbarToggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <nav class="navbar navbar-expand-lg navbar-light container px-3">
+                <a class="navbar-brand" href="#"><span style="color: #000;">Daya</span>Clinic</a>
+                <button class="navbar-toggler" type="button" id="navbarToggler" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> -->
-                        <!-- <li class="nav-item"><a class="nav-link" href="#">View Result</a></li> -->
 
                         <!-- Dropdown Menu for Services -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
@@ -53,6 +55,7 @@
                                 <li><a class="dropdown-item" href="#labservices">Lab services</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                     </ul>
@@ -60,17 +63,23 @@
             </nav>
         </header>
 
+
         <!-- Custom CSS -->
         <style>
             /* Initial transparent background */
             #mainHeader {
-                transition: background-color 0.3s ease;
-                background-color: transparent;
+                transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(5px);
+                /* Blur effect */
+                -webkit-backdrop-filter: blur(20px);
+                /* For Safari */
             }
+
 
             /* Solid background on scroll */
             #mainHeader.scrolled {
-                background-color: rgba(255, 255, 255, 0.9);
+                /* background-color: rgba(255, 255, 255, 0.9); */
                 /* Light background with slight transparency */
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                 /* Optional shadow for depth */
@@ -125,140 +134,180 @@
 
 
         <!-- Hero Section -->
-<section class="text-center py-5" id="hero">
-    <div class="container py-5 px-4" style="background-color: #d0f0eb; border-radius: 15px;">
-        <div class="row align-items-center">
-            <!-- Right Column: Image and Overlays - Order first on small screens -->
-            <div class="col-md-6 order-first order-md-last position-relative">
-                <img src="./assets/images/homedoc.png" class="img-fluid rounded float-animation" alt="Doctor"
-                    style="max-width: 90%; border-radius: 10px;" data-aos="fade-right">
-            </div>
-
-            <!-- Left Column: Text and Button - Order last on small screens -->
-            <div class="col-md-6 text-start order-last order-md-first">
-                <h1 style="font-weight: 700;font-size: 50px;" data-aos="fade-right">Your Health is Our Priority</h1>
-                <p style="color: #6c757d;">
-                    We provide you with thorough health check-ups and help you in the process of maintaining overall health.
-                </p>
-                <button class="btn" data-aos="fade-left" onclick="showComingSoon()">
-                    Book Appointments
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* Floating Up and Down Animation */
-    @keyframes floatUpDown {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
-    }
-
-    .float-animation {
-        animation: floatUpDown 3s ease-in-out infinite;
-    }
-</style>
+        <section id="hero">
+            <div class="container px-4 my-0 my-md-4 my-lg-5 round-border" style="background-color: #d0f0eb;">
 
 
-     <!-- About Section -->
-<section class="py-3 bg-light" id="about">
-    <div class="container">
-        <div class="row">
-            <!-- Left side: Large image with full height -->
-            <div class="col-md-3 col-12 position-relative full-height-container mb-3 mb-md-0" data-aos="fade-in">
-                <img src="./assets/images/a1.jpeg" class="img-fluid main-image" alt="Clinic Interior">
-            </div>
+                <div class="row align-items-center">
 
-            <!-- Right side: Text and images -->
-            <div class="col-md-9 col-12">
-                <!-- Heading and Paragraph -->
-                <div class="mb-4">
-                    <h1 data-aos="fade-left">About Daya <span style="color: #00bfbf;">Clinic</span></h1>
-                    <p data-aos="fade-left" style="color:rgba(164, 164, 164, 1)">At Daya, we provide you with the best healthcare services. Whether it be Doctor Consultations or Lab Services, we ensure the best quality. Our top priority is to provide exceptional care, safety, and integrity. We ensure that every diagnosis we make is based on honesty and ethical standards.
-                        We assure you that complete care will be accessible anytime and affordable. We focus on the well-being of the patients, both physically and emotionally.
-                    </p>
+
+
+                    <!-- Right Column: Image and Overlays - Order first on small screens -->
+
+
+                    <div class="col-md-6 order-first order-md-last position-relative">
+                        <img src="./assets/images/homedoc.png" class="img-fluid rounded float-animation" alt="Doctor"
+                            style="max-width:90%; border-radius: 10px;" data-aos="fade-right">
+                    </div>
+
+
+
+                    <!-- Left Column: Text and Button - Order last on small screens -->
+                    <div class="col-md-6 text-start order-last order-md-first ps-4 ps-sm-4 ps-md-5 ps-lg-5">
+                        <h1 style="font-weight: 600;" data-aos="fade-right" class="fs-1 fs-md-2 fs-lg-4 fs-xl-5">Your
+                            Health
+                            is Our Priority</h1>
+                        <p style="color: #6c757d;">
+                            We provide you with thorough health check-ups and help you in the process of maintaining
+                            overall
+                            health.
+                        </p>
+                        <button class="btn mb-4" data-aos="fade-left" onclick="showComingSoon()">
+                            Book Appointments
+                        </button>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Single Image Row with overlay -->
-                <div class="mb-3 position-relative" data-aos="fade-left">
-                    <img src="./assets/images/a2.jpeg" class="img-fluid single-image" alt="Healthcare Service">
-                </div>
+        <style>
+            /* Floating Up and Down Animation */
+            @keyframes floatUpDown {
+                0% {
+                    transform: translateY(0);
+                }
 
-                <!-- Two Images in a Row with overlays -->
+                50% {
+                    transform: translateY(-10px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            .float-animation {
+                animation: floatUpDown 3s ease-in-out infinite;
+            }
+        </style>
+
+
+        <!-- About Section -->
+        <section class="py-3 bg-light" id="about">
+            <div class="container">
                 <div class="row">
-                    <div class="col-6 col-md-3 position-relative mb-3 mb-md-0" data-aos="fade-right">
-                        <img src="./assets/images/a3.jpeg" class="img-fluid small-image" alt="Surgery Preparation">
+                    <!-- Left side: Large image with full height -->
+                    <div class="col-md-3 col-12 position-relative full-height-container mb-3 mb-md-0"
+                        data-aos="fade-in">
+                        <img src="./assets/images/a1.jpeg" class="img-fluid main-image" alt="Clinic Interior">
                     </div>
-                    <div class="col-6 col-md-9 position-relative" data-aos="fade-left">
-                        <img src="./assets/images/a4.jpeg" class="img-fluid small-image" alt="Medical Procedure">
+
+                    <!-- Right side: Text and images -->
+                    <div class="col-md-9 col-12">
+                        <!-- Heading and Paragraph -->
+                        <div class="mb-4">
+                            <h1 data-aos="fade-left">About Daya <span style="color: #00bfbf;">Clinic</span></h1>
+                            <p data-aos="fade-left" style="color:rgba(164, 164, 164, 1)">At Daya, we provide you with
+                                the best healthcare services. Whether it be Doctor Consultations or Lab Services, we
+                                ensure the best quality. Our top priority is to provide exceptional care, safety, and
+                                integrity. We ensure that every diagnosis we make is based on honesty and ethical
+                                standards.
+                                We assure you that complete care will be accessible anytime and affordable. We focus on
+                                the well-being of the patients, both physically and emotionally.
+                            </p>
+                        </div>
+
+                        <!-- Single Image Row with overlay -->
+                        <div class="mb-3 position-relative" data-aos="fade-left">
+                            <img src="./assets/images/a2.jpeg" class="img-fluid single-image" alt="Healthcare Service">
+                        </div>
+
+                        <!-- Two Images in a Row with overlays -->
+                        <div class="row">
+                            <div class="col-6 col-md-3 position-relative mb-3 mb-md-0" data-aos="fade-right">
+                                <img src="./assets/images/a3.jpeg" class="img-fluid small-image"
+                                    alt="Surgery Preparation">
+                            </div>
+                            <div class="col-6 col-md-9 position-relative" data-aos="fade-left">
+                                <img src="./assets/images/a4.jpeg" class="img-fluid small-image"
+                                    alt="Medical Procedure">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<style>
-    /* Ensure the container for the left-side image takes full height */
-    .full-height-container {
-        display: flex;
-        align-items: stretch;
-    }
+        <style>
+            /* Ensure the container for the left-side image takes full height */
+            .full-height-container {
+                display: flex;
+                align-items: stretch;
+            }
 
-    /* Main image on the left side with full height */
-    .main-image {
-        border-radius: 20px;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        filter: brightness(0.5);
-    }
+            /* Main image on the left side with full height */
+            .main-image {
+                border-radius: 20px;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                filter: brightness(0.5);
+            }
 
-    /* Single image in the second row */
-    .single-image {
-        width: 100%;
-        border-radius: 15px;
-        height: 200px;
-        object-fit: cover;
-        filter: brightness(0.5);
-    }
+            /* Single image in the second row */
+            .single-image {
+                width: 100%;
+                border-radius: 15px;
+                height: 200px;
+                object-fit: cover;
+                filter: brightness(0.5);
+            }
 
-    /* Small images in the third row */
-    .small-image {
-        width: 100%;
-        height: 200px;
-        border-radius: 15px;
-        object-fit: cover;
-        filter: brightness(0.5);
-    }
+            /* Small images in the third row */
+            .small-image {
+                width: 100%;
+                height: 200px;
+                border-radius: 15px;
+                object-fit: cover;
+                filter: brightness(0.5);
+            }
 
-    /* Adjustments for mobile screens */
-    @media (max-width: 768px) {
-        /* Stack images and content */
-        .full-height-container, .single-image, .small-image {
-            height: auto; /* Allow images to adjust to content height */
-        }
+            /* Adjustments for mobile screens */
+            @media (max-width: 768px) {
 
-        .main-image, .single-image, .small-image {
-            width: 100%;
-            max-height: 300px; /* Limit height for mobile screens */
-            margin-bottom: 15px; /* Add spacing between stacked elements */
-        }
+                /* Stack images and content */
+                .full-height-container,
+                .single-image,
+                .small-image {
+                    height: auto;
+                    /* Allow images to adjust to content height */
+                }
 
-        .col-md-3, .col-md-9, .col-6 {
-            flex-basis: 100%; /* Full width for each column on small screens */
-            margin-bottom: 1rem;
-        }
-    }
+                .main-image,
+                .single-image,
+                .small-image {
+                    width: 100%;
+                    max-height: 300px;
+                    /* Limit height for mobile screens */
+                    margin-bottom: 15px;
+                    /* Add spacing between stacked elements */
+                }
 
-    /* Adjust padding for section */
-    .py-3 {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-    }
-</style>
+                .col-md-3,
+                .col-md-9,
+                .col-6 {
+                    flex-basis: 100%;
+                    /* Full width for each column on small screens */
+                    margin-bottom: 1rem;
+                }
+            }
+
+            /* Adjust padding for section */
+            .py-3 {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+        </style>
 
 
 
@@ -287,40 +336,47 @@
                             </div>
                             <h4>Doctor Consultation</h4>
                             <p class="text-muted text-start">
-                                Regular check-ups and consultations to maintain and improve your overall health and well-being. Book your consultation today for a better treatment plan. Our doctors will provide you with an accurate diagnosis by evaluating your symptoms alongside your health history.
+                                Regular check-ups and consultations to maintain and improve your overall health and
+                                well-being. Book your consultation today for a better treatment plan. Our doctors will
+                                provide you with an accurate diagnosis by evaluating your symptoms alongside your health
+                                history.
                             </p>
                         </div>
                     </div>
 
                     <!-- Observation -->
                     <div class="col-md-4 mb-4">
-                        <div class="p-4 box-wrap-2 h-100" data-aos="fade-up">
+                        <div class="p-4 box-wrap-1 h-100" data-aos="fade-up">
                             <div class="image mb-3">
                                 <img src="./assets/images/nurse.png" alt="Observation" class="rounded-circle"
                                     width="80">
                             </div>
                             <h4>Observation</h4>
                             <p class="text-muted text-start">
-                                Routine monitoring through observations will help you assess any health conditions. We provide you with comfortable rooms and monitoring equipment, ensuring that your health is closely observed and that you receive proper care.
+                                Routine monitoring through observations will help you assess any health conditions. We
+                                provide you with comfortable rooms and monitoring equipment, ensuring that your health
+                                is closely observed and that you receive proper care.
                             </p>
                         </div>
                     </div>
 
                     <!-- Lab Services -->
                     <div class="col-md-4 mb-4">
-                        <div class="p-4 box-wrap-2 h-100" data-aos="fade-right">
+                        <div class="p-4 box-wrap-1 h-100" data-aos="fade-right">
                             <div class="image mb-3">
                                 <img src="./assets/images/lab-technician.png" alt="Lab Services" class="rounded-circle"
                                     width="80">
                             </div>
                             <h4>Lab Services</h4>
                             <p class="text-muted text-start">
-                                In modern healthcare, laboratory services offer accurate information for diagnosis and treatments. Book your test today, and we will provide reliable services and precise diagnoses.
+                                In modern healthcare, laboratory services offer accurate information for diagnosis and
+                                treatments. Book your test today, and we will provide reliable services and precise
+                                diagnoses.
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>s
         </section>
 
         <!-- CSS -->
@@ -371,238 +427,324 @@
             }
         </style>
 
-<!-- Appointment Section -->
-<section class="py-2" id="appointment">
-    <div class="section-wrap">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Right Column (Text and Buttons) -->
-                <div class="col-md-6 order-1 order-md-2" data-aos="fade-left" id="abc">
-                    <h2 class="mt-4">Easy <span style="color: rgba(32, 197, 175, 1);">Same</span> or Next-Day Appointments</h2>
-                    <p class="custom-paragraph mt-3">Book Your Health Journey – Scheduling an Appointment Has Never Been Easier!
-                    </p>
-                    
-                    <!-- Button Grid Section -->
-                    <div class="button-grid mt-4">
-                        <a href="#abc" class="btn btn-primary" onclick="showComingSoon()" data-aos="fade-left">Easy Online Booking</a>
-                        <a href="#abc" class="btn btn-secondary" onclick="showComingSoon()" data-aos="fade-left">View Test Results</a>
-                        <a href="#abc" class="btn btn-primary" onclick="showComingSoon()" data-aos="fade-left">Make an Appointment</a>
-                    </div>
-                </div>
-                
-                <!-- Left Column (Image) -->
-                <div class="col-md-6 order-2 order-md-1">
-                    <div class="image-container mt-4 mt-md-0">
-                        <img src="./assets/images/nextday.png" class="img-fluid" alt="Clinic Interior" data-aos="fade-right" >
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <!-- Appointment Section -->
+        <section class="py-2" id="appointment">
+            <div class="section-wrap">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Right Column (Text and Buttons) -->
+                        <div class="col-md-6 order-1 order-md-2" data-aos="fade-left" id="abc">
+                            <h2 class="mt-4">Easy <span style="color: rgba(32, 197, 175, 1);">Same</span> or Next-Day
+                                Appointments</h2>
+                            <p class="custom-paragraph mt-3">Book Your Health Journey – Scheduling an Appointment Has
+                                Never Been Easier!
+                            </p>
 
-<!-- Custom Coming Soon Modal -->
-<div id="comingSoonAlert" class="coming-soon-modal">
-    <div class="coming-soon-modal-content">
-        <span class="coming-soon-close" onclick="closeComingSoon()">&times;</span>
-        <p>Coming Soon!</p>
-    </div>
-</div>
-
-<style>
-    /* Section Styling */
-    .section-wrap {
-        background-color: rgba(216, 250, 245, 1);
-        padding: 40px;
-        border-radius: 8px;
-    }
-    
-    #appointment {
-        background-color: #f9f9f9;
-        position: relative;
-    }
-    
-    /* Image Styling */
-    .image-container {
-        text-align: center;
-    }
-    
-    .image-container .img-fluid {
-        width: 80%;
-        max-width: 400px;
-        height: auto;
-    }
-
-    /* Button Grid Styling */
-    .button-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-    }
-
-    .button-grid a {
-        flex: 1 1 48%;
-        text-align: center;
-        padding: 10px 15px;
-    }
-
-    @media (max-width: 768px) {
-        .button-grid a {
-            flex: 1 1 100%;
-        }
-    }
-
-    /* Custom Coming Soon Modal Styling */
-    .coming-soon-modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .coming-soon-modal-content {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        width: 300px;
-        margin: 100px auto;
-        text-align: center;
-    }
-
-    .coming-soon-close {
-        color: #aaa;
-        float: right;
-        font-size: 24px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .coming-soon-close:hover,
-    .coming-soon-close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
-</style>
-
-<script>
-    // Show Coming Soon Alert
-    function showComingSoon() {
-        document.getElementById("comingSoonAlert").style.display = "block";
-    }
-
-    // Close Coming Soon Alert
-    function closeComingSoon() {
-        document.getElementById("comingSoonAlert").style.display = "none";
-    }
-
-    // Close Coming Soon Alert when clicking outside the modal content
-    window.onclick = function(event) {
-        var modal = document.getElementById("comingSoonAlert");
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-
-
-        <section class="doctor-profile py-5">
-            <div class="container">
-                <div class="text-center">
-                    <!-- <h6 class="text-info" style="color: #20c997 !important;">Team Doctor</h6> -->
-                    <h2 data-aos="fade-left">Meet Our <span style="color: #00bfbf">Specialists</span></h2>
-                </div>
-                <div id="doctorCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="2500"
-                    data-pause="hover">
-                    <div class="carousel-inner p-3">
-                        <!-- First Doctor Profile -->
-                        <div class="carousel-item active">
-                            <div class="row align-items-center">
-                                <div class="col-md-4 text-center">
-                                    <div class="profile-image">
-                                        <img src="./assets/images/docimage.png" alt="Doctor Image"
-                                            class="img-fluid rounded shadow">
-                                        <p class="mt-3">Dr. Benjamin Luis</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h4 class="text-primary" style="color: #00bfbf !important;">Daya Clinic</h4>
-                                    <h3 class="text-dark">Dr. Benjamin Luis</h3>
-                                    <p><strong>MBBS, FCPS (Pathologist), MD (Pathology)</strong></p>
-                                    <p><a href="" class="text-success">Pathology Specialist (3891 Ranchview Dr. Richard,
-                                            Delhi 134234)</a></p>
-                                    <h5 class="text-muted">Department of Pathology</h5>
-                                    <p class="text-secondary">Lorem ipsum dolor sit amet consectetur...</p>
-                                    <a href="#" class="btn btn-success" onclick="showComingSoon()">Make an Appointment</a>
-                                </div>
+                            <!-- Button Grid Section -->
+                            <div class="button-grid mt-4">
+                                <a href="#abc" class="btn btn-primary" onclick="showComingSoon()"
+                                    data-aos="fade-left">Easy Online Booking</a>
+                                <a href="#abc" class="btn btn-secondary" onclick="showComingSoon()"
+                                    data-aos="fade-left">View Test Results</a>
+                                <a href="#abc" class="btn btn-primary" onclick="showComingSoon()"
+                                    data-aos="fade-left">Make an Appointment</a>
                             </div>
                         </div>
-                        <!-- Second Doctor Profile -->
-                        <!-- <div class="carousel-item">
-                            <div class="row align-items-center">
-                                <div class="col-md-4 text-center">
-                                    <div class="profile-image">
-                                        <img src="./assets/images/male doctor.png" alt="Another Doctor"
-                                            class="img-fluid rounded shadow">
-                                        <p class="mt-3">Dr. Rohan Mehta</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h4 class="text-primary" style="color: #00bfbf !important;">Daya Clinic</h4>
-                                    <h3 class="text-dark">Dr. Rohan Mehta </h3>
-                                    <p><strong>MBBS, FCPS (Cardiologist)</strong></p>
-                                    <p><a href="#" class="text-success">Cardiology Specialist (1234 Health St, Delhi
-                                            134234)</a></p>
-                                    <h5 class="text-muted">Department of Cardiology</h5>
-                                    <p class="text-secondary">Sed do eiusmod tempor incididunt ut labore...</p>
-                                    <a href="#" class="btn btn-success">Make an Appointment</a>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- Third Doctor Profile -->
-                        <!-- <div class="carousel-item">
-                            <div class="row align-items-center">
-                                <div class="col-md-4 text-center">
-                                    <div class="profile-image">
-                                        <img src="./assets/images/lady-doc.png" alt="Third Doctor"
-                                            class="img-fluid rounded shadow">
-                                        <p class="mt-3">Dr. Aisha Menon</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h4 class="text-primary" style="color: #00bfbf !important;">Daya Clinic</h4>
-                                    <h3 class="text-dark">Dr. Aisha Menon</h3>
-                                    <p><strong>MBBS, FCPS (Neurologist)</strong></p>
-                                    <p><a href="#" class="text-success">Neurology Specialist (5678 Health St, Delhi
-                                            134234)</a></p>
-                                    <h5 class="text-muted">Department of Neurology</h5>
-                                    <p class="text-secondary">Lorem ipsum dolor sit amet consectetur...</p>
-                                    <a href="#" class="btn btn-success">Make an Appointment</a>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
 
-                    <!-- Carousel controls with Font Awesome icons -->
-                    <a class="carousel-control-prev" href="#doctorCarousel" role="button" data-bs-slide="prev">
-                        <i class="fas fa-chevron-left carousel-control-prev-icon"></i>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#doctorCarousel" role="button" data-bs-slide="next">
-                        <i class="fas fa-chevron-right carousel-control-next-icon"></i>
-                        <span class="sr-only">Next</span>
-                    </a>
+                        <!-- Left Column (Image) -->
+                        <div class="col-md-6 order-2 order-md-1">
+                            <div class="image-container mt-4 mt-md-0">
+                                <img src="./assets/images/nextday.png" class="img-fluid" alt="Clinic Interior"
+                                    data-aos="fade-right">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Custom Coming Soon Modal -->
+        <div id="comingSoonAlert" class="coming-soon-modal">
+            <div class="coming-soon-modal-content">
+                <span class="coming-soon-close" onclick="closeComingSoon()">&times;</span>
+                <p>Coming Soon!</p>
+            </div>
+        </div>
 
         <style>
+            /* Section Styling */
+            .section-wrap {
+                background-color: rgba(216, 250, 245, 1);
+                padding: 40px;
+                border-radius: 8px;
+            }
+
+            #appointment {
+                background-color: #f9f9f9;
+                position: relative;
+            }
+
+            /* Image Styling */
+            .image-container {
+                text-align: center;
+            }
+
+            .image-container .img-fluid {
+                width: 80%;
+                max-width: 400px;
+                height: auto;
+            }
+
+            /* Button Grid Styling */
+            .button-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .button-grid a {
+                flex: 1 1 48%;
+                text-align: center;
+                padding: 10px 15px;
+            }
+
+            @media (max-width: 768px) {
+                .button-grid a {
+                    flex: 1 1 100%;
+                }
+            }
+
+            /* Custom Coming Soon Modal Styling */
+            .coming-soon-modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .coming-soon-modal-content {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                width: 300px;
+                margin: 100px auto;
+                text-align: center;
+            }
+
+            .coming-soon-close {
+                color: #aaa;
+                float: right;
+                font-size: 24px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .coming-soon-close:hover,
+            .coming-soon-close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+
+        <script>
+            // Show Coming Soon Alert
+            function showComingSoon() {
+                document.getElementById("comingSoonAlert").style.display = "block";
+            }
+
+            // Close Coming Soon Alert
+            function closeComingSoon() {
+                document.getElementById("comingSoonAlert").style.display = "none";
+            }
+
+            // Close Coming Soon Alert when clicking outside the modal content
+            window.onclick = function (event) {
+                var modal = document.getElementById("comingSoonAlert");
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+
+<section class="doctor-profile py-5">
+    <div class="container">
+        <div class="text-center">
+            <h2 data-aos="fade-left">Meet Our <span class="text-highlight">Specialists</span></h2>
+        </div>
+        <div id="doctorCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="2500">
+            <div class="carousel-inner p-3">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row text-center">
+                        <!-- Doctor 1 -->
+                        <div class="col-md-6">
+                            <div class="profile-image">
+                                <img src="./assets/images/fshadow1.jpg" alt="Dr Anna John" class="img-fluid profile-image p-3">
+                                <p class="mt-3">Dr Anna John</p>
+                            </div>
+                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <h3 class="doctor-name">Dr Anna John</h3>
+                            <p><strong>MBBS (Medical Officer)</strong></p>
+                            <p class="specialization">General Medicine</p>
+                            <p><a href="#test" class="text-success" onclick="return false;">7:30 AM - 9:00 PM</a></p>
+                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
+                        </div>
+                        <!-- Doctor 2 -->
+                        <div class="col-md-6">
+                            <div class="profile-image">
+                                <img src="./assets/images/mshadow1.png" alt="Dr Jithesh M" class="img-fluid profile-image">
+                                <p class="mt-3">Dr Jithesh M</p>
+                            </div>
+                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <h3 class="doctor-name">Dr Jithesh M</h3>
+                            <p><strong>MBBS, MS (General Surgery), M.CH (Urology)</strong></p>
+                            <p class="specialization">Urology</p>
+                            <p><a href="#test" class="text-success" onclick="return false;">3:30 PM - 5:30 PM</a></p>
+                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.querySelectorAll('a[href="#test"]').forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+    });
+});
+                </script>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row text-center">
+                        <!-- Doctor 3 -->
+                        <div class="col-md-6">
+                            <div class="profile-image">
+                                <img src="./assets/images/fshadow2.jpg" alt="Dr Indhu" class="img-fluid profile-image p-3">
+                                <p class="mt-3">Dr Indhu</p>
+                            </div>
+                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <h3 class="doctor-name">Dr Indhu</h3>
+                            <p><strong>MBBS, DPM</strong></p>
+                            <p class="specialization">Psychology</p>
+                            <p><a href="#test" class="text-success" onclick="return false;">3:30 PM - 5:30 PM</a></p>
+                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
+                        </div>
+                        <!-- Doctor 4 -->
+                        <div class="col-md-6">
+                            <div class="profile-image">
+                                <img src="./assets/images/mshadow2.png" alt="Dr Pranav N Saji" class="img-fluid profile-image">
+                                <p class="mt-3">Dr Pranav N Saji</p>
+                            </div>
+                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <h3 class="doctor-name">Dr Pranav N Saji</h3>
+                            <p><strong>MBBS, MD Pediatrics, FIAP</strong></p>
+                            <p class="specialization">Pediatrics</p>
+                            <p><a href="#test" class="text-success" onclick="return false;">6:30 PM - 8:30 PM</a></p>
+                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="row text-center">
+                        <!-- Doctor 5 -->
+                        <div class="col-md-6">
+                            <div class="profile-image">
+                                <img src="./assets/images/fshadow3.jpg" alt="Dr Athira Krishna" class="img-fluid profile-image p-3">
+                                <p class="mt-3">Dr Athira Krishna</p>
+                            </div>
+                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <h3 class="doctor-name">Dr Athira Krishna</h3>
+                            <p><strong>MBBS, MD Respiratory Medicine</strong></p>
+                            <p class="specialization">Respiratory Medicine</p>
+                            <p><a href="#test" class="text-success" onclick="return false;">5:30 PM - 7:30 PM</a></p>
+                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
+                        </div>
+                        <!-- Doctor 6 -->
+                        <div class="col-md-6">
+                            <div class="profile-image">
+                                <img src="./assets/images/fshadow4.jpg" alt="Dr Shemeera Thufeeq P M" class="img-fluid profile-image p-3">
+                                <p class="mt-3">Dr Shemeera Thufeeq P M</p>
+                            </div>
+                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <h3 class="doctor-name">Dr Shemeera Thufeeq P M</h3>
+                            <p><strong>MBBS, DNB, Physician</strong></p>
+                            <p class="specialization">Physician, Diabetes Specialist</p>
+                            <p><a href="#test" class="text-success" onclick="return false;">Tuesday 5:30 PM - 7:30 PM</a></p>
+                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon();return false;">Make an Appointment</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <div class="row text-center">
+                        <!-- Doctor 7 -->
+                        <div class="col-md-6">
+                            <div class="profile-image">
+                                <img src="./assets/images/fshadow5.jpg" alt="Dr Sajmi" class="img-fluid profile-image p-3">
+                                <p class="mt-3">Dr Sajmi</p>
+                            </div>
+                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <h3 class="doctor-name">Dr Sajmi</h3>
+                            <p><strong>MBBS, DNB, OBG</strong></p>
+                            <p class="specialization">Obstetrics & Gynaecology</p>
+                            <p><a href="#test" class="text-success" onclick="return false;">Friday 5:30 PM - 7:00 PM</a></p>
+                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
+                        </div>
+                        <!-- Doctor 8 -->
+                        <div class="col-md-6">
+                            <div class="profile-image">
+                                <img src="./assets/images/mshadow3.png" alt="Dr Jothish K" class="img-fluid profile-image">
+                                <p class="mt-3">Dr Jothish K</p>
+                            </div>
+                            <h4 class="clinic-name">Daya Clinic</h4>
+                            <h3 class="doctor-name">Dr Jothish K</h3>
+                            <p><strong>MBBS, MS, DNB, MRCS Edinburgh, UK</strong></p>
+                            <p class="specialization">Orthopedics</p>
+                            <p><a href="#test" class="text-success" onclick="return false;">Wednesday 5:30 PM - 7:30 PM</a></p>
+                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon();return false;">Make an Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#doctorCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#doctorCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+        <style>
+           .profile-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-highlight {
+    color: #00bfbf;
+}
             /* Adjust the previous button */
             .carousel-control-prev {
                 left: -20px;
@@ -660,17 +802,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-center" style="color: rgba(32, 197, 175, 1);" data-aos="fade-right">Lab Services</h2>
+                        <h2 class="text-center" style="color: rgba(32, 197, 175, 1);" data-aos="fade-right">Lab Services
+                        </h2>
                         <!-- <p class="text-center">Our lab services</p> -->
                     </div>
                 </div>
 
-                <div class="row mt-3">
+                <div class="row mt-2">
+                    <!-- First Row -->
                     <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between">
-                        <!-- Flex container for even spacing -->
-
                         <!-- Urine Routine Examination -->
-                        <div class="test-box-wrap flex-fill" data-aos="fade-right">
+                        <div class="test-box-wrap flex-fill" data-aos="fade-right" style="order: 1;">
                             <h4>Urine Routine Examination</h4>
                             <ul class="bullet-custom">
                                 <li class="main-point">Physical Examination</li>
@@ -692,9 +834,8 @@
                             </ul>
                         </div>
 
-
                         <!-- Lipid Profile -->
-                        <div class="test-box-wrap flex-fill" data-aos="fade-up">
+                        <div class="test-box-wrap flex-fill" data-aos="fade-up" style="order: 2;">
                             <h4>Lipid Profile</h4>
                             <ul class="bullet-custom">
                                 <li>Total Cholesterol</li>
@@ -706,7 +847,7 @@
                         </div>
 
                         <!-- Renal Function Test -->
-                        <div class="test-box-wrap flex-fill" data-aos="fade-left">
+                        <div class="test-box-wrap flex-fill" data-aos="fade-left" style="order: 3;">
                             <h4>Renal Function Test</h4>
                             <ul class="bullet-custom">
                                 <li>Urea</li>
@@ -714,9 +855,12 @@
                                 <li>Uric Acid</li>
                             </ul>
                         </div>
+                    </div>
 
+                    <!-- Second Row -->
+                    <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between mt-2">
                         <!-- Thyroid Function Test -->
-                        <div class="test-box-wrap flex-fill" data-aos="fade-right">
+                        <div class="test-box-wrap flex-fill" data-aos="fade-right" style="order: 4;">
                             <h4>Thyroid Function Test</h4>
                             <ul class="bullet-custom">
                                 <li>T3</li>
@@ -726,7 +870,7 @@
                         </div>
 
                         <!-- Blood Group RH -->
-                        <div class="test-box-wrap flex-fill" data-aos="fade-left">
+                        <div class="test-box-wrap flex-fill" data-aos="fade-left" style="order: 5;">
                             <h4>Blood Group RH</h4>
                             <ul class="bullet-custom">
                                 <li>ECG</li>
@@ -734,9 +878,9 @@
                                 <li>Doctor Consultation</li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
+
             </div>
 
             <!-- Original Test Listings -->
@@ -744,7 +888,8 @@
                 <div class="row">
                     <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between">
 
-                        <div class="test-box-wrap flex-fill" data-aos="fade-right"> <!-- Complete Blood Count (CBC) box -->
+                        <div class="test-box-wrap flex-fill" data-aos="fade-right">
+                            <!-- Complete Blood Count (CBC) box -->
                             <h4>Complete Blood Count (CBC)</h4>
                             <ul class="bullet-custom">
                                 <li>Haemoglobin</li>
@@ -799,22 +944,22 @@
         </section>
 
         <div class="container position-relative">
-            <div class="offer-price-circle position-absolute">1050/549</div>
-            <div class="" style="background-color: #D8FAF5; border-radius: 50px;">
+            <!-- <div class="offer-price-circle position-absolute">1050/549</div> -->
+            <div class="round-border" style="background-color: #D8FAF5;">
                 <div class="row p-4">
                     <div class="col-md-6">
                         <div class="brand-wrap text-center" data-aos="fade-right">
                             <h3>Daya <span style="color: #00bfa6; size: 20px;"> Clinic</span></h3>
                         </div>
                         <img src="./assets/images/minipackagenew.png" alt="Mini Package" class="mini-package-img"
-                style="width: 80%;" data-aos="fade-right">
+                            style="width: 80%;" data-aos="fade-right">
                     </div>
                     <div class="col-md-6">
                         <h1 style="font-size: 40px;">Mini Package</h1>
                         <div class="row mt-5">
                             <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-between">
                                 <!-- Flex container for even spacing -->
-        
+
                                 <!-- Urine Routine Examination -->
                                 <div class=" flex-fill" data-aos="fade-right">
                                     <h4>Urine Routine Examination</h4>
@@ -837,7 +982,7 @@
                                         </li>
                                     </ul>
                                 </div>
-        
+
                                 <!-- Lipid Profile -->
                                 <div class="flex-fill" data-aos="fade-up">
                                     <h4>Lipid Profile</h4>
@@ -849,7 +994,7 @@
                                         <li>VLDL</li>
                                     </ul>
                                 </div>
-        
+
                                 <!-- Renal Function Test -->
                                 <div class="flex-fill" data-aos="fade-left">
                                     <h4>Renal Function Test</h4>
@@ -859,7 +1004,7 @@
                                         <li>Uric Acid</li>
                                     </ul>
                                 </div>
-        
+
                                 <!-- Thyroid Function Test -->
                                 <div class="flex-fill" data-aos="fade-right">
                                     <h4>Thyroid Function Test</h4>
@@ -869,7 +1014,7 @@
                                         <li>TSH</li>
                                     </ul>
                                 </div>
-        
+
                                 <!-- Blood Group RH -->
                                 <div class="flex-fill" data-aos="fade-left">
                                     <h4>Blood Group RH</h4>
@@ -879,36 +1024,43 @@
                                         <li>Doctor Consultation</li>
                                     </ul>
                                 </div>
-        
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- <div class="text-center mt-4" style="width: 100%;"> -->
-            
+
             <!-- </div> -->
         </div>
 
         <style>
+            /* .offer-price-circle {
+                background-color: #bf0000;
+                Circle background color
+                color: #ffffff;
+                Text color
+                font-weight: bold;
+                font-size: 18px;
+                Adjust font size
+                padding: 10px 15px;
+                Padding inside the circle
+                border-radius: 50%;
+                Circular shape
+                position: absolute;
+                top: -10px;
+                Adjust as needed
+                right: -10px;
+                Adjust as needed
+                height: 120px;
+                width: 120px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                z-index: 1;
+            } */
 
-.offer-price-circle {
-        background-color: #bf0000;  /* Circle background color */
-        color: #ffffff;             /* Text color */
-        font-weight: bold;
-        font-size: 18px;            /* Adjust font size */
-        padding: 10px 15px;         /* Padding inside the circle */
-        border-radius: 50%;         /* Circular shape */
-        position: absolute;
-        top: -10px;                 /* Adjust as needed */
-        right: -10px;               /* Adjust as needed */
-        height: 120px;
-        width: 120px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        z-index: 1;
-    }
             .test-box-wrap {
                 padding: 25px;
                 background: rgba(216, 250, 245, 1);
@@ -983,19 +1135,28 @@
                 gap: 10px;
                 /* Add space between flex items */
             }
+
             @media (max-width: 768px) {
-        .offer-price-circle {
-            font-size: 12px;       /* Adjust font size for mobile */
-            padding: 8px 12px;     /* Adjust padding for mobile */
-            top: -35px;
-            right: -5px;
-            height: 80px;
-            width: 80px;
-        }
-    }
+                .offer-price-circle {
+                    font-size: 12px;
+                    /* Adjust font size for mobile */
+                    padding: 8px 12px;
+                    /* Adjust padding for mobile */
+                    top: -15;
+                    right: 10px;
+                    height: 80px;
+                    width: 80px;
+                }
+            }
+
+            @media (max-width: 560px) {
+                .offer-price-circle {
+                    font-size: 8px;
+                    height: 60px;
+                    width: 60px;
+                }
+            }
         </style>
-
-
 
         <!-- Testimonials Section -->
         <section class="bg-light py-3 mb-5" id="testimonials">
@@ -1016,7 +1177,10 @@
                                 <!-- Testimonial text on the right side -->
                                 <div class="col-md-8">
                                     <blockquote class="blockquote">
-                                        <p>"I had a wonderful experience at Daya Polyclinic. The staff was warm and attentive, and the doctors truly listened to my concerns. I felt comfortable and well-cared-for from start to finish. Thank you for bringing quality healthcare to our community!"</p>
+                                        <p>"I had a wonderful experience at Daya Polyclinic. The staff was warm and
+                                            attentive, and the doctors truly listened to my concerns. I felt comfortable
+                                            and well-cared-for from start to finish. Thank you for bringing quality
+                                            healthcare to our community!"</p>
                                         <footer class="blockquote-footer">Deepa Iyer</footer>
                                         <!-- <p class="mt-2 text-muted">Cardiologist with 15+ years of experience in patient
                                             care and heart disease prevention.</p> -->
@@ -1030,15 +1194,17 @@
                             <div class="row align-items-center">
                                 <!-- Image on the left side -->
                                 <div class="col-md-4 text-center">
-                                    <img src="./assets/images/men.png" class="rounded-circle img-fluid"
-                                        alt="Doctor 2">
+                                    <img src="./assets/images/men.png" class="rounded-circle img-fluid" alt="Doctor 2">
                                 </div>
                                 <!-- Testimonial text on the right side -->
                                 <div class="col-md-8">
                                     <blockquote class="blockquote">
-                                        <p>“Daya Polyclinic gave me such peace of mind during my treatment. The staff is caring and attentive, and the doctors truly listened to my concerns. I’m happy to have found a clinic in Kozhikode where quality care and compassion go hand in hand. Highly recommend it!"</p>
+                                        <p>“Daya Polyclinic gave me such peace of mind during my treatment. The staff is
+                                            caring and attentive, and the doctors truly listened to my concerns. I’m
+                                            happy to have found a clinic in Kozhikode where quality care and compassion
+                                            go hand in hand. Highly recommend it!"</p>
                                         <footer class="blockquote-footer">Manoj Thomas
-                                            </footer>
+                                        </footer>
                                         <!-- <p class="mt-2 text-muted">Dermatologist specializing in skin care and advanced
                                             treatment options for over 10 years.</p> -->
                                     </blockquote>
@@ -1051,13 +1217,15 @@
                             <div class="row align-items-center">
                                 <!-- Image on the left side -->
                                 <div class="col-md-4 text-center">
-                                    <img src="./assets/images/men.png" class="rounded-circle img-fluid"
-                                        alt="Doctor 3">
+                                    <img src="./assets/images/men.png" class="rounded-circle img-fluid" alt="Doctor 3">
                                 </div>
                                 <!-- Testimonial text on the right side -->
                                 <div class="col-md-8">
                                     <blockquote class="blockquote">
-                                        <p>“The staff at Daya Polyclinic treat you with respect and patience. I was nervous about my first visit, but their friendly approach made all the difference. It’s rare to find healthcare that combines quality, compassion, and transparency so well. Highly recommend to everyone”</p>
+                                        <p>“The staff at Daya Polyclinic treat you with respect and patience. I was
+                                            nervous about my first visit, but their friendly approach made all the
+                                            difference. It’s rare to find healthcare that combines quality, compassion,
+                                            and transparency so well. Highly recommend to everyone”</p>
                                         <footer class="blockquote-footer">Faisal</footer>
                                         <!-- <p class="mt-2 text-muted">Orthopedic surgeon known for minimally invasive
                                             techniques and personalized patient care.</p> -->
@@ -1118,115 +1286,57 @@
 
                 <!-- Contact Modal -->
                 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                    aria-hidden="true" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered" style="position: relative;">
                         <div class="modal-content">
                             <div class="modal-body d-flex">
                                 <!-- Contact Form (Left Side) -->
                                 <div class="col-md-6 p-4">
                                     <h3 class="modal-title mb-4" id="contactModalLabel">Lets Talk</h3>
-                                    <p>We’re here to help you with any questions or to schedule an appointment. Your health and comfort are our priority, so don’t hesitate to reach out. Connect with us:
+                                    <p>We’re here to help you with any questions or to schedule an appointment. Your
+                                        health and comfort are our priority, so don’t hesitate to reach out. Connect
+                                        with us:
                                     </p>
                                     <form id="contactForm" onsubmit="sendForm(event)">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Name</label>
                                             <input type="text" class="form-control" id="name" required>
                                         </div>
+                                        <!-- Phone Field -->
                                         <div class="mb-3">
-                                            <label for="email" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email" required>
+                                            <label for="phone" class="form-label">Phone</label>
+                                            <input type="tel" class="form-control" id="phone" required>
                                         </div>
+                                        <!-- Date Field -->
                                         <div class="mb-3">
-                                            <label for="message" class="form-label">Message</label>
-                                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                                            <label for="date" class="form-label">Preferred Date</label>
+                                            <input type="date" class="form-control" id="date" required>
+                                        </div>
+                                        <!-- Time Field -->
+                                        <div class="mb-3">
+                                            <label for="time" class="form-label">Preferred Time</label>
+                                            <input type="time" class="form-control" id="time" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Send Message</button>
                                     </form>
                                     <script>
                                         //contact form sending....
                                         function sendForm(event) {
-                                            event.preventDefault();
+                                            event.preventDefault(); // Prevent form submission
 
-                                            const formData = {
-                                                name: document.getElementById("name").value,
-                                                email: document.getElementById("email").value,
-                                                message: document.getElementById("message").value
-                                            };
+                                            // Show success popup
+                                            showModal('Response Sent!', 'Your response has been sent successfully.', true);
 
-                                            fetch('/api/send-email', {
-                                                method: 'POST',
-                                                headers: {
-                                                    'Content-Type': 'application/json'
-                                                },
-                                                body: JSON.stringify(formData)
-                                            })
-                                                .then(response => response.json())
-                                                .then(data => {
-                                                    if (data.success) {
-                                                        Swal.fire({
-                                                            icon: 'success',
-                                                            title: 'Message Sent!',
-                                                            text: 'Thank you for contacting us. We will get back to you shortly.',
-                                                            confirmButtonColor: '#3085d6',
-                                                            confirmButtonText: 'OK'
-                                                        });
-                                                        document.getElementById("contactForm").reset();
-                                                    } else {
-                                                        Swal.fire({
-                                                            icon: 'error',
-                                                            title: 'Oops...',
-                                                            text: 'Failed to send message. Please try again.',
-                                                            confirmButtonColor: '#d33',
-                                                            confirmButtonText: 'Try Again'
-                                                        });
-                                                    }
-                                                })
-                                                .catch(error => {
-                                                    console.error('Error:', error);
-                                                    Swal.fire({
-                                                        icon: 'error',
-                                                        title: 'Error',
-                                                        text: 'There was an error sending your message. Please try again later.',
-                                                        confirmButtonColor: '#d33',
-                                                        confirmButtonText: 'OK'
-                                                    });
-                                                });
+                                            // Reset the form
+                                            document.getElementById("contactForm").reset();
                                         }
 
-                                        // event.preventDefault();
-                                         // Prevent default form submission
 
-                                        // const formData = {
-                                        //     name: document.getElementById("name").value,
-                                        //     email: document.getElementById("email").value,
-                                        //     message: document.getElementById("message").value
-                                        // };
-
-                                        // fetch('/api/send-email', {
-                                        //     method: 'POST',
-                                        //     headers: {
-                                        //         'Content-Type': 'application/json'
-                                        //     },
-                                        //     body: JSON.stringify(formData)
-                                        // })
-                                        //     .then(response => response.json())
-                                        //     .then(data => {
-                                        //         if (data.success) {
-                                        //             alert('Message sent successfully!');
-                                        //             document.getElementById("contactForm").reset();
-                                        //         } else {
-                                        //             alert('Failed to send message. Please try again.');
-                                        //         }
-                                        //     })
-                                        //     .catch(error => {
-                                        //         console.error('Error:', error);
-                                        //         alert('There was an error sending your message.');
-                                        //     });
                                     </script>
                                 </div>
                                 <!-- Custom Alert Modal -->
-                                <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel"
-                                    aria-hidden="true">
+                                <div class="modal fade m-3" id="alertModal" tabindex="-1"
+                                    aria-labelledby="alertModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -1244,6 +1354,8 @@
                                 </div>
                                 <script>
                                     function showModal(title, message, isSuccess) {
+                                        document.body.classList.add('modal-open');
+                                        $('#myModal').modal('show')
                                         const alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
                                         document.getElementById('alertModalLabel').innerText = title;
                                         document.getElementById('alertModalBody').innerText = message;
@@ -1256,35 +1368,32 @@
                                     }
 
                                     function sendForm(event) {
-                                        event.preventDefault();
+                                        event.preventDefault(); // Prevent default form submission
 
-                                        const formData = {
-                                            name: document.getElementById("name").value,
-                                            email: document.getElementById("email").value,
-                                            message: document.getElementById("message").value
-                                        };
+                                        // Get form data
+                                        const name = document.getElementById("name").value;
+                                        const phone = document.getElementById("phone").value;
+                                        const date = document.getElementById("date").value;
+                                        const time = document.getElementById("time").value;
 
-                                        fetch('/api/send-email', {
-                                            method: 'POST',
-                                            headers: {
-                                                'Content-Type': 'application/json'
-                                            },
-                                            body: JSON.stringify(formData)
-                                        })
-                                            .then(response => response.json())
-                                            .then(data => {
-                                                if (data.success) {
-                                                    showModal('Message Sent!', 'Thank you for contacting us. We will get back to you shortly.', true);
-                                                    document.getElementById("contactForm").reset();
-                                                } else {
-                                                    showModal('Oops...', 'Failed to send message. Please try again.', false);
-                                                }
-                                            })
-                                            .catch(error => {
-                                                console.error('Error:', error);
-                                                showModal('Error', 'There was an error sending your message. Please try again later.', false);
-                                            });
+                                        // Check if all fields are filled
+                                        if (name && phone && date && time) {
+                                            // Show success message
+                                            showModal('Response Sent!', 'Your response has been sent successfully.', true);
+
+                                            // Clear the form
+                                            document.getElementById("contactForm").reset();
+                                        } else {
+                                            // Show error message if fields are empty
+                                            showModal('Incomplete Form', 'Please fill in all fields before submitting.', false);
+                                        }
                                     }
+
+                                    function hideModal(){
+                                        document.body.classList.remove('modal-open');
+                                        $('#myModal').modal('hide');
+                                    }
+
 
                                 </script>
 
@@ -1299,9 +1408,9 @@
 
                                     <!-- Contact Info -->
                                     <div class="contact-info text-center">
-                                        <p><i class="fa-solid fa-location-dot"></i> Calicut , Kerala , India</p>
-                                        <p><i class="fa-solid fa-phone"></i> 0987654321</p>
-                                        <p><i class="fa-solid fa-envelope"></i> loremipsum@gmail.com</p>
+                                        <p><i class="fa-solid fa-location-dot"></i> Kambalakkad ,Wayanad , Kerala , India</p>
+                                        <p><i class="fa-solid fa-phone"></i> 04936 293 706 | 9207 22 99 66</p>
+                                        <p><i class="fa-solid fa-envelope"></i> dayaclinic@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -1415,20 +1524,20 @@
                     </div>
 
                     <!-- Policies Section -->
-                    <div class="col-md-3 mb-4">
+                    <!-- <div class="col-md-3 mb-4">
                         <h5>Policies</h5>
                         <ul class="list-unstyled">
                             <li><a href="#" class="text-dark">Terms</a></li>
                             <li><a href="#" class="text-dark">Privacy</a></li>
                             <li><a href="#" class="text-dark">Licenses</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Copyright Section -->
                 <div class="text-center mt-4">
                     <p>&copy; 2024 <a href="https://chaaviesolutions.com" target="_blank" class="text-dark">
-                        chaaviesolutions</a>. All rights reserved.</p>
+                            chaaviesolutions</a>. All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -1456,6 +1565,7 @@
                 }
             });
         </script>
+
 
         <!-- CSS -->
         <style>
@@ -1634,11 +1744,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
     <script>
-        //     AOS.init({
-        //         duration:1000,
-        //         once:false
-        //     },
-        // );
+        AOS.init({
+            duration: 1000,
+            once: false
+        },
+        );
     </script>
 </body>
 

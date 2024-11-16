@@ -19,6 +19,10 @@ body {
     scroll-behavior: unset;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 .loader {
     position: fixed;
     left: 0;
@@ -52,10 +56,10 @@ body {
 
 
 /* Container for Layout */
-.container {
+/* .container {
     width: 80%;
     margin: 0 auto;
-}
+} */
 
 /* Header */
 header {
@@ -98,9 +102,9 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     background-color: #e3f3f3;
-    padding: 50px;
+    /* padding: 50px; */
     /* margin-top: 20px; */
-    height: 100vh;
+    /* height: 100vh; */
 }
 .hero-content {
     max-width: 50%;
@@ -119,6 +123,32 @@ nav ul li a:hover {
     margin: 20px 0;
     color: #666;
 }
+/* Large screens and up (>=992px) */
+.round-border {
+    border-radius: 16px; /* Default radius for large screens */
+}
+
+/* Medium screens and below (max-width: 991.98px) */
+@media (max-width: 991.98px) {
+    .round-border {
+        border-radius: 8px; /* Smaller radius for medium screens */
+    }
+}
+
+/* Small screens and below (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+    .round-border {
+        border-radius: 4px; /* Smaller radius for small screens */
+    }
+}
+
+/* Extra small screens (max-width: 575.98px) */
+@media (max-width: 575.98px) {
+    .round-border {
+        border-radius: 0px; /* No border radius on mobile screens */
+    }
+}
+
 .btn {
     display: inline-block;
     padding: 12px 25px;

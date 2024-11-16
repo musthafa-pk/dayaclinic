@@ -28,8 +28,7 @@ body.modal-open {
     .carousel-item .col-md-6 {
         margin-bottom: 20px; /* Adjust this value to your preference */
     }
-}
-.loader {
+}.loader {
     position: fixed;
     left: 0;
     top: 0;
@@ -44,15 +43,26 @@ body.modal-open {
     z-index: 9999; /* Ensure it's on top */
 }
 
-/* Optional spinner animation */
-.loader::after {
-    content: '';
+.spinner-container {
+    display: flex;
+    flex-direction: column; /* Stack spinner and text vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
     border: 8px solid #f3f3f3; /* Light gray */
     border-top: 8px solid #00c3a5; /* Blue */
     border-radius: 50%;
     width: 50px; /* Size of the spinner */
     height: 50px;
     animation: spin 1s linear infinite; /* Spin animation */
+}
+
+.loading-text {
+    margin-top: 10px; /* Space between spinner and text */
+    font-size: 18px; /* Font size for the text */
+    color: #333; /* Text color */
 }
 
 @keyframes spin {

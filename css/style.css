@@ -23,6 +23,12 @@ body.modal-open {
     overflow: hidden;
 }
 
+ /* Apply margin on mobile devices */
+ @media (max-width: 768px) {
+    .carousel-item .col-md-6 {
+        margin-bottom: 20px; /* Adjust this value to your preference */
+    }
+}
 .loader {
     position: fixed;
     left: 0;

@@ -33,37 +33,37 @@
         <!-- Header -->
         <header class="sticky-top" id="mainHeader">
             <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light container px-3">
-    <a class="navbar-brand" href="#"><span style="color: #000;">Daya</span>Clinic</a>
-    <button class="navbar-toggler" type="button" id="navbarToggler" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <nav class="navbar navbar-expand-lg navbar-light container px-3">
+                <a class="navbar-brand" href="#"><span style="color: #000;">Daya</span>Clinic</a>
+                <button class="navbar-toggler" type="button" id="navbarToggler" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 
-            <li class="nav-item"><a class="nav-link" href="#specialist">Our Specialist</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#specialist">Our Specialist</a></li>
 
-            <!-- Dropdown Menu for Services -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Services
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                    <li><a class="dropdown-item" href="#services">Our services</a></li>
-                    <li><a class="dropdown-item" href="#labservices">Lab services</a></li>
-                </ul>
-            </li>
+                        <!-- Dropdown Menu for Services -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="#services">Our services</a></li>
+                                <li><a class="dropdown-item" href="#labservices">Lab services</a></li>
+                            </ul>
+                        </li>
 
-            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-        </ul>
-    </div>
-</nav>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
 
         </header>
 
@@ -166,7 +166,7 @@
                             overall
                             health.
                         </p>
-                        <button class="btn mb-4" data-aos="fade-left" onclick="showComingSoon()">
+                        <button class="btn mb-4" data-aos="fade-left" onclick="redirectToWhatsApp()">
                             Book Appointments
                         </button>
                     </div>
@@ -450,8 +450,12 @@
                                     data-aos="fade-left">Easy Online Booking</a>
                                 <a href="#abc" class="btn btn-secondary" onclick="showComingSoon()"
                                     data-aos="fade-left">View Test Results</a>
-                                <a href="#abc" class="btn btn-primary" onclick="showComingSoon()"
-                                    data-aos="fade-left">Make an Appointment</a>
+                                <a href="https://wa.me/919544688490?text=Hello%2C%20I%20would%20like%20to%20make%20an%20appointment.%20Here%20are%20my%20details%3A%0AName%3A%20%5BYour%20Name%5D%0AContact%3A%20%5BYour%20Phone%5D%0ADate%3A%20%5BPreferred%20Date%5D%0ATime%3A%20%5BPreferred%20Time%5D"
+                                    class="btn btn-primary" data-aos="fade-left" target="_blank">
+                                    Make an Appointment
+                                </a>
+
+
                             </div>
                         </div>
 
@@ -577,198 +581,244 @@
         </script>
 
 
-<section class="doctor-profile py-5" id="specialist">
-    <div class="container">
-        <div class="text-center">
-            <h2 data-aos="fade-left">Meet Our <span class="text-highlight">Specialists</span></h2>
-        </div>
-        <div id="doctorCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="2500">
-            <div class="carousel-inner p-3">
-
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="row text-center">
-                        <!-- Doctor 1 -->
-                        <div class="col-md-6">
-                            <div class="profile-image">
-                                <img src="./assets/images/fshadow1.jpg" alt="Dr Anna John" class="img-fluid profile-image p-3">
-                                <!-- <p class="mt-3">Dr Anna John</p> -->
-                            </div>
-                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
-                            <h3 class="doctor-name">Dr Anna John</h3>
-                            <p><strong>MBBS (Medical Officer)</strong></p>
-                            <p class="specialization">General Medicine</p>
-                            <p><a href="#test" class="text-success" onclick="return false;">7:30 AM - 9:00 PM</a></p>
-                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
-                        </div>
-                        <!-- Doctor 2 -->
-                        <div class="col-md-6">
-                            <div class="profile-image">
-                                <img src="./assets/images/mshadow1.png" alt="Dr Jithesh M" class="img-fluid profile-image">
-                                <!-- <p class="mt-3">Dr Jithesh M</p> -->
-                            </div>
-                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
-                            <h3 class="doctor-name">Dr Jithesh M</h3>
-                            <p><strong>MBBS, MS (General Surgery), M.CH (Urology)</strong></p>
-                            <p class="specialization">Urology</p>
-                            <p><a href="#test" class="text-success" onclick="return false;">3:30 PM - 5:30 PM</a></p>
-                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
-                        </div>
-                    </div>
+        <section class="doctor-profile py-5" id="specialist">
+            <div class="container">
+                <div class="text-center">
+                    <h2 data-aos="fade-left">Meet Our <span class="text-highlight">Specialists</span></h2>
                 </div>
-                <script>
-                    document.querySelectorAll('a[href="#test"]').forEach(link => {
-    link.addEventListener('click', event => {
-        event.preventDefault();
-    });
-});
-                </script>
+                <div id="doctorCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="2500">
+                    <div class="carousel-inner p-3">
 
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="row text-center">
-                        <!-- Doctor 3 -->
-                        <div class="col-md-6">
-                            <div class="profile-image">
-                                <img src="./assets/images/fshadow2.jpg" alt="Dr Indhu" class="img-fluid profile-image p-3">
-                                <!-- <p class="mt-3">Dr Indhu</p> -->
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row text-center">
+                                <!-- Doctor 1 -->
+                                <div class="col-md-6">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/fshadow1.jpg" alt="Dr Anna John"
+                                            class="img-fluid profile-image p-3">
+                                        <!-- <p class="mt-3">Dr Anna John</p> -->
+                                    </div>
+                                    <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
+                                    <h3 class="doctor-name">Dr Anna John</h3>
+                                    <p><strong>MBBS (Medical Officer)</strong></p>
+                                    <p class="specialization">General Medicine</p>
+                                    <p><a href="#test" class="text-success" onclick="return false;">7:30 AM - 9:00 PM</a></p>
+                                    <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
+                                        data-doctor="Dr Anna John" data-time="7:30 AM - 9:00 PM">
+                                        Make an Appointment
+                                    </button>
+                                </div>
+                                <!-- Doctor 2 -->
+                                <div class="col-md-6">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/mshadow1.png" alt="Dr Jithesh M"
+                                            class="img-fluid profile-image">
+                                        <!-- <p class="mt-3">Dr Jithesh M</p> -->
+                                    </div>
+                                    <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
+                                    <h3 class="doctor-name">Dr Jithesh M</h3>
+                                    <p><strong>MBBS, MS (General Surgery), M.CH (Urology)</strong></p>
+                                    <p class="specialization">Urology</p>
+                                    <p><a href="#test" class="text-success" onclick="return false;">3:30 PM - 5:30 PM</a></p>
+                                            <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
+                                            data-doctor="Dr Jithesh M" data-time="3:30 PM - 5:30 PM">
+                                            Make an Appointment
+                                        </button>
+                                </div>
                             </div>
-                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
-                            <h3 class="doctor-name">Dr Indhu</h3>
-                            <p><strong>MBBS, DPM</strong></p>
-                            <p class="specialization">Psychology</p>
-                            <p><a href="#test" class="text-success" onclick="return false;">3:30 PM - 5:30 PM</a></p>
-                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
                         </div>
-                        <!-- Doctor 4 -->
-                        <div class="col-md-6">
-                            <div class="profile-image">
-                                <img src="./assets/images/mshadow2.png" alt="Dr Pranav N Saji" class="img-fluid profile-image">
-                                <!-- <p class="mt-3">Dr Pranav N Saji</p> -->
+                        <script>
+                            document.querySelectorAll('a[href="#test"]').forEach(link => {
+                                link.addEventListener('click', event => {
+                                    event.preventDefault();
+                                });
+                            });
+                        </script>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row text-center">
+                                <!-- Doctor 3 -->
+                                <div class="col-md-6">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/fshadow2.jpg" alt="Dr Indhu"
+                                            class="img-fluid profile-image p-3">
+                                        <!-- <p class="mt-3">Dr Indhu</p> -->
+                                    </div>
+                                    <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
+                                    <h3 class="doctor-name">Dr Indhu</h3>
+                                    <p><strong>MBBS, DPM</strong></p>
+                                    <p class="specialization">Psychology</p>
+                                    <p><a href="#test" class="text-success" onclick="return false;">3:30 PM - 5:30
+                                            PM</a></p>
+                                            <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
+                                            data-doctor="Dr Indhu" data-time="3:30 PM - 5:30 PM">
+                                            Make an Appointment
+                                        </button>
+                                </div>
+                                <!-- Doctor 4 -->
+                                <div class="col-md-6">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/mshadow2.png" alt="Dr Pranav N Saji"
+                                            class="img-fluid profile-image">
+                                        <!-- <p class="mt-3">Dr Pranav N Saji</p> -->
+                                    </div>
+                                    <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
+                                    <h3 class="doctor-name">Dr Pranav N Saji</h3>
+                                    <p><strong>MBBS, MD Pediatrics, FIAP</strong></p>
+                                    <p class="specialization">Pediatrics</p>
+                                    <p><a href="#test" class="text-success" onclick="return false;">6:30 PM - 8:30
+                                            PM</a></p>
+                                            <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
+                                            data-doctor="Dr Pranav N Saji" data-time="6:30 PM - 8:30 PM">
+                                            Make an Appointment
+                                        </button>
+                                </div>
                             </div>
-                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
-                            <h3 class="doctor-name">Dr Pranav N Saji</h3>
-                            <p><strong>MBBS, MD Pediatrics, FIAP</strong></p>
-                            <p class="specialization">Pediatrics</p>
-                            <p><a href="#test" class="text-success" onclick="return false;">6:30 PM - 8:30 PM</a></p>
-                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="row text-center">
+                                <!-- Doctor 5 -->
+                                <div class="col-md-6">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/fshadow3.jpg" alt="Dr Athira Krishna"
+                                            class="img-fluid profile-image p-3">
+                                        <!-- <p class="mt-3">Dr Athira Krishna</p> -->
+                                    </div>
+                                    <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
+                                    <h3 class="doctor-name">Dr Athira Krishna</h3>
+                                    <p><strong>MBBS, MD Respiratory Medicine</strong></p>
+                                    <p class="specialization">Respiratory Medicine</p>
+                                    <p><a href="#test" class="text-success" onclick="return false;">5:30 PM - 7:30
+                                            PM</a></p>
+                                            <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
+                                            data-doctor="Dr Athira Krishna" data-time="5:30 PM - 7:30 PM">
+                                            Make an Appointment
+                                        </button>
+                                </div>
+                                <!-- Doctor 6 -->
+                                <div class="col-md-6">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/fshadow4.jpg" alt="Dr Shemeera Thufeeq P M"
+                                            class="img-fluid profile-image p-3">
+                                        <!-- <p class="mt-3">Dr Shemeera Thufeeq P M</p> -->
+                                    </div>
+                                    <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
+                                    <h3 class="doctor-name">Dr Sameera Thoufeeq P M</h3>
+                                    <p><strong>MBBS, DNB, Physician</strong></p>
+                                    <p class="specialization">Physician, Diabetes Specialist</p>
+                                    <p><a href="#test" class="text-success" onclick="return false;">Tuesday 5:30 PM -
+                                            7:30 PM</a></p>
+                                            <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
+                                            data-doctor="Dr Sameera Thoufeeq P M" data-time="5:30 PM - 7:30 PM">
+                                            Make an Appointment
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="carousel-item">
+                            <div class="row text-center">
+                                <!-- Doctor 7 -->
+                                <div class="col-md-6">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/fshadow5.jpg" alt="Dr Sajmi"
+                                            class="img-fluid profile-image p-3">
+                                        <!-- <p class="mt-3">Dr Sajmi</p> -->
+                                    </div>
+                                    <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
+                                    <h3 class="doctor-name">Dr Sajmi</h3>
+                                    <p><strong>MBBS, DNB, OBG</strong></p>
+                                    <p class="specialization">Obstetrics & Gynaecology</p>
+                                    <p><a href="#test" class="text-success" onclick="return false;">Friday 5:30 PM -
+                                            7:00 PM</a></p>
+                                            <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
+                                            data-doctor="Dr Sajmi" data-time="5:30 PM - 7:00 PM">
+                                            Make an Appointment
+                                        </button>
+                                </div>
+                                <!-- Doctor 8 -->
+                                <div class="col-md-6">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/mshadow3.png" alt="Dr Jothish K"
+                                            class="img-fluid profile-image">
+                                        <!-- <p class="mt-3">Dr Jothish K</p> -->
+                                    </div>
+                                    <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
+                                    <h3 class="doctor-name">Dr Jothish K</h3>
+                                    <p><strong>MBBS, MS, DNB, MRCS Edinburgh, UK</strong></p>
+                                    <p class="specialization">Orthopedics</p>
+                                    <p><a href="#test" class="text-success" onclick="return false;">Wednesday 5:30 PM -
+                                            7:30 PM</a></p>
+                                            <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
+                                            data-doctor="Dr Jothish K" data-time="5:30 PM - 7:30 PM">
+                                            Make an Appointment
+                                        </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <div class="row text-center">
-                        <!-- Doctor 5 -->
-                        <div class="col-md-6">
-                            <div class="profile-image">
-                                <img src="./assets/images/fshadow3.jpg" alt="Dr Athira Krishna" class="img-fluid profile-image p-3">
-                                <!-- <p class="mt-3">Dr Athira Krishna</p> -->
-                            </div>
-                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
-                            <h3 class="doctor-name">Dr Athira Krishna</h3>
-                            <p><strong>MBBS, MD Respiratory Medicine</strong></p>
-                            <p class="specialization">Respiratory Medicine</p>
-                            <p><a href="#test" class="text-success" onclick="return false;">5:30 PM - 7:30 PM</a></p>
-                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
-                        </div>
-                        <!-- Doctor 6 -->
-                        <div class="col-md-6">
-                            <div class="profile-image">
-                                <img src="./assets/images/fshadow4.jpg" alt="Dr Shemeera Thufeeq P M" class="img-fluid profile-image p-3">
-                                <!-- <p class="mt-3">Dr Shemeera Thufeeq P M</p> -->
-                            </div>
-                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
-                            <h3 class="doctor-name">Dr Shemeera Thufeeq P M</h3>
-                            <p><strong>MBBS, DNB, Physician</strong></p>
-                            <p class="specialization">Physician, Diabetes Specialist</p>
-                            <p><a href="#test" class="text-success" onclick="return false;">Tuesday 5:30 PM - 7:30 PM</a></p>
-                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon();return false;">Make an Appointment</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="carousel-item">
-                    <div class="row text-center">
-                        <!-- Doctor 7 -->
-                        <div class="col-md-6">
-                            <div class="profile-image">
-                                <img src="./assets/images/fshadow5.jpg" alt="Dr Sajmi" class="img-fluid profile-image p-3">
-                                <!-- <p class="mt-3">Dr Sajmi</p> -->
-                            </div>
-                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
-                            <h3 class="doctor-name">Dr Sajmi</h3>
-                            <p><strong>MBBS, DNB, OBG</strong></p>
-                            <p class="specialization">Obstetrics & Gynaecology</p>
-                            <p><a href="#test" class="text-success" onclick="return false;">Friday 5:30 PM - 7:00 PM</a></p>
-                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon(); return false;">Make an Appointment</a>
-                        </div>
-                        <!-- Doctor 8 -->
-                        <div class="col-md-6">
-                            <div class="profile-image">
-                                <img src="./assets/images/mshadow3.png" alt="Dr Jothish K" class="img-fluid profile-image">
-                                <!-- <p class="mt-3">Dr Jothish K</p> -->
-                            </div>
-                            <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
-                            <h3 class="doctor-name">Dr Jothish K</h3>
-                            <p><strong>MBBS, MS, DNB, MRCS Edinburgh, UK</strong></p>
-                            <p class="specialization">Orthopedics</p>
-                            <p><a href="#test" class="text-success" onclick="return false;">Wednesday 5:30 PM - 7:30 PM</a></p>
-                            <a href="#test" class="btn btn-success mt-3" onclick="showComingSoon();return false;">Make an Appointment</a>
-                        </div>
-                    </div>
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#doctorCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#doctorCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#doctorCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#doctorCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
 
         <style>
-           .profile-image img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+            .profile-image img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 50%;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
 
-.text-highlight {
-    color: #00bfbf;
-}
-.carousel-control-prev, .carousel-control-next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-    }
+            .text-highlight {
+                color: #00bfbf;
+            }
 
-    .carousel-control-prev {
-        left: 15px; /* Adjust the position */
-    }
+            .carousel-control-prev,
+            .carousel-control-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 10;
+            }
 
-    .carousel-control-next {
-        right: 15px; /* Adjust the position */
-    }
+            .carousel-control-prev {
+                left: 15px;
+                /* Adjust the position */
+            }
 
-    /* Optionally, style the controls to make them more visible */
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-        background-color: #00bfa6;
-        border-radius: 50%; /* Round icon */
-    }
+            .carousel-control-next {
+                right: 15px;
+                /* Adjust the position */
+            }
+
+            /* Optionally, style the controls to make them more visible */
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: #00bfa6;
+                border-radius: 50%;
+                /* Round icon */
+            }
         </style>
 
 
@@ -1263,7 +1313,7 @@
 
                 <!-- Contact Modal -->
                 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
-                    aria-hidden="true" >
+                    aria-hidden="true">
                     <div class="modal-dialog modal-lg modal-dialog-centered" style="position: relative;">
                         <div class="modal-content">
                             <div class="modal-body d-flex">
@@ -1366,7 +1416,7 @@
                                         }
                                     }
 
-                                    function hideModal(){
+                                    function hideModal() {
                                         document.body.classList.remove('modal-open');
                                         $('#myModal').modal('hide');
                                     }
@@ -1385,7 +1435,8 @@
 
                                     <!-- Contact Info -->
                                     <div class="contact-info text-center">
-                                        <p><i class="fa-solid fa-location-dot"></i> Kambalakkad ,Wayanad , Kerala , India</p>
+                                        <p><i class="fa-solid fa-location-dot"></i> Kambalakkad ,Wayanad , Kerala ,
+                                            India</p>
                                         <p><i class="fa-solid fa-phone"></i> 04936 293 706 | 9207 22 99 66</p>
                                         <p><i class="fa-solid fa-envelope"></i> info@dayapolyclinic.com</p>
                                     </div>

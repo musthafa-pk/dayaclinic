@@ -22,3 +22,38 @@ document.addEventListener('click', function(event) {
     }
 });
 
+
+function redirectToWhatsApp() {
+    const phoneNumber = "919207229966"; // Replace with your clinic's WhatsApp number
+    const message = `Hello, I would like to book an appointment. Here are my details:
+Name: [Your Name]
+Contact: [Your Phone]
+Date: [Preferred Date]
+Time: [Preferred Time]`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+}
+
+function whatsappappointment(button) {
+    const phoneNumber = "919207229966"; // Replace with your clinic's WhatsApp number
+    
+    const doctorName = button.getAttribute("data-doctor");
+
+    const appointmentTime = button.getAttribute("data-time");
+
+    const message = `Hello, I would like to book an appointment. Here are my details:
+Doctor: ${doctorName}
+Time: ${appointmentTime}
+Name: [Your Name]
+Contact: [Your Phone]
+Date: [Preferred Date]`;
+
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, '_blank');
+
+}

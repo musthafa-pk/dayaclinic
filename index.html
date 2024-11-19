@@ -47,9 +47,21 @@
 
                         <li class="nav-item"><a class="nav-link" href="#specialist">Our Specialist</a></li>
 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Link
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </li>
+
                         <!-- Dropdown Menu for Services -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="" id="servicesDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
@@ -924,6 +936,68 @@ function redirectToWhatsApp() {
                 /* Round icon */
             }
         </style>
+
+      <!-- Floating Buttons -->
+<div id="floatingButtons">
+    <!-- Call Button -->
+    <a href="tel:+919207229966" class="floating-btn call-btn" title="Call Us">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919207229966" class="floating-btn whatsapp-btn" target="_blank" title="WhatsApp Us">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
+
+<style>
+    /* Container for the floating buttons */
+    #floatingButtons {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 9999;
+    }
+
+    /* Floating button style */
+    .floating-btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    /* Call Button */
+    .call-btn {
+        background-color: #007bff; /* Blue color */
+    }
+
+    .call-btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+        transform: scale(0.5);
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-btn {
+        background-color: #25d366; /* WhatsApp green */
+    }
+
+    .whatsapp-btn:hover {
+        background-color: #1da851; /* Darker green on hover */
+        transform: scale(1.1);
+    }
+</style>
+
+
 
 
 

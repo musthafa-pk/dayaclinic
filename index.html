@@ -471,6 +471,84 @@
             </div>
         </section>
 
+        <!-- Trigger Button -->
+<!-- <button class="btn btn-primary" onclick="showPopup()">Make an Appointment</button> -->
+
+<!-- Popup Modal -->
+<div id="popupModal" class="popup-modal">
+    <div class="popup-content">
+        <h4>Contact Us</h4>
+        <p>How would you like to proceed?</p>
+        <button class="btn btn-success" onclick="makeCall()">Call</button>
+        <button class="btn btn-success" onclick="redirectToWhatsApp()">WhatsApp</button>
+        <button class="btn btn-secondary" onclick="closePopup()">Cancel</button>
+    </div>
+</div>
+
+<!-- Styles for Popup -->
+<style>
+    .popup-modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        padding: 20px; /* Add padding around the modal on all screens */
+        box-sizing: border-box; /* Ensure padding doesn't affect width/height */
+    }
+    
+    .popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 400px; /* Limit the width of the modal */
+        width: 100%; /* Ensure the modal adapts to smaller screens */
+        box-sizing: border-box;
+    }
+    
+    /* Responsive Design for Mobile Screens */
+    @media screen and (max-width: 768px) {
+        .popup-content {
+            padding: 15px; /* Reduce padding slightly for smaller screens */
+            font-size: 1rem;
+        }
+    }
+    </style>
+    
+
+<!-- JavaScript -->
+<script>
+function showPopup() {
+    document.getElementById('popupModal').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('popupModal').style.display = 'none';
+}
+
+function makeCall() {
+    const phoneNumber = "918123456789"; // Replace with your phone number
+    window.location.href = `tel:${phoneNumber}`;
+}
+
+function redirectToWhatsApp() {
+    const phoneNumber = "918123456789"; // Replace with your WhatsApp number
+    const message = `Hello, I would like to book an appointment.`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+    closePopup(); // Close the popup after redirect
+}
+</script>
+
+
         <!-- Custom Coming Soon Modal -->
         <div id="comingSoonAlert" class="coming-soon-modal">
             <div class="coming-soon-modal-content">
@@ -756,6 +834,32 @@
                                             7:30 PM</a></p>
                                             <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
                                             data-doctor="Dr Jothish K" data-time="5:30 PM - 7:30 PM">
+                                            Make an Appointment
+                                        </button>
+                                </div>
+
+                                 
+                            </div>
+                        </div>
+                         <!-- Slide  -->
+                         <div class="carousel-item">
+                            <div class="row text-center">
+                                <!-- Doctor 9 -->
+                                <div class="col-md-6">
+                                    <div class="profile-image">
+                                        <img src="./assets/images/drashok.jpg" alt="Dr Jithesh"
+                                            class="img-fluid profile-image">
+                                        <!-- <p class="mt-3">Dr Jothish K</p> -->
+                                    </div>
+                                    <!-- <h4 class="clinic-name">Daya Clinic</h4> -->
+                                    <h3 class="doctor-name">Dr. Ashok T
+                                    </h3>
+                                    <p><strong>MBBS, MD</strong></p>
+                                    <p class="specialization">Dermatology</p>
+                                    <p><a href="#test" class="text-success" onclick="return false;">5:30 PM -
+                                            7:30 PM</a></p>
+                                            <button class="btn btn-success mt-3" onclick="whatsappappointment(this)"
+                                            data-doctor="Dr Ashok T" data-time="5:30 PM - 7:30 PM">
                                             Make an Appointment
                                         </button>
                                 </div>
@@ -1313,9 +1417,13 @@
 
                 <!-- Contact Modal -->
                 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
-                    aria-hidden="true">
+                    aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
                     <div class="modal-dialog modal-lg modal-dialog-centered" style="position: relative;">
                         <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="contactModalLabel">Contact...</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div class="modal-body d-flex">
                                 <!-- Contact Form (Left Side) -->
                                 <div class="col-md-6 p-4">
